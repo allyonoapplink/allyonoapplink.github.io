@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="hi">
 <head>
@@ -14,7 +13,6 @@
       --accent:#00e6ff;
       --gold:#ffd247;
       --text:#ffffff;
-      --warning-height:88px; /* change this value to control warning bar height */
     }
     *{box-sizing:border-box;}
     body{
@@ -25,12 +23,7 @@
       -webkit-font-smoothing:antialiased;
     }
 
-    /* ensure the bottom area remains visible above the fixed warning */
-    .wrap{
-      max-width:780px;
-      margin:0 auto;
-      padding:18px 12px calc(var(--warning-height) + 70px); /* important: leaves space for fixed bar */
-    }
+    .wrap{max-width:780px;margin:0 auto;padding:18px 12px 90px;}
 
     .header{
       text-align:center;
@@ -39,20 +32,21 @@
       color:#00faff;font-weight:800;font-size:22px;box-shadow:0 6px 18px rgba(0,0,0,0.4);
     }
 
-    /* Join box (screenshot style) */
-    .join-box-screenshot{
-      margin-top:22px;
-      padding:24px;
-      background:linear-gradient(180deg,#11283b,#0e2134);
-      border-radius:14px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.45);
+    .video-banner{
+      background:#061529;padding:20px;border-radius:14px;margin-bottom:18px;box-shadow:0 10px 30px rgba(0,0,0,0.45);
       text-align:center;
     }
-    .join-box-screenshot h3{margin:0 0 16px;font-size:22px;color:#ffffff;font-weight:900;}
-    .join-row{display:flex;gap:14px;justify-content:center;align-items:center;flex-wrap:wrap;}
-    .join-btn-blue{background:linear-gradient(180deg,#218cff,#0b6fff);color:#fff;padding:12px 28px;border-radius:40px;font-weight:900;text-decoration:none;box-shadow:0 8px 20px rgba(0,0,0,0.45);display:inline-block;min-width:140px;text-align:center;}
-    .join-btn-green{background:linear-gradient(180deg,#39e36f,#16b84a);color:#003500;padding:12px 28px;border-radius:40px;font-weight:900;text-decoration:none;box-shadow:0 8px 20px rgba(0,0,0,0.45);display:inline-block;min-width:140px;text-align:center;}
-    .share-btn-wide{margin-top:18px;display:inline-block;background:linear-gradient(180deg,#29c96c,#12964b);color:#fff;padding:12px 30px;border-radius:40px;font-weight:900;text-decoration:none;box-shadow:0 8px 20px rgba(0,0,0,0.45);}
+    .video-frame{height:160px;border-radius:12px;background-size:cover;background-position:center;margin-bottom:12px;box-shadow:inset 0 0 60px rgba(0,0,0,0.25)}
+    .video-cta{display:inline-block;padding:12px 26px;border-radius:40px;background:linear-gradient(180deg,#ffd24a,#c88d00);color:#000;font-weight:900;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,0.35)}
+
+    /* join area */
+    .join-box{
+      margin-top:8px;padding:20px;background:#132544;border-radius:14px;text-align:center;color:#fff;box-shadow:0 6px 20px rgba(0,0,0,0.35);
+    }
+    .join-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .jbtn{padding:12px 26px;border-radius:40px;font-weight:800;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,0.35)}
+    .jbtn.telegram{background:linear-gradient(180deg,#1da1ff,#0060c9);color:#fff}
+    .jbtn.wa{background:linear-gradient(180deg,#39e36f,#16b84a);color:#003500}
 
     .footer-links{margin-top:26px;text-align:center;display:flex;justify-content:center;gap:18px;flex-wrap:wrap;}
     .footer-links a{color:#00e6ff;font-weight:800;text-decoration:none;font-size:16px;}
@@ -61,95 +55,72 @@
     .popular-box h3{color:#4dd3ff;margin:0 0 10px;font-size:18px;}
     .popular-box p{color:#e0ecff;margin:0 0 12px;line-height:1.5;}
     .popular-box h4{color:#ffd857;margin:6px 0 8px;}
-    .popular-box .tags{color:#ffeaa7;margin:0;}
+    .popular-box .tags{color:#ffeaa7;margin:0}
 
-    .footer{margin-top:18px;color:#9aa6b2;text-align:center;font-size:13px;}
+    .section-card{background:#0f2138;padding:18px;border-radius:12px;margin-top:18px;box-shadow:0 6px 24px rgba(0,0,0,0.45)}
+    .section-card h3{margin:0 0 8px;color:#ffd857}
+    .section-card p{color:#dfeeff;margin:0 0 10px}
 
-    /* DISMISSIBLE fixed warning (smaller and accessible) */
-    .fixed-warning{
-      position:fixed;
-      left:0;
-      bottom:0;
-      width:100%;
-      height:var(--warning-height);
-      background:linear-gradient(90deg,#ff4a4a 0%,#d21b1b 100%);
-      color:#fff;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:10px 18px;
-      z-index:9999;
-      box-shadow:0 -8px 30px rgba(0,0,0,0.45);
-      transition:transform .28s ease,opacity .28s ease;
+    /* final warning inside disclaimer */
+    .final-warning{
+      background:linear-gradient(90deg,#e53935 0%,#b30000 100%);
+      color:#fff;padding:16px;border-radius:10px;font-weight:800;text-align:center;margin-top:12px;
+      box-shadow:0 8px 30px rgba(0,0,0,0.5);
     }
-    .fixed-warning.hidden{
-      transform:translateY(120%);
-      opacity:0;
-      pointer-events:none;
-    }
-    .fixed-warning .content{
-      max-width:980px;
-      text-align:center;
-      font-weight:800;
-      line-height:1.15;
-      font-size:16px;
-    }
-    .fixed-warning .content small{display:block;font-weight:700;margin-top:8px;font-size:14px;color:rgba(255,255,255,0.95)}
-    /* close button */
-    .warn-close{
-      position:absolute;
-      right:14px;
-      top:10px;
-      background:rgba(0,0,0,0.18);
-      border:1px solid rgba(255,255,255,0.12);
-      color:#fff;
-      width:36px;
-      height:36px;
-      border-radius:999px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      cursor:pointer;
-      font-weight:900;
-      box-shadow:0 6px 14px rgba(0,0,0,0.4);
-    }
-    .warn-close:focus{outline:2px solid rgba(255,255,255,0.25)}
-    /* small warning icon */
-    .warn-icon{margin-right:10px;font-size:20px}
+    .final-warning small{display:block;font-weight:600;margin-top:8px;color:rgba(255,255,255,0.95)}
 
+    /* responsive tweaks */
     @media (max-width:480px){
+      .video-frame{height:120px}
+      .video-cta{padding:10px 18px}
       .join-row{gap:10px}
-      .join-btn-blue,.join-btn-green{min-width:120px;padding:10px 18px;font-size:15px}
-      .share-btn-wide{width:100%}
-      .fixed-warning{height:var(--warning-height);font-size:15px;padding:10px}
-      .warn-close{right:10px;top:8px;width:34px;height:34px}
+      .jbtn{padding:10px 18px}
+      .wrap{padding-bottom:80px}
     }
   </style>
 </head>
-
 <body>
 
   <div class="wrap">
+
     <div class="header">🔥 All Yono Games App – Download Now</div>
 
-    <!-- Join box (screenshot style) -->
-    <div class="join-box-screenshot" aria-label="Join and share">
-      <h3>Join Our Telegram Channel</h3>
+    <!-- Animated/Video banner (keeps top visible) -->
+    <div class="video-banner" aria-hidden="false">
+      <div class="video-frame" style="background-image:url('https://i.ibb.co/MDCzvZdK/taurus-app.png');"></div>
+      <h2 style="color:#00eaff;margin:0 0 8px">😄 All Yono Games App – Download Now</h2>
+      <p style="color:#cde8ff;margin:0 0 12px">Latest Teen Patti • Rummy • Slots • Casino — Fast All-New updates (2025)</p>
+      <a class="video-cta" href="#apps">Download All Apps 🚀</a>
+    </div>
+
+    <!-- Join / share box -->
+    <div class="join-box" role="region" aria-label="Join and share">
+      <h3 style="margin:0 0 10px;color:#fff;font-size:20px">Join Our Telegram Channel</h3>
       <div class="join-row" role="menu" aria-label="join options">
-        <a class="join-btn-blue" href="https://t.me/yonorummy_app" target="_blank" rel="noopener" role="button">Join Now</a>
-        <a class="join-btn-green" href="https://wa.me/?text=🔥%20Check%20these%20apps%20→%20https://allyonoapplink.github.io" target="_blank" rel="noopener" role="button">WhatsApp</a>
+        <a class="jbtn telegram" href="https://t.me/yonorummy_app" target="_blank" rel="noopener" role="button">Join Now</a>
+        <a class="jbtn wa" href="https://wa.me/?text=🔥%20Check%20these%20apps%20→%20https://allyonoapplink.github.io" target="_blank" rel="noopener" role="button">WhatsApp</a>
       </div>
-      <a class="share-btn-wide" href="https://wa.me/?text=🔥%20Check%20these%20earning%20apps%20→%20https://allyonoapplink.github.io" target="_blank" rel="noopener">📤 Share With Friends</a>
+      <a class="jbtn" href="https://wa.me/?text=🔥%20Check%20these%20earning%20apps%20→%20https://allyonoapplink.github.io" style="display:inline-block;margin-top:12px;background:linear-gradient(180deg,#29c96c,#12964b);color:#fff;border-radius:40px;padding:12px 26px;text-decoration:none;font-weight:900">📤 Share With Friends</a>
     </div>
 
-    <div class="footer-links" aria-label="footer links">
-      <a href="#">About Us</a>
-      <a href="#">Disclaimer</a>
-      <a href="#">Contact Us</a>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms & Conditions</a>
+    <!-- Link-like footer navigation (but we will add separate tag subsections below) -->
+    <div class="footer-links" aria-label="quick links">
+      <a href="#about">About Us</a>
+      <a href="#disclaimer">Disclaimer</a>
+      <a href="#contact">Contact Us</a>
+      <a href="#privacy">Privacy Policy</a>
+      <a href="#terms">Terms & Conditions</a>
     </div>
 
+    <!-- APPS SECTION placeholder -->
+    <div id="apps" class="section-card" aria-label="apps list">
+      <h3 style="color:#4dd3ff;margin:0 0 10px">All Yono App Links</h3>
+      <p style="margin:0 0 10px;color:#dfeeff">Download all latest Yono Games, Teen Patti, Rummy SE, BET51, Taurus App, Good Slots and earning apps. Fast working links, daily updates and 100% working download buttons.</p>
+      <!-- Example app cards (you already had these in earlier file) -->
+      <!-- Keep real app boxes below - omitted here for brevity; keep your existing app-boxes here -->
+    </div>
+
+    <!-- Popular searches -->
     <div class="popular-box" aria-labelledby="popular-heading">
       <h3 id="popular-heading">Popular Searches</h3>
       <p>
@@ -159,66 +130,44 @@
       <p class="tags">Yono Games, Earn App, Casino, 3 Patti, Rummy, TeenPattiGold, Bonus51, Yono App Update</p>
     </div>
 
-    <div class="footer">© All Yono Games • Always play responsibly</div>
-
-  </div> <!-- .wrap end -->
-
-  <!-- Fixed dismissible warning bar -->
-  <div id="fixedWarning" class="fixed-warning" role="alert" aria-live="polite" aria-atomic="true">
-    <button id="warnClose" class="warn-close" aria-label="Close warning (hide)">×</button>
-    <div class="content">
-      <span class="warn-icon">⚠️</span>
-      <strong>Warning:</strong> This website contains <strong>18+ real-money gaming content</strong>.
-      <small>You must be 18+ to continue. Visitors under 18 must leave this site immediately.</small>
+    <!-- About Us with its own tag set -->
+    <div id="about" class="section-card" aria-labelledby="about-heading">
+      <h3 id="about-heading">About Us</h3>
+      <p>हम All Yono Games ऐप्स के लिंक और अपडेट शेयर करते हैं — ताज़ा वर्किंग डाउनलोड बटन और छोटी टिप्स।</p>
+      <h4 style="color:#ffd857;margin:10px 0 6px">About Us Tags:</h4>
+      <p style="color:#ffeaa7;margin:0 0 6px">Yono Team, App Links, Daily Updates, App Reviews</p>
     </div>
+
+    <!-- Disclaimer (here we place the final warning as requested) -->
+    <div id="disclaimer" class="section-card" aria-labelledby="disclaimer-heading">
+      <h3 id="disclaimer-heading">Disclaimer</h3>
+      <p>हम इन ऐप्स के डेवलपर नहीं हैं। रमी/कसिनो ऐप्स में आर्थिक जोखिम होते हैं — केवल 18+ उपयोगकर्ताओं के लिए।</p>
+
+      <!-- Final Warning placed INSIDE Disclaimer (last) -->
+      <div class="final-warning" role="alert" aria-live="polite">
+        ⚠️ Warning: This website contains <strong>18+ real-money gaming content</strong>.
+        <small>You must be 18+ to continue. Visitors under 18 must leave this site immediately.</small>
+      </div>
+    </div>
+
+    <!-- Privacy Policy with its own tags -->
+    <div id="privacy" class="section-card" aria-labelledby="privacy-heading">
+      <h3 id="privacy-heading">Privacy Policy</h3>
+      <p>हम आपकी जानकारी की सुरक्षा का सम्मान करते हैं। हमारी साइट ट्रैकिंग और कुकीज का उपयोग कर सकती है (कम से कम) — देखें पूर्ण नीति।</p>
+      <h4 style="color:#ffd857;margin:10px 0 6px">Privacy Tags:</h4>
+      <p style="color:#ffeaa7;margin:0">Cookies, Tracking, Data Usage, No Third-Party Sharing (summary)</p>
+    </div>
+
+    <!-- Terms & Conditions with its own tags -->
+    <div id="terms" class="section-card" aria-labelledby="terms-heading">
+      <h3 id="terms-heading">Terms & Conditions</h3>
+      <p>यहाँ साइट उपयोग के नियम — उपयोगकर्ता स्वयं जिम्मेदार हैं। कृपया नियम पढ़ें।</p>
+      <h4 style="color:#ffd857;margin:10px 0 6px">Terms Tags:</h4>
+      <p style="color:#ffeaa7;margin:0">Responsible Use, Age Limit, App Liability, Content Accuracy</p>
+    </div>
+
+    <div class="footer" style="margin-top:20px">© All Yono Games • Always play responsibly</div>
   </div>
-
-  <script>
-    (function(){
-      var key = 'yono_warning_closed_v1';
-      var bar = document.getElementById('fixedWarning');
-      var btn = document.getElementById('warnClose');
-
-      // If user closed it earlier (persisted), hide now
-      try {
-        if(localStorage && localStorage.getItem(key) === '1') {
-          bar.classList.add('hidden');
-        }
-      } catch(e){ /* ignore storage errors */ }
-
-      // Close handler
-      btn.addEventListener('click', function(e){
-        e.preventDefault();
-        bar.classList.add('hidden');
-        try { localStorage && localStorage.setItem(key, '1'); } catch(err){}
-      });
-
-      // Allow Esc key to close when focused anywhere (accessibility)
-      document.addEventListener('keydown', function(e){
-        if(e.key === 'Escape') {
-          if(!bar.classList.contains('hidden')) {
-            bar.classList.add('hidden');
-            try { localStorage && localStorage.setItem(key, '1'); } catch(err){}
-          }
-        }
-      });
-
-      // If user taps the warning itself, don't block (but keep present)
-      bar.addEventListener('click', function(e){
-        // don't close when clicking content; only use close button
-        if(e.target === bar) { /* optional behaviour */ }
-      });
-
-      // For first-time visitors: small bounce animation to draw attention (only once)
-      try {
-        var bounceKey = 'yono_warning_bounced_v1';
-        if(localStorage && !localStorage.getItem(bounceKey)) {
-          bar.style.transform = 'translateY(8px)';
-          setTimeout(function(){ bar.style.transform = ''; localStorage.setItem(bounceKey, '1'); }, 700);
-        }
-      } catch(e){}
-    })();
-  </script>
 
 </body>
 </html>
