@@ -22,7 +22,7 @@
       color:var(--text);
       -webkit-font-smoothing:antialiased;
     }
-    .wrap{max-width:780px;margin:0 auto;padding:18px 12px 140px;}
+    .wrap{max-width:780px;margin:0 auto;padding:18px 12px 160px;}
 
     .header{
       text-align:center;
@@ -45,22 +45,7 @@
     .download-btn{display:inline-block;padding:10px 14px;border-radius:12px;text-decoration:none;font-weight:800;background:linear-gradient(180deg,var(--gold),#c99711);color:#000;box-shadow:0 8px 24px rgba(0,0,0,0.12);transition:transform .18s ease,box-shadow .18s ease;}
     .download-btn:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 20px 36px rgba(0,0,0,0.3);}
 
-    .actions{margin-top:18px;display:flex;gap:12px;flex-direction:column}
-    .action-btn{display:inline-block;padding:12px 18px;border-radius:30px;text-decoration:none;font-weight:800;text-align:center;width:100%}
-    .telegram{background:#2b8cff;color:#fff}
-    .whatsapp{background:#32d74b;color:#003500;font-weight:800}
-
-    .footer{text-align:center;color:#9aa6b2;margin-top:18px;font-size:13px}
-
-    /* age warning small notice (fixed) */
-    .age-warning{
-      position:fixed;bottom:0;left:0;width:100%;
-      background:linear-gradient(90deg,#ff1f1f 0%,#b30000 100%);
-      color:#fff;padding:14px;text-align:center;font-weight:700;z-index:9999;box-shadow:0 -6px 18px rgba(0,0,0,0.35);
-    }
-    .age-warning small{display:block;font-weight:500;font-size:13px;margin-top:6px;color:rgba(255,255,255,0.95);}
-
-    /* Animated download banner styles */
+/* Animated download banner styles */
     .video-banner{
       background:#061529;
       padding:22px;
@@ -79,7 +64,23 @@
       box-shadow:0 10px 25px rgba(0,0,0,0.5);
       background-size:cover;
       background-position:center;
+      position:relative;
+      overflow:hidden;
     }
+    .play-overlay{
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform:translate(-50%,-50%);
+      background:rgba(0,0,0,0.35);
+      padding:12px 18px;
+      border-radius:999px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.4);
+    }
+    .play-overlay img{width:36px;height:36px}
     .video-banner h2{margin:0;font-size:24px;color:#00eaff;font-weight:800;}
     .video-banner p{margin:6px 0 14px;color:#cde8ff;font-size:15px;}
     .video-cta{
@@ -126,6 +127,20 @@
     .jbtn:hover{transform:translateY(-4px);}
     .share-btn{margin-top:20px;background:#1bb55c;padding:12px 28px;color:#fff;border-radius:40px;text-decoration:none;font-weight:900;display:inline-block;box-shadow:0 4px 18px rgba(0,0,0,0.35);}
 
+    .footer{text-align:center;color:#9aa6b2;margin-top:18px;font-size:13px}
+
+/* robots section / last warning */
+    #robot-section{
+      max-width:780px;margin:26px auto 120px;padding:18px;background:#071027;border-radius:12px;color:#dceeff;border:1px solid rgba(255,255,255,0.03);
+    }
+    #robot-section h4{color:#7ed6ff;margin:0 0 8px}
+    .robot-links{color:#9fe6ff;margin-bottom:12px}
+    .final-warning{
+      background:linear-gradient(90deg,#e53935 0%,#b30000 100%);
+      color:#fff;padding:14px;border-radius:10px;font-weight:800;text-align:center;
+      box-shadow:0 8px 30px rgba(0,0,0,0.5);
+    }
+
     /* responsive */
     @media (max-width:480px){
       .wrap{padding:12px;}
@@ -139,12 +154,22 @@
 
 <body>
 
-  <!-- ====== REPLACED TOP: ANIMATED VIDEO BANNER + SEO BLOCK ====== -->
+  <!-- ====== REPLACED TOP: ANIMATED / IMAGE BANNER + CTA (Anamesal button) ====== -->
   <div class="video-banner" aria-hidden="false">
-    <div class="video-frame" style="background-image:url('https://i.ibb.co/k3BrpC4/yonogamevideo.gif');"></div>
+    <!-- NOTE: yahan pe stable image use kiya gaya — agar tum chaho, animated 3D replace kar dunga -->
+    <div class="video-frame" style="background-image:url('https://i.ibb.co/KccDBL1t/GoodSlots.png');">
+      <div class="play-overlay" aria-hidden="true">
+        <!-- small play / logo overlay -->
+        <img src="https://i.ibb.co/8cY4mQq/play-icon.png" alt="play" onerror="this.style.display='none'">
+        <strong style="color:#fff;font-size:16px;">Watch Preview</strong>
+      </div>
+    </div>
+
     <h2>😄 All Yono App Link – Download Now</h2>
     <p>Latest Teen Patti • Rummy • Slots • Casino — Fast All-New updates (2025)</p>
-    <a class="video-cta" href="#apps">Download All Apps 🚀</a>
+
+    <!-- ANAMESAL button (only button name as requested) -->
+    <a class="video-cta" href="#apps" id="anamesal-cta">Anamesal</a>
   </div>
 
   <!-- ====== SUPER SEO BLOCK (Body-top) ====== -->
@@ -313,10 +338,21 @@
 
   </div> <!-- .wrap end -->
 
-  <!-- FIXED 18+ WARNING (LAST - always visible at bottom) -->
-  <div class="age-warning" role="alert" aria-live="polite">
-    ⚠️ Warning: This website contains <strong>18+ real-money gaming content</strong>.  
-    <small>You must be 18+ to continue. Visitors under 18 must leave this site immediately.</small>
+  <!-- ===== ROBOT / SITEMAP SECTION (Warning last inside here) ===== -->
+  <div id="robot-section">
+    <h4>Robots / Sitemap</h4>
+    <div class="robot-links">
+      Sitemap: <a href="https://allyonoapplink.github.io/sitemap.xml" style="color:#8fe6ff" target="_blank" rel="noopener">sitemap.xml</a> |
+      Robots: <a href="https://allyonoapplink.github.io/robots.txt" style="color:#8fe6ff" target="_blank" rel="noopener">robots.txt</a>
+    </div>
+
+    <!-- FINAL WARNING (placed last inside robot section as requested) -->
+    <div class="final-warning" role="alert" aria-live="polite">
+      ⚠️ Warning: This website contains <strong>18+ real-money gaming content</strong>.
+      <div style="margin-top:8px;font-weight:600;font-size:14px;">
+        You must be 18+ to continue. Visitors under 18 must leave this site immediately.
+      </div>
+    </div>
   </div>
 
 </body>
