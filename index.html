@@ -1,213 +1,118 @@
-<!DOCTYPE html>
-<html lang="hi">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>All Yono Games App – Rummy • Teen Patti • 2025</title>
-  <meta name="description" content="Download All Yono Games links: Teen Patti, Rummy, 3 Patti Master, 3 Patti Gold, BET51, Taurus App, Good Slots, earning apps 2025. Fast updates." />
+<!-- REPLACE your existing #apps section with this block -->
+<style>
+  /* Add/replace these CSS rules in your <head> CSS */
+  .apps-grid{
+    display:grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap:12px;
+    margin-top:12px;
+  }
+  @media(min-width:420px){
+    .apps-grid{ grid-template-columns: repeat(2, 1fr); } /* 2 columns on wider phones */
+  }
+  .app-card{
+    display:flex;
+    gap:12px;
+    align-items:center;
+    background:#07263d;
+    padding:12px;
+    border-radius:10px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.45);
+  }
+  .app-card .icon{
+    width:64px;height:64px;border-radius:12px;object-fit:cover;flex:0 0 64px;
+  }
+  .app-card .meta{flex:1}
+  .app-card .meta strong{display:block;color:#e6f8ff;margin-bottom:4px}
+  .app-card .meta small{color:#9fb0c9;display:block}
+  .app-card .dl{
+    flex:0 0 auto;
+  }
+  .app-card .dl a{
+    display:inline-block;padding:10px 14px;border-radius:12px;background:linear-gradient(180deg,#ffd24a,#c99711);color:#000;font-weight:800;text-decoration:none;box-shadow:0 8px 20px rgba(0,0,0,0.35)
+  }
+  /* Make download button wider on mobile so it's easy to tap */
+  @media(max-width:420px){
+    .app-card{flex-direction:row}
+    .app-card .dl a{min-width:96px;text-align:center;padding:10px 10px}
+  }
+</style>
 
-  <style>
-    :root{
-      --bg:#08111f;
-      --card:#0f2138;
-      --accent:#00e6ff;
-      --gold:#ffd247;
-      --text:#ffffff;
-    }
-    *{box-sizing:border-box;}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:Arial, sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      -webkit-font-smoothing:antialiased;
-    }
+<div id="apps" class="section-card" aria-label="apps list">
+  <h3>All Yono App Links</h3>
+  <p>Download all latest Yono Games, Teen Patti, Rummy SE, BET51, Taurus App, Good Slots and earning apps. Fast working links, daily updates and 100% working download buttons.</p>
 
-    /* container */
-    .wrap{max-width:780px;margin:0 auto;padding:14px 12px 110px;} /* reduced top/bottom padding for more viewport */
-
-    /* header */
-    .header{
-      text-align:center;
-      background:#0f1a34;
-      padding:12px;border-radius:12px;margin-bottom:12px;
-      color:#00faff;font-weight:800;font-size:20px;box-shadow:0 6px 18px rgba(0,0,0,0.35);
-    }
-
-    /* Banner */
-    .video-banner{
-      background:#061529;padding:16px;border-radius:14px;margin-bottom:14px;box-shadow:0 10px 26px rgba(0,0,0,0.45);
-      text-align:center;
-    }
-    .video-frame{
-      height:130px;border-radius:12px;background-size:cover;background-position:center;margin-bottom:12px;
-      box-shadow:inset 0 0 40px rgba(0,0,0,0.25);
-    }
-    .video-cta{display:inline-block;padding:12px 24px;border-radius:40px;background:linear-gradient(180deg,#ffd24a,#c88d00);color:#000;font-weight:900;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,0.35)}
-    .video-emoji{font-size:18px;margin-right:8px}
-
-    /* join area */
-    .join-box{
-      margin-top:8px;padding:18px;background:#132544;border-radius:12px;text-align:center;color:#fff;box-shadow:0 6px 20px rgba(0,0,0,0.35);
-    }
-    .join-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-    .jbtn{padding:10px 22px;border-radius:36px;font-weight:800;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,0.35)}
-    .jbtn.telegram{background:linear-gradient(180deg,#1da1ff,#0060c9);color:#fff}
-    .jbtn.wa{background:linear-gradient(180deg,#39e36f,#16b84a);color:#003500}
-
-    .share-btn{display:inline-block;margin-top:12px;background:linear-gradient(180deg,#29c96c,#12964b);color:#fff;border-radius:36px;padding:10px 22px;text-decoration:none;font-weight:900;box-shadow:0 6px 18px rgba(0,0,0,0.35)}
-
-    /* footer links */
-    .footer-links{margin-top:18px;text-align:center;display:flex;justify-content:center;gap:18px;flex-wrap:wrap;padding:12px 0}
-    .footer-links a{color:#00e6ff;font-weight:800;text-decoration:none;font-size:16px}
-
-    /* sections */
-    .section-card{background:#0f2138;padding:16px;border-radius:12px;margin-top:14px;box-shadow:0 6px 24px rgba(0,0,0,0.45)}
-    .section-card h3{margin:0 0 8px;color:#4dd3ff}
-    .section-card p{color:#dfeeff;margin:0 0 8px;line-height:1.55}
-
-    .popular-box{background:#062139;border-radius:12px;padding:14px;margin-top:14px;box-shadow:inset 0 2px 0 rgba(255,255,255,0.02), 0 8px 28px rgba(0,0,0,0.45);}
-    .popular-box h3{color:#4dd3ff;margin:0 0 8px}
-    .popular-box p{color:#e0ecff;margin:0 0 8px}
-    .popular-box h4{color:#ffd857;margin:8px 0 6px}
-    .popular-box .tags{color:#ffeaa7;margin:0}
-
-    /* robot/disclaimer area */
-    #robot-section{max-width:780px;margin:16px auto 80px;padding:12px;background:#071027;border-radius:12px;color:#dceeff;border:1px solid rgba(255,255,255,0.03)}
-    #robot-section h4{color:#7ed6ff;margin:0 0 8px}
-    .robot-links a{color:#8fe6ff}
-    .final-warning{background:linear-gradient(90deg,#e53935 0%,#b30000 100%);color:#fff;padding:14px;border-radius:10px;font-weight:800;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,0.5);margin-top:10px}
-    .final-warning small{display:block;margin-top:8px;font-weight:600;color:rgba(255,255,255,0.95)}
-
-    /* small screens */
-    @media (max-width:480px){
-      .video-frame{height:100px}
-      .wrap{padding-bottom:90px}
-      .video-cta{padding:10px 18px}
-      .header{font-size:18px;padding:10px}
-      .jbtn{padding:9px 16px}
-    }
-
-    /* smooth anchor offset so apps heading visible */
-    :target {scroll-margin-top:80px;}
-  </style>
-</head>
-<body>
-
-  <div class="wrap">
-
-    <div class="header">🔥 All Yono Games App – Download Now</div>
-
-    <!-- Banner -->
-    <div class="video-banner" aria-hidden="false">
-      <div class="video-frame" style="background-image:url('https://i.ibb.co/MDCzvZdK/taurus-app.png');" role="img" aria-label="Yono Games preview"></div>
-      <h2 style="color:#00eaff;margin:0 0 6px"><span class="video-emoji">😄</span>All Yono Games App – Download Now</h2>
-      <p style="color:#cde8ff;margin:0 0 10px">Latest Teen Patti • Rummy • Slots • Casino — Fast All-New updates (2025)</p>
-      <a class="video-cta" href="#apps" id="downloadAll">Download All Apps 🚀</a>
-    </div>
-
-    <!-- Join box -->
-    <div class="join-box" role="region" aria-label="Join and share">
-      <h3 style="margin:0 0 10px;color:#fff;font-size:18px">Join Our Telegram Channel</h3>
-      <div class="join-row" role="menu" aria-label="join options">
-        <a class="jbtn telegram" href="https://t.me/yonorummy_app" target="_blank" rel="noopener" role="button">Join Now</a>
-        <a class="jbtn wa" href="https://wa.me/?text=🔥%20Check%20these%20apps%20→%20https://allyonoapplink.github.io" target="_blank" rel="noopener" role="button">WhatsApp</a>
+  <div class="apps-grid" role="list">
+    <!-- App 1 -->
+    <div class="app-card" role="listitem">
+      <img class="icon" src="https://i.ibb.co/KccDBL1t/GoodSlots.png" alt="Good Slots">
+      <div class="meta">
+        <strong>Good Slots</strong>
+        <small>🎁 ₹40 • 🏦 ₹100</small>
       </div>
-      <a class="share-btn" href="https://wa.me/?text=🔥%20Check%20these%20earning%20apps%20→%20https://allyonoapplink.github.io" target="_blank" rel="noopener">📤 Share With Friends</a>
-    </div>
-
-    <!-- quick links -->
-    <div class="footer-links" aria-label="quick links">
-      <a href="#about">About Us</a>
-      <a href="#disclaimer">Disclaimer</a>
-      <a href="#contact">Contact Us</a>
-      <a href="#privacy">Privacy Policy</a>
-      <a href="#terms">Terms & Conditions</a>
-    </div>
-
-    <!-- APPS SECTION (apps should be visible now) -->
-    <div id="apps" class="section-card" aria-label="apps list">
-      <h3>All Yono App Links</h3>
-      <p>Download all latest Yono Games, Teen Patti, Rummy SE, BET51, Taurus App, Good Slots and earning apps. Fast working links, daily updates and 100% working download buttons.</p>
-
-      <!-- Put your app cards here (sample one shown) -->
-      <div style="display:flex;gap:12px;flex-direction:column;margin-top:12px;">
-        <div style="display:flex;align-items:center;gap:12px;background:#0b2740;padding:12px;border-radius:10px;">
-          <img src="https://i.ibb.co/KccDBL1t/GoodSlots.png" alt="Good Slots" style="width:64px;height:64px;border-radius:10px;object-fit:cover;">
-          <div style="flex:1">
-            <strong style="display:block;color:#cde8ff">Good Slots</strong>
-            <small style="color:#9fb0c9">🎁 ₹40 • 🏦 ₹100</small>
-          </div>
-          <a class="video-cta" href="https://sharegoodslots.im?pid=458075709&pkg=com.goodslotsa.dss" style="background:linear-gradient(180deg,#ffd24a,#c99711);color:#000">Download</a>
-        </div>
-
-        <!-- add your other app boxes here -->
+      <div class="dl">
+        <a href="https://sharegoodslots.im?pid=458075709&pkg=com.goodslotsa.dss" target="_blank" rel="noopener">Download</a>
       </div>
     </div>
 
-    <!-- Popular searches -->
-    <div class="popular-box" aria-labelledby="popular-heading">
-      <h3 id="popular-heading">Popular Searches</h3>
-      <p>All Yono App Link, Yono Rummy, Teen Patti, Good Slots, 3 Patti Master, Taurus App, BET51 Download, Real Cash Games, Best Earning Apps India, Rummy SE.</p>
-      <h4>Tags:</h4>
-      <p class="tags">Yono Games, Earn App, Casino, 3 Patti, Rummy, TeenPattiGold, Bonus51, Yono App Update</p>
-    </div>
-
-    <!-- About -->
-    <div id="about" class="section-card">
-      <h3>About Us</h3>
-      <p>हम All Yono Games ऐप्स के लिंक और अपडेट शेयर करते हैं — ताज़ा वर्किंग डाउनलोड बटन और छोटी टिप्स।</p>
-      <h4 style="color:#ffd857;margin:8px 0 6px">About Tags:</h4>
-      <p style="color:#ffeaa7">Yono Team, App Links, Daily Updates, App Reviews</p>
-    </div>
-
-    <!-- Disclaimer + final warning -->
-    <div id="disclaimer" class="section-card">
-      <h3>Disclaimer</h3>
-      <p>हम इन ऐप्स के डेवलपर नहीं हैं। रमी/कसिनो ऐप्स में आर्थिक जोखिम होते हैं — केवल 18+ उपयोगकर्ता ही जारी रखें।</p>
-
-      <div class="final-warning" role="alert" aria-live="polite">
-        ⚠️ Warning: This website contains <strong>18+ real-money gaming content</strong>.
-        <small>You must be 18+ to continue. Visitors under 18 must leave this site immediately.</small>
+    <!-- App 2 -->
+    <div class="app-card" role="listitem">
+      <img class="icon" src="https://i.ibb.co/jkzQ0g9K/3PattiMaster.png" alt="3 Patti Master">
+      <div class="meta">
+        <strong>3 Patti Master</strong>
+        <small>🎁 ₹60 • 🏦 ₹100</small>
+      </div>
+      <div class="dl">
+        <a href="https://www.earntp.com/m/tn3kto" target="_blank" rel="noopener">Download</a>
       </div>
     </div>
 
-    <!-- Privacy -->
-    <div id="privacy" class="section-card">
-      <h3>Privacy Policy</h3>
-      <p>हम आपकी जानकारी की सुरक्षा का सम्मान करते हैं — विस्तृत नीति के लिये पेज देखें।</p>
-      <h4 style="color:#ffd857;margin:8px 0 6px">Privacy Tags:</h4>
-      <p style="color:#ffeaa7">Cookies, Tracking, Data Usage</p>
+    <!-- App 3 -->
+    <div class="app-card" role="listitem">
+      <img class="icon" src="https://i.ibb.co/W4DK6zQm/3PattiGold.png" alt="3 Patti Gold">
+      <div class="meta">
+        <strong>3 Patti Gold</strong>
+        <small>🎁 Special • Check App</small>
+      </div>
+      <div class="dl">
+        <a href="https://www.earntp.com/gold/jexzd" target="_blank" rel="noopener">Download</a>
+      </div>
     </div>
 
-    <!-- Terms -->
-    <div id="terms" class="section-card">
-      <h3>Terms & Conditions</h3>
-      <p>साइट उपयोग नियम — उपयोगकर्ता स्वयं जिम्मेदार हैं।</p>
-      <h4 style="color:#ffd857;margin:8px 0 6px">Terms Tags:</h4>
-      <p style="color:#ffeaa7">Responsible Use, Age Limit, Liability</p>
+    <!-- App 4 -->
+    <div class="app-card" role="listitem">
+      <img class="icon" src="https://i.ibb.co/fYvbwjMd/earnTP.png" alt="Rummy SE">
+      <div class="meta">
+        <strong>Rummy SE</strong>
+        <small>🎁 varies • Check App</small>
+      </div>
+      <div class="dl">
+        <a href="https://www.rummyse.com/share/3g8pFxy" target="_blank" rel="noopener">Download</a>
+      </div>
     </div>
 
-    <!-- robot / sitemap -->
-    <div id="robot-section">
-      <h4>Robots / Sitemap</h4>
-      <div class="robot-links">Sitemap: <a href="/sitemap.xml" target="_blank" rel="noopener">sitemap.xml</a> | Robots: <a href="/robots.txt" target="_blank" rel="noopener">robots.txt</a></div>
+    <!-- App 5 -->
+    <div class="app-card" role="listitem">
+      <img class="icon" src="https://i.ibb.co/nNdCqS3M/BET51.png" alt="BET51">
+      <div class="meta">
+        <strong>BET51 Casino</strong>
+        <small>🎁 ₹51 • 🏦 ₹100</small>
+      </div>
+      <div class="dl">
+        <a href="https://wgo360.com/b/f4de1b" target="_blank" rel="noopener">Download</a>
+      </div>
     </div>
 
-    <div style="text-align:center;color:#9aa6b2;margin-top:6px">© All Yono Games • Always play responsibly</div>
-
+    <!-- App 6 -->
+    <div class="app-card" role="listitem">
+      <img class="icon" src="https://i.ibb.co/MDCzvZdK/taurus-app.png" alt="Taurus App">
+      <div class="meta">
+        <strong>Taurus App</strong>
+        <small>🎁 ₹100 • 🏦 ₹150</small>
+      </div>
+      <div class="dl">
+        <a href="https://th1.my/BJGUO3/dgvl3pf" target="_blank" rel="noopener">Download</a>
+      </div>
+    </div>
   </div>
-
-  <script>
-    // Smooth scroll to apps and slightly offset so heading is visible
-    document.getElementById('downloadAll').addEventListener('click', function(e){
-      // Let default anchor happen; but ensure smooth scroll if JS enabled
-      e.preventDefault();
-      var target = document.getElementById('apps');
-      if(!target) location.href = '#apps';
-      else target.scrollIntoView({behavior:'smooth', block:'start'});
-    });
-  </script>
-</body>
-</html>
+</div>
