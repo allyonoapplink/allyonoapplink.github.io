@@ -60,7 +60,53 @@
     }
     .age-warning small{display:block;font-weight:500;font-size:13px;margin-top:6px;color:rgba(255,255,255,0.95);}
 
-    /* === UPDATED IMPORTANT NOTICE + TAGS + TELEGRAM/WHATSAPP === */
+    /* Animated download banner styles */
+    .video-banner{
+      background:#061529;
+      padding:22px;
+      border-radius:16px;
+      margin:18px auto;
+      max-width:780px;
+      text-align:center;
+      box-shadow:0 12px 40px rgba(0,0,0,0.55);
+      animation:glow 3s infinite alternate;
+    }
+    .video-frame{
+      width:100%;
+      height:170px;
+      border-radius:12px;
+      margin-bottom:14px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.5);
+      background-size:cover;
+      background-position:center;
+    }
+    .video-banner h2{margin:0;font-size:24px;color:#00eaff;font-weight:800;}
+    .video-banner p{margin:6px 0 14px;color:#cde8ff;font-size:15px;}
+    .video-cta{
+      background:linear-gradient(180deg,#ffdd47,#c88d00);
+      padding:12px 26px;
+      font-weight:900;
+      border-radius:40px;
+      color:#000;
+      text-decoration:none;
+      font-size:17px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.45);
+      display:inline-block;
+      animation:pulse 2s infinite;
+    }
+
+    @keyframes pulse{
+      0%{transform:scale(1)}
+      50%{transform:scale(1.08)}
+      100%{transform:scale(1)}
+    }
+
+    @keyframes glow{
+      0%{box-shadow:0 0 15px #00eaff55;}
+      100%{box-shadow:0 0 30px #00eaffaa;}
+    }
+
+    /* notice box & tags */
     .notice-box{
       border:1px solid rgba(255,255,255,0.08);
       background:#0f2138;
@@ -70,18 +116,7 @@
       color:#e8efff;
       box-shadow:0 5px 20px rgba(0,0,0,0.35);
     }
-    .notice-box h3{
-      margin:0 0 12px;
-      font-size:20px;
-      font-weight:800;
-      color:#ffcf5c;
-      display:flex;
-      align-items:center;
-      gap:10px;
-    }
-    .notice-box p{margin:6px 0;font-size:15px;line-height:1.55;color:#d4e2ff;}
-    .notice-box strong{color:#fff;}
-
+    .notice-box h3{margin:0 0 12px;font-size:20px;font-weight:800;color:#ffcf5c;display:flex;align-items:center;gap:10px;}
     .tag-bar{background:#001c4b;padding:10px 14px;border-radius:8px;margin-top:22px;color:#fff;font-weight:700;font-size:15px;}
     .tag-bar span{color:#ffeb3b;font-weight:900;}
 
@@ -90,19 +125,27 @@
     .jbtn{padding:12px 26px;background:linear-gradient(180deg,#1da1ff,#0060c9);color:#fff;border-radius:40px;font-weight:800;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,0.35);}
     .jbtn:hover{transform:translateY(-4px);}
     .share-btn{margin-top:20px;background:#1bb55c;padding:12px 28px;color:#fff;border-radius:40px;text-decoration:none;font-weight:900;display:inline-block;box-shadow:0 4px 18px rgba(0,0,0,0.35);}
-    .footer-links{margin-top:26px;text-align:center;}
-    .footer-links a{margin:0 10px;color:#00e6ff;font-weight:700;text-decoration:none;}
 
     /* responsive */
     @media (max-width:480px){
       .wrap{padding:12px;}
       .icon{width:64px;height:64px}
       .download-btn{padding:8px 12px}
+      .video-frame{height:140px;}
+      .video-banner h2{font-size:20px;}
     }
   </style>
 </head>
 
 <body>
+
+  <!-- ====== REPLACED TOP: ANIMATED VIDEO BANNER + SEO BLOCK ====== -->
+  <div class="video-banner" aria-hidden="false">
+    <div class="video-frame" style="background-image:url('https://i.ibb.co/k3BrpC4/yonogamevideo.gif');"></div>
+    <h2>😄 All Yono App Link – Download Now</h2>
+    <p>Latest Teen Patti • Rummy • Slots • Casino — Fast All-New updates (2025)</p>
+    <a class="video-cta" href="#apps">Download All Apps 🚀</a>
+  </div>
 
   <!-- ====== SUPER SEO BLOCK (Body-top) ====== -->
   <section style="background:#0d1b33;padding:16px;border-radius:12px;margin:18px auto;color:#fff;max-width:780px;">
@@ -165,7 +208,7 @@
   </script>
   <!-- ====== SUPER SEO BLOCK END ====== -->
 
-  <div class="wrap">
+  <div class="wrap" id="apps">
     <div class="header">🔥 All Yono App Link – Download Now</div>
 
     <!-- 1 Good Slots -->
@@ -205,7 +248,6 @@
         <h3>Rummy SE</h3>
         <div class="meta"><div class="bonus">🎁 varies</div><div class="withdraw">🏦 Check App</div></div>
       </div>
-      <!-- Rummy SE link requested: https://www.rummyse.com/share/3g8pFxy -->
       <a class="download-btn" href="https://www.rummyse.com/share/3g8pFxy" target="_blank" rel="noopener">Download</a>
     </div>
 
@@ -216,7 +258,6 @@
         <h3>BET51 Casino</h3>
         <div class="meta"><div class="bonus">🎁 ₹51</div><div class="withdraw">🏦 ₹100</div></div>
       </div>
-      <!-- BET51 link requested: https://wgo360.com/b/f4de1b -->
       <a class="download-btn" href="https://wgo360.com/b/f4de1b" target="_blank" rel="noopener">Download</a>
     </div>
 
@@ -227,7 +268,6 @@
         <h3>Taurus App</h3>
         <div class="meta"><div class="bonus">🎁 ₹100</div><div class="withdraw">🏦 ₹150</div></div>
       </div>
-      <!-- Taurus link requested: https://th1.my/BJGUO3/dgvl3pf -->
       <a class="download-btn" href="https://th1.my/BJGUO3/dgvl3pf" target="_blank" rel="noopener">Download</a>
     </div>
 
@@ -249,14 +289,6 @@
       </div>
 
       <a class="share-btn" href="https://wa.me/?text=🔥%20Check%20these%20earning%20apps%20→%20https://allyonoapplink.github.io" target="_blank" rel="noopener">📤 Share With Friends</a>
-    </div>
-
-    <div class="footer-links">
-      <a href="#">About Us</a>
-      <a href="#">Disclaimer</a>
-      <a href="#">Contact Us</a>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms & Conditions</a>
     </div>
 
     <!-- 🌟 FOOTER SEO BOOST START -->
@@ -281,12 +313,11 @@
 
   </div> <!-- .wrap end -->
 
-  <!-- FIXED 18+ WARNING -->
-  <div class="age-warning">
+  <!-- FIXED 18+ WARNING (LAST - always visible at bottom) -->
+  <div class="age-warning" role="alert" aria-live="polite">
     ⚠️ Warning: This website contains <strong>18+ real-money gaming content</strong>.  
     <small>You must be 18+ to continue. Visitors under 18 must leave this site immediately.</small>
   </div>
 
 </body>
 </html>
-
