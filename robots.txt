@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://allyonoapplink.github.io/sitemap.xml
