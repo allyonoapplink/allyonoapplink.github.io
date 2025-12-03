@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="hi">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>All Yono Games App Update • Rummy • Teen Patti • 2025</title>
+  <title>All Yono Games App – Rummy • Teen Patti • 2025</title>
   <meta name="description" content="Download All Yono Games links: Teen Patti, Rummy, 3 Patti Master, 3 Patti Gold, BET51, Taurus App, Good Slots, earning apps 2025. Fast updates." />
 
   <style>
@@ -13,10 +14,7 @@
       --accent:#00e6ff;
       --gold:#ffd247;
       --text:#ffffff;
-      --join-blue-start:#218cff;
-      --join-blue-end:#0b6fff;
-      --join-green:#24d366;
-      --share-green:#1bb55c;
+      --warning-height:88px; /* change this value to control warning bar height */
     }
     *{box-sizing:border-box;}
     body{
@@ -26,7 +24,13 @@
       color:var(--text);
       -webkit-font-smoothing:antialiased;
     }
-    .wrap{max-width:780px;margin:0 auto;padding:18px 12px 160px;}
+
+    /* ensure the bottom area remains visible above the fixed warning */
+    .wrap{
+      max-width:780px;
+      margin:0 auto;
+      padding:18px 12px calc(var(--warning-height) + 70px); /* important: leaves space for fixed bar */
+    }
 
     .header{
       text-align:center;
@@ -44,109 +48,82 @@
       box-shadow:0 10px 30px rgba(0,0,0,0.45);
       text-align:center;
     }
-    .join-box-screenshot h3{
-      margin:0 0 16px;
-      font-size:22px;
-      color:#ffffff;
-      font-weight:900;
-    }
-    .join-row{
-      display:flex;
-      gap:14px;
-      justify-content:center;
-      align-items:center;
-      flex-wrap:wrap;
-    }
-    .join-btn-blue{
-      background:linear-gradient(180deg,var(--join-blue-start),var(--join-blue-end));
-      color:#fff;
-      padding:12px 28px;
-      border-radius:40px;
-      font-weight:900;
-      text-decoration:none;
-      box-shadow:0 8px 20px rgba(0,0,0,0.45);
-      display:inline-block;
-      min-width:140px;
-      text-align:center;
-    }
-    .join-btn-green{
-      background:linear-gradient(180deg,#39e36f,#16b84a);
-      color:#003500;
-      padding:12px 28px;
-      border-radius:40px;
-      font-weight:900;
-      text-decoration:none;
-      box-shadow:0 8px 20px rgba(0,0,0,0.45);
-      display:inline-block;
-      min-width:140px;
-      text-align:center;
-    }
-    .share-btn-wide{
-      margin-top:18px;
-      display:inline-block;
-      background:linear-gradient(180deg,#29c96c,#12964b);
-      color:#fff;
-      padding:12px 30px;
-      border-radius:40px;
-      font-weight:900;
-      text-decoration:none;
-      box-shadow:0 8px 20px rgba(0,0,0,0.45);
-    }
+    .join-box-screenshot h3{margin:0 0 16px;font-size:22px;color:#ffffff;font-weight:900;}
+    .join-row{display:flex;gap:14px;justify-content:center;align-items:center;flex-wrap:wrap;}
+    .join-btn-blue{background:linear-gradient(180deg,#218cff,#0b6fff);color:#fff;padding:12px 28px;border-radius:40px;font-weight:900;text-decoration:none;box-shadow:0 8px 20px rgba(0,0,0,0.45);display:inline-block;min-width:140px;text-align:center;}
+    .join-btn-green{background:linear-gradient(180deg,#39e36f,#16b84a);color:#003500;padding:12px 28px;border-radius:40px;font-weight:900;text-decoration:none;box-shadow:0 8px 20px rgba(0,0,0,0.45);display:inline-block;min-width:140px;text-align:center;}
+    .share-btn-wide{margin-top:18px;display:inline-block;background:linear-gradient(180deg,#29c96c,#12964b);color:#fff;padding:12px 30px;border-radius:40px;font-weight:900;text-decoration:none;box-shadow:0 8px 20px rgba(0,0,0,0.45);}
 
-    /* footer links */
-    .footer-links{
-      margin-top:26px;
-      text-align:center;
-      display:flex;
-      justify-content:center;
-      gap:18px;
-      flex-wrap:wrap;
-    }
-    .footer-links a{
-      color:#00e6ff;
-      font-weight:800;
-      text-decoration:none;
-      font-size:16px;
-    }
+    .footer-links{margin-top:26px;text-align:center;display:flex;justify-content:center;gap:18px;flex-wrap:wrap;}
+    .footer-links a{color:#00e6ff;font-weight:800;text-decoration:none;font-size:16px;}
 
-    /* Popular searches box (screenshot style) */
-    .popular-box{
-      background:#062139;
-      border-radius:12px;
-      padding:18px;
-      margin-top:26px;
-      box-shadow:inset 0 2px 0 rgba(255,255,255,0.02), 0 8px 28px rgba(0,0,0,0.45);
-    }
+    .popular-box{background:#062139;border-radius:12px;padding:18px;margin-top:26px;box-shadow:inset 0 2px 0 rgba(255,255,255,0.02), 0 8px 28px rgba(0,0,0,0.45);}
     .popular-box h3{color:#4dd3ff;margin:0 0 10px;font-size:18px;}
     .popular-box p{color:#e0ecff;margin:0 0 12px;line-height:1.5;}
     .popular-box h4{color:#ffd857;margin:6px 0 8px;}
     .popular-box .tags{color:#ffeaa7;margin:0;}
 
-    /* Fixed bottom warning bar (screenshot) */
+    .footer{margin-top:18px;color:#9aa6b2;text-align:center;font-size:13px;}
+
+    /* DISMISSIBLE fixed warning (smaller and accessible) */
     .fixed-warning{
       position:fixed;
-      bottom:0;
       left:0;
+      bottom:0;
       width:100%;
+      height:var(--warning-height);
       background:linear-gradient(90deg,#ff4a4a 0%,#d21b1b 100%);
       color:#fff;
-      padding:16px 14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 18px;
+      z-index:9999;
+      box-shadow:0 -8px 30px rgba(0,0,0,0.45);
+      transition:transform .28s ease,opacity .28s ease;
+    }
+    .fixed-warning.hidden{
+      transform:translateY(120%);
+      opacity:0;
+      pointer-events:none;
+    }
+    .fixed-warning .content{
+      max-width:980px;
       text-align:center;
       font-weight:800;
-      z-index:9999;
-      box-shadow:0 -8px 30px rgba(0,0,0,0.5);
+      line-height:1.15;
       font-size:16px;
     }
-    .fixed-warning small{display:block;font-weight:600;margin-top:8px;color:rgba(255,255,255,0.95);font-size:14px;}
-
-    .footer{margin-top:18px;color:#9aa6b2;text-align:center;font-size:13px;}
+    .fixed-warning .content small{display:block;font-weight:700;margin-top:8px;font-size:14px;color:rgba(255,255,255,0.95)}
+    /* close button */
+    .warn-close{
+      position:absolute;
+      right:14px;
+      top:10px;
+      background:rgba(0,0,0,0.18);
+      border:1px solid rgba(255,255,255,0.12);
+      color:#fff;
+      width:36px;
+      height:36px;
+      border-radius:999px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+      font-weight:900;
+      box-shadow:0 6px 14px rgba(0,0,0,0.4);
+    }
+    .warn-close:focus{outline:2px solid rgba(255,255,255,0.25)}
+    /* small warning icon */
+    .warn-icon{margin-right:10px;font-size:20px}
 
     @media (max-width:480px){
       .join-row{gap:10px}
       .join-btn-blue,.join-btn-green{min-width:120px;padding:10px 18px;font-size:15px}
       .share-btn-wide{width:100%}
+      .fixed-warning{height:var(--warning-height);font-size:15px;padding:10px}
+      .warn-close{right:10px;top:8px;width:34px;height:34px}
     }
-
   </style>
 </head>
 
@@ -155,21 +132,16 @@
   <div class="wrap">
     <div class="header">🔥 All Yono Games App – Download Now</div>
 
-    <!-- --- PLACE YOUR HERO/CTA ABOVE (kept earlier) --- -->
-
     <!-- Join box (screenshot style) -->
     <div class="join-box-screenshot" aria-label="Join and share">
       <h3>Join Our Telegram Channel</h3>
-
       <div class="join-row" role="menu" aria-label="join options">
         <a class="join-btn-blue" href="https://t.me/yonorummy_app" target="_blank" rel="noopener" role="button">Join Now</a>
         <a class="join-btn-green" href="https://wa.me/?text=🔥%20Check%20these%20apps%20→%20https://allyonoapplink.github.io" target="_blank" rel="noopener" role="button">WhatsApp</a>
       </div>
-
       <a class="share-btn-wide" href="https://wa.me/?text=🔥%20Check%20these%20earning%20apps%20→%20https://allyonoapplink.github.io" target="_blank" rel="noopener">📤 Share With Friends</a>
     </div>
 
-    <!-- footer links (center) -->
     <div class="footer-links" aria-label="footer links">
       <a href="#">About Us</a>
       <a href="#">Disclaimer</a>
@@ -178,7 +150,6 @@
       <a href="#">Terms & Conditions</a>
     </div>
 
-    <!-- Popular searches box -->
     <div class="popular-box" aria-labelledby="popular-heading">
       <h3 id="popular-heading">Popular Searches</h3>
       <p>
@@ -192,11 +163,62 @@
 
   </div> <!-- .wrap end -->
 
-  <!-- Fixed warning bar at bottom (screenshot-like) -->
-  <div class="fixed-warning" role="alert" aria-live="polite">
-    ⚠️ Warning: This website contains <strong>18+ real-money gaming content</strong>.
-    <small>You must be 18+ to continue. Visitors under 18 must leave this site immediately.</small>
+  <!-- Fixed dismissible warning bar -->
+  <div id="fixedWarning" class="fixed-warning" role="alert" aria-live="polite" aria-atomic="true">
+    <button id="warnClose" class="warn-close" aria-label="Close warning (hide)">×</button>
+    <div class="content">
+      <span class="warn-icon">⚠️</span>
+      <strong>Warning:</strong> This website contains <strong>18+ real-money gaming content</strong>.
+      <small>You must be 18+ to continue. Visitors under 18 must leave this site immediately.</small>
+    </div>
   </div>
+
+  <script>
+    (function(){
+      var key = 'yono_warning_closed_v1';
+      var bar = document.getElementById('fixedWarning');
+      var btn = document.getElementById('warnClose');
+
+      // If user closed it earlier (persisted), hide now
+      try {
+        if(localStorage && localStorage.getItem(key) === '1') {
+          bar.classList.add('hidden');
+        }
+      } catch(e){ /* ignore storage errors */ }
+
+      // Close handler
+      btn.addEventListener('click', function(e){
+        e.preventDefault();
+        bar.classList.add('hidden');
+        try { localStorage && localStorage.setItem(key, '1'); } catch(err){}
+      });
+
+      // Allow Esc key to close when focused anywhere (accessibility)
+      document.addEventListener('keydown', function(e){
+        if(e.key === 'Escape') {
+          if(!bar.classList.contains('hidden')) {
+            bar.classList.add('hidden');
+            try { localStorage && localStorage.setItem(key, '1'); } catch(err){}
+          }
+        }
+      });
+
+      // If user taps the warning itself, don't block (but keep present)
+      bar.addEventListener('click', function(e){
+        // don't close when clicking content; only use close button
+        if(e.target === bar) { /* optional behaviour */ }
+      });
+
+      // For first-time visitors: small bounce animation to draw attention (only once)
+      try {
+        var bounceKey = 'yono_warning_bounced_v1';
+        if(localStorage && !localStorage.getItem(bounceKey)) {
+          bar.style.transform = 'translateY(8px)';
+          setTimeout(function(){ bar.style.transform = ''; localStorage.setItem(bounceKey, '1'); }, 700);
+        }
+      } catch(e){}
+    })();
+  </script>
 
 </body>
 </html>
