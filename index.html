@@ -1,78 +1,227 @@
-<!-- ===== OLD PROFILE HEADER (paste & replace existing header) ===== -->
-<header style="max-width:980px;margin:0 auto 18px;padding:10px 6px;">
-  <div style="display:flex;align-items:center;justify-content:space-between;background:#0f2138;padding:10px;border-radius:10px;">
-    <!-- left: logo + site name -->
-    <div style="display:flex;align-items:center;gap:10px;">
-      <!-- rocket icon: change src if you have your image -->
-      <div style="width:44px;height:44px;border-radius:10px;background:linear-gradient(180deg,#ffd24a,#c99711);display:flex;align-items:center;justify-content:center;font-weight:900;color:#041013;">
-        🚀
-      </div>
-      <div>
-        <div style="font-weight:900;color:#00f0ff;font-size:16px;line-height:1;">All Yono Games</div>
-      </div>
-    </div>
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>All Yono Games — Top Fast Links</title>
+  <meta name="description" content="Top Fast Yono Links — Yono Rummy, 789 Jackpots, 101Z Games, Slots Winner." />
+  <style>
+    /* simple safe styles so page definitely shows */
+    html,body{height:100%;margin:0;background:#031827;color:#e6f7ff;font-family:Inter,Arial,sans-serif}
+    .wrap{max-width:980px;margin:12px auto;padding:12px}
+    /* old header style (your requested header) */
+    .old-header .topbar{display:flex;align-items:center;justify-content:space-between;background:#0f2138;padding:10px;border-radius:10px}
+    .brand{display:flex;align-items:center;gap:10px}
+    .rocket{width:44px;height:44px;border-radius:10px;background:linear-gradient(180deg,#ffd24a,#c99711);display:flex;align-items:center;justify-content:center;color:#041013;font-weight:900}
+    .brand h1{margin:0;font-size:16px;color:#00f0ff;font-weight:900}
+    .top-actions{display:flex;gap:10px;align-items:center}
+    .tele-small{background:#2b8cff;color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:800}
+    .robot-link{background:#0b3140;color:#9fe6ff;padding:8px 10px;border-radius:8px;font-weight:800;cursor:pointer}
+    .menu-btn{background:transparent;border:0;color:#cfeeff;padding:8px;font-weight:800;cursor:pointer}
 
-    <!-- right: buttons (Join Telegram / Robots / Menu) -->
-    <div style="display:flex;gap:10px;align-items:center;">
-      <a href="https://t.me/yonorummy_app" target="_blank" rel="noopener"
-         style="background:#2b8cff;color:#fff;padding:8px 12px;border-radius:8px;font-weight:800;text-decoration:none;font-size:13px;">
-         Join Telegram
-      </a>
+    .top-label{display:inline-block;margin:12px 0;padding:6px 10px;background:rgba(255,216,107,0.06);color:#ffd86b;border-radius:8px;font-weight:900}
 
-      <button id="robotBtnHeader" style="background:#0b3140;color:#9fe6ff;padding:8px 12px;border-radius:8px;font-weight:800;font-size:13px;border:0;cursor:pointer;">
-        Robots / All Games
-      </button>
+    /* cards area */
+    .fast-grid{display:grid;gap:12px;margin-bottom:14px}
+    .fast-card{display:flex;gap:12px;align-items:center;background:linear-gradient(180deg,#113041,#07232f);padding:12px;border-radius:12px}
+    .icon{width:72px;height:72px;border-radius:10px;overflow:hidden;background:#001a2b;display:flex;align-items:center;justify-content:center}
+    .icon img{width:100%;height:100%;object-fit:cover}
+    .app-info h3{margin:0;color:#00f0ff;font-size:18px}
+    .meta{color:#9fb0c9;font-size:13px;margin-top:8px;display:flex;gap:10px;align-items:center}
 
-      <button id="menuBtnHeader" aria-expanded="false" style="background:transparent;border:0;color:#cfeeff;padding:8px;font-weight:800;cursor:pointer;">
-        ☰ Menu
-      </button>
-    </div>
-  </div>
-</header>
+    .download-btn{padding:10px 16px;border-radius:12px;background:linear-gradient(180deg,#2dd36f,#1aa84f);color:#012b10;font-weight:900;border:0;cursor:pointer}
 
-<!-- small JS to toggle panels (paste near end of body or in your main script) -->
-<script>
-  (function(){
-    var robotBtn = document.getElementById('robotBtnHeader');
-    var menuBtn = document.getElementById('menuBtnHeader');
+    /* app list */
+    .apps-grid{display:grid;gap:12px;margin-top:12px}
+    .app-card{display:flex;gap:12px;align-items:center;background:linear-gradient(180deg,#0b2a3b,#082235);padding:12px;border-radius:12px;position:relative}
+    .rank-badge{position:absolute;left:-18px;top:14px;width:56px;height:56px;border-radius:10px;background:#ffd24a;color:#041013;display:flex;align-items:center;justify-content:center;font-weight:900}
 
-    // create panels if not exist (keeps original profile untouched visually)
-    function createPanel(id, rightPx){
-      var panel = document.getElementById(id);
-      if(panel) return panel;
-      panel = document.createElement('div');
-      panel.id = id;
-      panel.style.position = 'fixed';
-      panel.style.top = '64px';
-      panel.style.right = rightPx || '12px';
-      panel.style.background = '#071b2b';
-      panel.style.padding = '8px';
-      panel.style.borderRadius = '8px';
-      panel.style.display = 'none';
-      panel.style.zIndex = 9999;
-      document.body.appendChild(panel);
-      return panel;
+    /* footer / opinion */
+    .opinion{margin-top:16px;padding:12px;border-radius:12px;background:#0b2230}
+    .seo{margin-top:14px;color:#cfeeff;padding:12px;background:#071827;border-radius:12px}
+
+    /* responsive small */
+    @media(max-width:520px){
+      .rank-badge{left:6px;top:8px;width:48px;height:48px}
+      .fast-card, .app-card{padding-left:18px}
     }
+  </style>
+</head>
+<body>
+  <div class="wrap">
 
-    var robotPanel = createPanel('robotPanelHeader','120px');
-    robotPanel.innerHTML = '<a href=\"#apps\" style=\"display:block;color:#e6f7f7;padding:8px 10px;text-decoration:none;border-radius:6px;\">All Games (Open)</a><a href=\"/robots.txt\" target=\"_blank\" style=\"display:block;color:#e6f7f7;padding:8px 10px;text-decoration:none;border-radius:6px;\">robots.txt</a>';
+    <!-- OLD HEADER -->
+    <header class="old-header" aria-label="Old profile header">
+      <div class="topbar">
+        <div class="brand">
+          <div class="rocket">🚀</div>
+          <h1>All Yono Games</h1>
+        </div>
 
-    var menuPanel = createPanel('menuPanelHeader','12px');
-    menuPanel.innerHTML = '<a href=\"#about\" style=\"display:block;color:#e6f7f7;padding:8px 10px;text-decoration:none;border-radius:6px;\">About</a><a href=\"#contact\" style=\"display:block;color:#e6f7f7;padding:8px 10px;text-decoration:none;border-radius:6px;\">Contact</a><a href=\"#disclaimer\" style=\"display:block;color:#e6f7f7;padding:8px 10px;text-decoration:none;border-radius:6px;\">Disclaimer</a>';
+        <div class="top-actions">
+          <a class="tele-small" href="https://t.me/yonorummy_app" target="_blank" rel="noopener">Join Telegram</a>
+          <div class="robot-link" id="robotBtnHeader">Robots / All Games</div>
+          <button class="menu-btn" id="menuBtnHeader" aria-expanded="false">☰ Menu</button>
+        </div>
+      </div>
+    </header>
 
-    robotBtn && robotBtn.addEventListener('click', function(e){
-      e.stopPropagation();
-      robotPanel.style.display = robotPanel.style.display === 'block' ? 'none' : 'block';
+    <!-- content -->
+    <div>
+      <div class="top-label">TOP FAST — Quick open</div>
+
+      <section class="fast-grid" aria-label="Top fast">
+        <div class="fast-card">
+          <div class="rank-badge">1</div>
+          <div class="icon"><img src="https://i.ibb.co/9mZ24gP2/1764847040178.jpg" alt="Yono Rummy"></div>
+          <div class="app-info">
+            <h3>Yono Rummy</h3>
+            <div class="meta"><span>🎁 ₹40–₹120</span><span>🏦 Min ₹100</span></div>
+          </div>
+          <div><button class="download-btn" data-link="https://yonorummy003.com/?code=VIP17W6WRJE&t=1764846515">Download</button></div>
+        </div>
+
+        <div class="fast-card">
+          <div class="rank-badge">2</div>
+          <div class="icon"><img src="https://i.ibb.co/gb3JSmmw/Screenshot-20251204-164648.jpg" alt="Slots Winner"></div>
+          <div class="app-info">
+            <h3>Slots Winner</h3>
+            <div class="meta"><span>🎁 ₹80</span><span>🏦 Min ₹100</span></div>
+          </div>
+          <div><button class="download-btn" data-link="https://slotwinner.app/?code=K4E9L13WN7Z&t=1764848119">Download</button></div>
+        </div>
+
+        <div class="fast-card">
+          <div class="rank-badge">3</div>
+          <div class="icon"><img src="https://i.ibb.co/xqvd2TqX/1764847083323.jpg" alt="789 Jackpots"></div>
+          <div class="app-info">
+            <h3>789 Jackpots</h3>
+            <div class="meta"><span>🎁 ₹70</span><span>🏦 Min ₹100</span></div>
+          </div>
+          <div><button class="download-btn" data-link="https://789jackpots.club/?code=HSRERPBPZS9&t=1764847360">Download</button></div>
+        </div>
+
+        <div class="fast-card">
+          <div class="rank-badge">4</div>
+          <div class="icon"><img src="https://i.ibb.co/N6bnvmrw/1764847249976.jpg" alt="101Z Games"></div>
+          <div class="app-info">
+            <h3>101Z Games</h3>
+            <div class="meta"><span>🎁 ₹50</span><span>🏦 Min ₹100</span></div>
+          </div>
+          <div><button class="download-btn" data-link="https://101z1.com/?code=3988734F461&t=1764847949">Download</button></div>
+        </div>
+      </section>
+
+      <section class="apps-grid" id="apps">
+        <!-- 5 -->
+        <div class="app-card">
+          <div class="rank-badge">5</div>
+          <div class="icon"><img src="https://i.ibb.co/KccDBL1t/GoodSlots.png" alt="Good Slots"></div>
+          <div class="app-info"><h3>Good Slots</h3><div class="meta"><span>🎁 ₹40</span><span>🏦 Min ₹100</span></div></div>
+          <div><button class="download-btn" data-link="https://sharegoodslots.im?pid=458075709&pkg=com.goodslotsa.dss">Download</button></div>
+        </div>
+
+        <!-- 6 -->
+        <div class="app-card">
+          <div class="rank-badge">6</div>
+          <div class="icon"><img src="https://i.ibb.co/jkzQ0g9K/3PattiMaster.png" alt="Teen Patti"></div>
+          <div class="app-info"><h3>Teen Patti Master</h3><div class="meta"><span>🎁 ₹60</span><span>🏦 Min ₹100</span></div></div>
+          <div><button class="download-btn" data-link="https://www.earntp.com/m/tn3kto">Download</button></div>
+        </div>
+
+        <!-- 7 -->
+        <div class="app-card">
+          <div class="rank-badge">7</div>
+          <div class="icon"><img src="https://i.ibb.co/W4DK6zQm/3PattiGold.png" alt="3 Patti Gold"></div>
+          <div class="app-info"><h3>Teen Patti Gold</h3><div class="meta"><span>🎁 Special</span><span>🏦 Check App</span></div></div>
+          <div><button class="download-btn" data-link="https://www.earntp.com/gold/jexzd">Download</button></div>
+        </div>
+
+        <!-- 8 -->
+        <div class="app-card">
+          <div class="rank-badge">8</div>
+          <div class="icon"><img src="https://i.ibb.co/fYvbwjMd/earnTP.png" alt="Rummy SE"></div>
+          <div class="app-info"><h3>Rummy SE</h3><div class="meta"><span>🎁 varies</span><span>🏦 Check App</span></div></div>
+          <div><button class="download-btn" data-link="https://www.rummyse.com/share/3g8pFxy">Download</button></div>
+        </div>
+
+        <!-- 9 -->
+        <div class="app-card">
+          <div class="rank-badge">9</div>
+          <div class="icon"><img src="https://i.ibb.co/nNdCqS3M/BET51.png" alt="BET51"></div>
+          <div class="app-info"><h3>BET51</h3><div class="meta"><span>🎁 ₹51</span><span>🏦 Min ₹100</span></div></div>
+          <div><button class="download-btn" data-link="https://wgo360.com/b/f4de1b">Download</button></div>
+        </div>
+
+        <!-- 10 -->
+        <div class="app-card">
+          <div class="rank-badge">10</div>
+          <div class="icon"><img src="https://i.ibb.co/MDCzvZdK/taurus-app.png" alt="Taurus"></div>
+          <div class="app-info"><h3>Taurus App</h3><div class="meta"><span>🎁 ₹100</span><span>🏦 Min ₹150</span></div></div>
+          <div><button class="download-btn" data-link="https://th1.my/BJGUO3/dgvl3pf">Download</button></div>
+        </div>
+
+      </section>
+
+      <div class="opinion">
+        <strong>Opinion — जुड़ना चाहते हैं?</strong>
+        <div style="margin-top:10px">
+          <a style="background:#2b8cff;color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:800" href="https://t.me/yonorummy_app" target="_blank">Join Telegram</a>
+          <a style="background:#ffd86b;color:#041013;padding:8px 12px;border-radius:8px;font-weight:800;margin-left:8px" href="https://wa.me/?text=Check%20these%20apps%20https://allyonoapplink.github.io" target="_blank">WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="seo">
+        <strong>Popular searches & tags:</strong>
+        <div style="margin-top:8px;color:#cfeeff">Yono Rummy, 789 Jackpots, 101Z Games, Slots Winner, Good Slots, Teen Patti, Rummy SE, BET51, Taurus App.</div>
+      </div>
+    </div>
+
+  <!-- age notice -->
+  <div id="ageNote" style="position:fixed;left:12px;right:12px;bottom:14px;padding:12px;border-radius:12px;background:linear-gradient(90deg,#ff4d4f,#c70000);color:#fff;display:flex;align-items:center;gap:12px;z-index:9999">
+    <div style="flex:1">⚠️ <strong>This website contains 18+ real-money gaming content.</strong></div>
+    <button id="ageOk" style="background:rgba(255,255,255,0.12);border:0;color:#fff;padding:8px 10px;border-radius:8px;font-weight:800">OK</button>
+  </div>
+
+  <script>
+    // header panels (robot/menu)
+    (function(){
+      var robotBtn = document.getElementById('robotBtnHeader'), menuBtn = document.getElementById('menuBtnHeader');
+
+      function createPanel(id,right){
+        var p=document.getElementById(id); if(p) return p;
+        p=document.createElement('div'); p.id=id; p.style.position='fixed'; p.style.top='64px'; p.style.right=right||'12px';
+        p.style.background='#071b2b'; p.style.padding='8px'; p.style.borderRadius='8px'; p.style.display='none'; p.style.zIndex=9999;
+        document.body.appendChild(p); return p;
+      }
+      var robotPanel=createPanel('robotPanel','120px'); robotPanel.innerHTML='<a href=\"#apps\" style=\"display:block;color:#e6f7f7;padding:8px 10px;text-decoration:none\">All Games (Open)</a>';
+      var menuPanel=createPanel('menuPanel','12px'); menuPanel.innerHTML='<a href=\"#about\" style=\"display:block;color:#e6f7f7;padding:8px 10px;text-decoration:none\">About</a>';
+
+      robotBtn && robotBtn.addEventListener('click', function(e){ e.stopPropagation(); robotPanel.style.display = robotPanel.style.display==='block'?'none':'block'; });
+      menuBtn && menuBtn.addEventListener('click', function(e){ e.stopPropagation(); menuPanel.style.display = menuPanel.style.display==='block'?'none':'block'; menuBtn.setAttribute('aria-expanded', menuPanel.style.display==='block'); });
+      document.addEventListener('click', function(ev){ if(!robotPanel.contains(ev.target) && ev.target!==robotBtn) robotPanel.style.display='none'; if(!menuPanel.contains(ev.target) && ev.target!==menuBtn) menuPanel.style.display='none'; });
+
+      // robotPanel link scroll
+      robotPanel.querySelectorAll('a[href="#apps"]').forEach(function(a){ a.addEventListener('click', function(e){ e.preventDefault(); document.getElementById('apps') && document.getElementById('apps').scrollIntoView({behavior:'smooth'}); robotPanel.style.display='none'; }); });
+    })();
+
+    // download buttons - open (replace so user doesn't come back)
+    document.querySelectorAll('.download-btn').forEach(function(b){
+      b.addEventListener('click', function(){
+        var u = this.getAttribute('data-link'); if(!u) return;
+        // hide age note
+        var n=document.getElementById('ageNote'); if(n) n.style.display='none';
+        this.disabled=true; this.textContent='Opening...';
+        // open in same tab (replace)
+        try{ setTimeout(function(){ window.location.replace(u); }, 120); } catch(e){ window.location.href=u; }
+      });
     });
-    menuBtn && menuBtn.addEventListener('click', function(e){
-      e.stopPropagation();
-      menuPanel.style.display = menuPanel.style.display === 'block' ? 'none' : 'block';
-      menuBtn.setAttribute('aria-expanded', menuPanel.style.display === 'block');
-    });
 
-    document.addEventListener('click', function(ev){
-      if(!robotPanel.contains(ev.target) && ev.target !== robotBtn) robotPanel.style.display = 'none';
-      if(!menuPanel.contains(ev.target) && ev.target !== menuBtn) menuPanel.style.display = 'none';
-    });
-  })();
-</script>
+    document.getElementById('ageOk').addEventListener('click', function(){ document.getElementById('ageNote').style.display='none'; });
+
+    // debug: if page still blank, check console and element count
+    // (developer: user can open console - but mobile limited)
+    console.log('All Yono Games: page loaded. Download buttons:', document.querySelectorAll('.download-btn').length);
+  </script>
+</body>
+</html>
