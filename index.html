@@ -6,93 +6,125 @@
 <title>All Yono Games — Download APKs & Signup Bonuses ₹35–₹500 | 2025</title>
 <link rel="icon" href="https://i.ibb.co/KccDBL1t/GoodSlots.png">
 <style>
-  :root{
-    --bg:#061223; --accent:#00f0ff; --gold:#ffd247;
-  }
-  *{box-sizing:border-box} body{margin:0;font-family:Inter,Arial,sans-serif;background:linear-gradient(180deg,#061223,#031827);color:#e6f7ff}
-  .wrap{max-width:980px;margin:18px auto;padding:16px}
-  .header{background:#0f2138;padding:14px;border-radius:12px;text-align:center;margin-bottom:16px}
-  .header h1{color:var(--accent);margin:0}
+:root{
+  --bg1:#061223; --bg2:#031827; --accent:#00f0ff; --gold1:#ffd65a; --gold2:#d19500;
+  --card:#071827; --muted:#9fb0c9;
+}
+*{box-sizing:border-box} body{margin:0;font-family:Inter,Arial,sans-serif;background:linear-gradient(180deg,var(--bg1),var(--bg2));color:#e6f7ff;-webkit-font-smoothing:antialiased}
+.wrap{max-width:980px;margin:18px auto;padding:16px}
+.header{padding:18px;border-radius:14px;text-align:center;margin-bottom:18px;background:
+  radial-gradient(1000px 200px at 10% 10%, rgba(255,200,80,0.06), transparent),
+  linear-gradient(180deg,#071a2a,#07232f); box-shadow: 0 12px 40px rgba(0,0,0,0.6)}
+.header h1{color:var(--accent);margin:0;font-weight:900; font-size:20px; text-shadow:0 6px 18px rgba(0,240,255,0.06)}
 
-  .apps-grid{display:grid;grid-template-columns:1fr;gap:12px}
-  @media(min-width:720px){.apps-grid{grid-template-columns:repeat(2,1fr)}}
+/* HERO with 3D-ish frame */
+.hero{background:linear-gradient(135deg,#ffd6a6,#60e6ff);border-radius:18px;padding:20px;text-align:center;margin-bottom:18px; box-shadow: 0 18px 40px rgba(0,0,0,0.5), inset 0 -6px 30px rgba(0,0,0,0.08)}
+.video-frame{height:160px;border-radius:12px;background:linear-gradient(180deg,#032028,#042b34);display:flex;align-items:center;justify-content:center;color:#e9fbff;margin-bottom:12px;box-shadow:0 8px 30px rgba(0,0,0,0.45)}
+.video-cta{display:inline-flex;align-items:center;gap:10px;padding:12px 28px;border-radius:999px;background:linear-gradient(180deg,var(--gold1),var(--gold2));color:#041013;font-weight:900;text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,0.45)}
 
-  .app-card{display:flex;gap:12px;align-items:center;background:linear-gradient(180deg,#0b2a3b,#082235);padding:12px;border-radius:12px}
-  .icon img{width:64px;height:64px;border-radius:10px;object-fit:cover}
-  .app-info h3{margin:0;color:var(--accent)}
-  .meta{color:#9fb0c9;font-size:13px;margin-top:6px}
+/* apps */
+.apps-grid{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:720px){.apps-grid{grid-template-columns:repeat(2,1fr)}}
+.app-card{display:flex;gap:12px;align-items:center;background:linear-gradient(180deg,#0b2a3b,#082235);padding:12px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.45)}
+.icon img{width:64px;height:64px;border-radius:10px;object-fit:cover}
+.app-info h3{margin:0;color:var(--accent)}
+.meta{color:var(--muted);font-size:13px;margin-top:6px}
 
-  /* main control row */
-  .controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:center;margin-top:14px}
-  .big-download{background:linear-gradient(180deg,#ffd65a,#d19500);color:#041013;border-radius:16px;padding:14px 22px;font-weight:900;font-size:18px;box-shadow:0 12px 30px rgba(0,0,0,0.45);border:0;cursor:pointer}
-  .mini-action{padding:12px 14px;border-radius:12px;background:rgba(255,255,255,0.06);color:#fff;font-weight:800;cursor:pointer;border:0}
-  .mini-action.copy{background:#39e639;color:#041f0c}
-  .mini-action.home{background:#1da1ff}
-  .mini-action.share{background:#25D366;color:#071f12}
+/* control bar */
+.controls{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:center;margin-top:18px}
+.big-download{background:linear-gradient(180deg,var(--gold1),var(--gold2));color:#041013;border-radius:18px;padding:14px 26px;font-weight:900;font-size:18px;box-shadow:0 18px 40px rgba(0,0,0,0.45);border:0;cursor:pointer;transition:transform .12s,box-shadow .12s,filter .12s}
+.big-download:hover{box-shadow:0 28px 60px rgba(0,0,0,0.5),0 0 28px rgba(255,215,80,0.12); transform:translateY(-4px)}
+.big-download:active{transform:translateY(0); filter:brightness(.98)}
 
-  /* overlay & sheet */
-  .overlay{position:fixed;inset:0;background:rgba(0,0,0,0.5);opacity:0;visibility:hidden;transition:.2s;z-index:99}
-  .overlay.show{opacity:1;visibility:visible}
-  .sheet{position:fixed;left:0;right:0;bottom:-120%;background:linear-gradient(180deg,#071827,#05202a);border-top-left-radius:16px;border-top-right-radius:16px;padding:18px;color:#e6f7ff;transition:.28s;z-index:100}
-  .sheet.show{bottom:0}
-  .grab{width:56px;height:6px;background:rgba(255,255,255,0.06);margin:6px auto;border-radius:99px}
-  .profile-head{display:flex;gap:12px;align-items:center}
-  .profile-head img{width:72px;height:72px;border-radius:10px;object-fit:cover}
-  .actions{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
-  .actions a{padding:12px;border-radius:12px;text-decoration:none;font-weight:900}
-  .download-action{background:linear-gradient(180deg,#ffd65a,#d19500);color:#041013}
-  .tg{background:#1da1ff;color:#fff}
-  .wa{background:#25D366;color:#041f0c}
-  .share{background:#39e639;color:#041f0c}
+/* small actions */
+.mini-action{padding:12px 14px;border-radius:12px;background:rgba(255,255,255,0.06);color:#fff;font-weight:800;cursor:pointer;border:0;box-shadow:0 8px 18px rgba(0,0,0,0.28)}
+.mini-action.home{background:#1da1ff}
+.mini-action.copy{background:#39e639;color:#041f0c}
+.mini-action.share{background:#25D366;color:#041f0c}
 
-  .moment{display:flex;gap:10px;overflow:auto;margin-top:14px;padding:10px;border-radius:12px;background:linear-gradient(180deg,#082a3a,#062330)}
-  .mini{min-width:110px;padding:8px;border-radius:10px;background:linear-gradient(180deg,#0b3140,#04212b);display:flex;gap:8px;align-items:center;cursor:pointer}
-  .mini img{width:48px;height:48px;border-radius:8px;object-fit:cover}
-  .mini .mtext{font-weight:800;color:#cfeeff}
-  .reviews{margin-top:12px}
+/* overlay and sheet */
+.overlay{position:fixed;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.6),rgba(0,0,0,0.6));opacity:0;visibility:hidden;transition:.22s;z-index:99}
+.overlay.show{opacity:1;visibility:visible}
+.sheet{position:fixed;left:0;right:0;bottom:-100%;background:linear-gradient(180deg,#071827,#04202a);border-top-left-radius:18px;border-top-right-radius:18px;padding:18px;color:#e6f7ff;transition:.28s;z-index:100;box-shadow:0 -20px 60px rgba(0,0,0,0.6)}
+.sheet.show{bottom:0}
+.grab{width:56px;height:6px;background:rgba(255,255,255,0.06);margin:6px auto;border-radius:99px}
+.profile-head{display:flex;gap:12px;align-items:center}
+.profile-head img{width:72px;height:72px;border-radius:12px;object-fit:cover}
+.actions{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
+.actions a{padding:12px;border-radius:12px;text-decoration:none;font-weight:900}
+.download-action{background:linear-gradient(180deg,var(--gold1),var(--gold2));color:#041013}
+.tg{background:#1da1ff;color:#fff}
+.wa{background:#25D366;color:#041f0c}
+.share{background:#39e639;color:#041f0c}
 
-  .age-fixed{position:fixed;left:12px;right:12px;bottom:14px;padding:12px;border-radius:12px;background:linear-gradient(90deg,#ff4d4f,#c70000);color:#fff;display:flex;align-items:center;gap:12px;z-index:1000}
-  .age-fixed button{margin-left:auto;background:rgba(255,255,255,0.12);border:0;color:#fff;padding:8px 10px;border-radius:10px;font-weight:800}
+/* moment strip (auto-carousel feel) */
+.moment{display:flex;gap:12px;overflow-x:auto;margin-top:14px;padding:10px;border-radius:12px;background:linear-gradient(180deg,#082a3a,#062330)}
+.mini{min-width:140px;padding:8px;border-radius:12px;background:linear-gradient(180deg,#0b3140,#04212b);display:flex;gap:10px;align-items:center;cursor:pointer;flex:0 0 auto;box-shadow:0 8px 20px rgba(0,0,0,0.35)}
+.mini img{width:56px;height:56px;border-radius:8px;object-fit:cover}
+.mini .mtext{font-weight:800;color:#cfeeff}
+
+/* reviews placeholder */
+.reviews{margin-top:12px;color:#cfeeff}
+
+/* age notice */
+.age-fixed{position:fixed;left:12px;right:12px;bottom:14px;padding:12px;border-radius:12px;background:linear-gradient(90deg,#ff4d4f,#c70000);color:#fff;display:flex;align-items:center;gap:12px;z-index:1000}
+.age-fixed button{margin-left:auto;background:rgba(255,255,255,0.12);border:0;color:#fff;padding:8px 10px;border-radius:10px;font-weight:800}
+
+/* small responsiveness */
+@media(max-width:420px){
+  .mini{min-width:110px}
+  .big-download{font-size:16px;padding:12px 18px}
+}
 </style>
 </head>
 <body>
   <div class="wrap">
     <div class="header"><h1>🔥 All Yono Games App — Download Now</h1></div>
 
-    <div id="apps" class="apps-grid" role="list"></div>
-
-    <!-- Controls row: Big Download + Home + Copy + Share -->
-    <div class="controls">
-      <button id="bigDownload" class="big-download">Download</button>
-      <button id="homeBtn" class="mini-action home">Home</button>
-      <button id="copyBtn" class="mini-action copy">Copy</button>
-      <button id="shareBtn" class="mini-action share">Share</button>
+    <div class="hero" role="region" aria-label="hero">
+      <div class="video-frame" role="img" aria-label="preview">
+        <div style="text-align:center">
+          <div style="font-weight:900;font-size:20px;color:#001b1f">All Yono Games App Update</div>
+          <div style="font-size:13px;margin-top:6px;color:#06323a">Latest Teen Patti • Rummy • Slots • Casino — Fast updates (2025)</div>
+        </div>
+      </div>
+      <div style="font-weight:800;color:#001b1f;margin-bottom:8px">Join All Yono Games today and receive signup bonuses ₹35–₹500</div>
+      <a id="anamasal-cta" class="video-cta" href="#apps">Anamasal 🚀</a>
     </div>
-  </div>
 
-  <div id="ageNotice" class="age-fixed">
-    <div>⚠️ <strong>18+ real-money gaming content.</strong><small style="display:block;margin-top:4px">You must be 18+ to continue.</small></div>
-    <button id="dismissAge">OK</button>
+    <!-- APPS LIST (JS fills this) -->
+    <div id="apps" class="apps-grid" role="list" aria-label="apps list"></div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button id="bigDownload" class="big-download" aria-label="Big download button">Download</button>
+      <button id="homeBtn" class="mini-action home" title="Home">Home</button>
+      <button id="copyBtn" class="mini-action copy" title="Copy link">Copy</button>
+      <button id="shareBtn" class="mini-action share" title="Share">Share</button>
+    </div>
   </div>
 
   <!-- overlay & sheet -->
   <div id="overlay" class="overlay" aria-hidden="true"></div>
   <div id="sheet" class="sheet" role="dialog" aria-hidden="true">
-    <div class="grab"></div>
+    <div class="grab" aria-hidden="true"></div>
     <div class="profile-head">
       <img id="sheetIcon" src="" alt="icon">
       <div>
-        <h2 id="sheetTitle">App Name</h2>
-        <div id="sheetBonus" style="color:#ffd86b;font-weight:800"></div>
-        <div id="sheetMeta" style="color:#9fb0c9"></div>
+        <h2 id="sheetTitle" style="margin:0">App Name</h2>
+        <div id="sheetBonus" style="color:#ffd86b;font-weight:800;margin-top:6px"></div>
+        <div id="sheetMeta" style="color:#9fb0c9;margin-top:6px"></div>
       </div>
     </div>
 
-    <div class="actions">
-      <a id="sheetDownload" class="download-action" href="#" target="_blank">Download</a>
-      <a id="sheetTelegram" class="tg" href="https://t.me/yonorummy_app" target="_blank">Join Telegram</a>
-      <a id="sheetWA" class="wa" href="#" target="_blank">WhatsApp</a>
-      <a id="sheetShare" class="share" href="#" target="_blank">Share</a>
+    <div class="actions" style="margin-top:14px">
+      <!-- last main download button (prominent) -->
+      <a id="sheetDownload" class="download-action" href="#" target="_blank" rel="noopener">Download</a>
+
+      <!-- optional other quick links -->
+      <a id="sheetTelegram" class="tg" href="https://t.me/yonorummy_app" target="_blank" rel="noopener">Join Telegram</a>
+      <a id="sheetWA" class="wa" href="#" target="_blank" rel="noopener">WhatsApp</a>
+      <a id="sheetShare" class="share" href="#" target="_blank" rel="noopener">Share</a>
     </div>
 
     <div id="sheetReviews" class="reviews"></div>
@@ -100,129 +132,158 @@
     <div id="momentStrip" class="moment" aria-label="moment-games"></div>
   </div>
 
+  <div id="ageNotice" class="age-fixed" role="dialog" aria-label="age notice">
+    <div>⚠️ <strong>यह साइट 18+ रियल-मनी गेमिंग कंटेंट दिखाती है।</strong><small style="display:block;margin-top:4px">जारी रखने के लिए 18+ होना आवश्यक है।</small></div>
+    <button id="dismissAge">OK</button>
+  </div>
+
 <script>
-  // basic config
-  const siteUrl = 'https://allyonoapplink.github.io/';
-  const apps = [
-    {id:'good-slots',name:'Good Slots',icon:'https://i.ibb.co/KccDBL1t/GoodSlots.png',bonus:'₹40',meta:'Min withdraw ₹100',download:'https://sharegoodslots.im?pid=458075709&pkg=com.goodslotsa.dss'},
-    {id:'3patti-master',name:'3 Patti Master',icon:'https://i.ibb.co/jkzQ0g9K/3PattiMaster.png',bonus:'₹60',meta:'Min withdraw ₹100',download:'https://www.earntp.com/m/tn3kto'},
-    {id:'rummy-se',name:'Rummy SE',icon:'https://i.ibb.co/fYvbwjMd/earnTP.png',bonus:'₹30–₹400',meta:'Check App',download:'https://www.rummyse.com/share/3g8pFxy'},
-    {id:'bet51',name:'BET51 Casino',icon:'https://i.ibb.co/nNdCqS3M/BET51.png',bonus:'₹51',meta:'Min withdraw ₹100',download:'https://wgo360.com/b/f4de1b'}
-  ];
+/* ========= CONFIG: बदलना हो तो यहीं बदलें ========= */
+const siteUrl = 'https://allyonoapplink.github.io/';
+const apps = [
+  {id:'good-slots', name:'Good Slots', icon:'https://i.ibb.co/KccDBL1t/GoodSlots.png', bonus:'₹40', meta:'Min withdraw ₹100', download:'https://sharegoodslots.im?pid=458075709&pkg=com.goodslotsa.dss'},
+  {id:'3patti-master', name:'3 Patti Master', icon:'https://i.ibb.co/jkzQ0g9K/3PattiMaster.png', bonus:'₹60', meta:'Min withdraw ₹100', download:'https://www.earntp.com/m/tn3kto'},
+  {id:'rummy-se', name:'Rummy SE', icon:'https://i.ibb.co/fYvbwjMd/earnTP.png', bonus:'₹30–₹400', meta:'Check App', download:'https://www.rummyse.com/share/3g8pFxy'},
+  {id:'bet51', name:'BET51 Casino', icon:'https://i.ibb.co/nNdCqS3M/BET51.png', bonus:'₹51', meta:'Min withdraw ₹100', download:'https://wgo360.com/b/f4de1b'},
+  // आप चाहें तो और apps add कर लें
+];
 
-  const appsContainer = document.getElementById('apps');
-  apps.forEach(app=>{
-    const article = document.createElement('article');
-    article.className='app-card';
-    article.innerHTML = `
-      <div class="icon"><img src="${app.icon}" alt="${app.name}"></div>
-      <div style="flex:1">
-        <h3>${app.name}</h3>
-        <div class="meta">Signup Bonus: <strong style="color:#ffd86b">${app.bonus}</strong></div>
-        <div class="meta">${app.meta}</div>
-      </div>
-      <div>
-        <button class="big-download small" data-app="${app.id}" style="padding:10px 14px;border-radius:12px">Open</button>
-      </div>
-    `;
-    appsContainer.appendChild(article);
+/* ========= UI BUILD ========= */
+const appsContainer = document.getElementById('apps');
+apps.forEach(app=>{
+  const article = document.createElement('article');
+  article.className = 'app-card';
+  article.innerHTML = `
+    <div class="icon"><img src="${app.icon}" alt="${app.name}"></div>
+    <div style="flex:1">
+      <h3>${app.name}</h3>
+      <div class="meta">Signup Bonus: <strong style="color:#ffd86b">${app.bonus}</strong></div>
+      <div class="meta">${app.meta}</div>
+    </div>
+    <div>
+      <button class="open-sheet" data-app="${app.id}" style="padding:10px 14px;border-radius:12px;background:linear-gradient(180deg,var(--gold1),var(--gold2));border:0;font-weight:900;cursor:pointer">Open</button>
+    </div>
+  `;
+  appsContainer.appendChild(article);
+});
+
+/* ========= SHEET + MOMENT LOGIC ========= */
+const overlay = document.getElementById('overlay');
+const sheet = document.getElementById('sheet');
+const sheetIcon = document.getElementById('sheetIcon');
+const sheetTitle = document.getElementById('sheetTitle');
+const sheetBonus = document.getElementById('sheetBonus');
+const sheetMeta = document.getElementById('sheetMeta');
+const sheetDownload = document.getElementById('sheetDownload');
+const sheetTelegram = document.getElementById('sheetTelegram');
+const sheetWA = document.getElementById('sheetWA');
+const sheetShare = document.getElementById('sheetShare');
+const sheetReviews = document.getElementById('sheetReviews');
+const momentStrip = document.getElementById('momentStrip');
+
+function openSheet(app){
+  sheetIcon.src = app.icon; sheetIcon.alt = app.name + ' icon';
+  sheetTitle.textContent = app.name;
+  sheetBonus.textContent = 'Signup Bonus: ' + app.bonus;
+  sheetMeta.textContent = app.meta;
+  sheetDownload.href = app.download;
+  sheetTelegram.href = 'https://t.me/yonorummy_app';
+  sheetWA.href = `https://wa.me/?text=${encodeURIComponent(app.name + ' — ' + app.download)}`;
+  sheetShare.href = sheetWA.href;
+  // reviews placeholder (आप real reviews यहाँ डालें)
+  sheetReviews.innerHTML = `<div style="color:#cfeeff;margin-top:10px"><strong>Public Reviews</strong><div style="margin-top:8px">⭐️⭐️⭐️⭐️☆ — \"Acha app, fast payout\"</div><div style="margin-top:6px">⭐️⭐️⭐️☆☆ — \"Bonus thoda kam hai\"</div></div>`;
+
+  // moment strip: show up to 4 other apps, auto-carousel already running
+  momentStrip.innerHTML = '';
+  apps.filter(a=>a.id!==app.id).slice(0,4).forEach(m=>{
+    const box = document.createElement('div'); box.className='mini';
+    box.innerHTML = `<img src="${m.icon}" alt="${m.name}"><div class="mtext">${m.name}</div>`;
+    box.addEventListener('click', ()=> openSheet(m));
+    momentStrip.appendChild(box);
   });
 
-  // sheet references
-  const overlay = document.getElementById('overlay');
-  const sheet = document.getElementById('sheet');
-  const sheetIcon = document.getElementById('sheetIcon');
-  const sheetTitle = document.getElementById('sheetTitle');
-  const sheetBonus = document.getElementById('sheetBonus');
-  const sheetMeta = document.getElementById('sheetMeta');
-  const sheetDownload = document.getElementById('sheetDownload');
-  const sheetWA = document.getElementById('sheetWA');
-  const sheetShare = document.getElementById('sheetShare');
-  const sheetReviews = document.getElementById('sheetReviews');
-  const momentStrip = document.getElementById('momentStrip');
+  overlay.classList.add('show'); sheet.classList.add('show');
+  overlay.setAttribute('aria-hidden','false'); sheet.setAttribute('aria-hidden','false');
+  document.body.style.overflow = 'hidden';
+}
 
-  function openSheet(app){
-    sheetIcon.src = app.icon; sheetIcon.alt = app.name + ' icon';
-    sheetTitle.textContent = app.name;
-    sheetBonus.textContent = 'Signup Bonus: ' + app.bonus;
-    sheetMeta.textContent = app.meta;
-    sheetDownload.href = app.download;
-    sheetWA.href = `https://wa.me/?text=${encodeURIComponent(app.name + ' — ' + app.download)}`;
-    sheetShare.href = sheetWA.href;
-    // simple reviews placeholder
-    sheetReviews.innerHTML = `<div style="color:#cfeeff;margin-top:10px">Public reviews for ${app.name} — लोगों की टिप्पणियाँ दिखेंगी।</div>`;
+function closeSheet(){ overlay.classList.remove('show'); sheet.classList.remove('show'); overlay.setAttribute('aria-hidden','true'); sheet.setAttribute('aria-hidden','true'); document.body.style.overflow = ''; }
 
-    // moment strip: show other apps
-    momentStrip.innerHTML = '';
-    apps.filter(a=>a.id!==app.id).slice(0,3).forEach(m=>{
-      const box = document.createElement('div'); box.className='mini';
-      box.innerHTML = `<img src="${m.icon}" alt="${m.name}"><div class="mtext">${m.name}</div>`;
-      box.addEventListener('click', ()=> openSheet(m));
-      momentStrip.appendChild(box);
-    });
-
-    overlay.classList.add('show'); sheet.classList.add('show');
-    overlay.setAttribute('aria-hidden','false'); sheet.setAttribute('aria-hidden','false');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeSheet(){
-    overlay.classList.remove('show'); sheet.classList.remove('show');
-    overlay.setAttribute('aria-hidden','true'); sheet.setAttribute('aria-hidden','true');
-    document.body.style.overflow = '';
-  }
-
-  // attach app open buttons
-  document.querySelectorAll('.app-card .small').forEach(btn=>{
-    btn.addEventListener('click', (e)=>{
-      const id = e.currentTarget.getAttribute('data-app');
-      const app = apps.find(a=>a.id===id);
-      if(app) openSheet(app);
-    });
+document.querySelectorAll('.open-sheet').forEach(btn=>{
+  btn.addEventListener('click', (e)=>{
+    const id = e.currentTarget.getAttribute('data-app');
+    const app = apps.find(a=>a.id===id);
+    if(app) openSheet(app);
   });
+});
+overlay.addEventListener('click', closeSheet);
 
-  // main control buttons
-  const bigDownload = document.getElementById('bigDownload');
-  const homeBtn = document.getElementById('homeBtn');
-  const copyBtn = document.getElementById('copyBtn');
-  const shareBtn = document.getElementById('shareBtn');
+/* ========= CONTROL BUTTONS ========= */
+const bigDownload = document.getElementById('bigDownload');
+const homeBtn = document.getElementById('homeBtn');
+const copyBtn = document.getElementById('copyBtn');
+const shareBtn = document.getElementById('shareBtn');
 
-  // bigDownload opens first app sheet by default
-  bigDownload.addEventListener('click', ()=> openSheet(apps[0]));
+bigDownload.addEventListener('click', ()=> openSheet(apps[0])); // big download opens first app
+homeBtn.addEventListener('click', ()=> window.location.href = siteUrl);
+copyBtn.addEventListener('click', ()=> {
+  const txt = apps[0].download;
+  navigator.clipboard.writeText(txt).then(()=> alert('Download link copied to clipboard!')).catch(()=> alert('Copy failed'));
+});
+shareBtn.addEventListener('click', ()=> {
+  const text = `${apps[0].name} — Download: ${apps[0].download}`;
+  if(navigator.share){ navigator.share({title:apps[0].name,text}) } else { window.open(`https://wa.me/?text=${encodeURIComponent(text)}`,'_blank') }
+});
 
-  // Home goes to site home (or you can set any URL)
-  homeBtn.addEventListener('click', ()=> window.location.href = siteUrl);
+/* sheetShare: fallback to copy/share */
+sheetShare.addEventListener('click', function(e){
+  e.preventDefault();
+  const url = sheetDownload.href || apps[0].download;
+  const txt = (sheetTitle.textContent || apps[0].name) + ' — ' + url;
+  if(navigator.share){ navigator.share({title:sheetTitle.textContent,text:txt,url:url}).catch(()=>{}); }
+  else { navigator.clipboard.writeText(txt).then(()=> alert('Share text copied to clipboard!')).catch(()=> window.open(sheetShare.href,'_blank')); }
+});
 
-  // Copy: copy current main download link (first app)
-  copyBtn.addEventListener('click', ()=>{
-    const txt = apps[0].download;
-    navigator.clipboard.writeText(txt).then(()=> alert('Download link copied to clipboard!'));
+/* ========= MOMENT STRIP AUTO SCROLL (carousel feel) ========= */
+let autoPos = 0;
+function seedMomentAll(){
+  const all = apps.slice(0,4); // initial seed
+  momentStrip.innerHTML = '';
+  all.forEach(m=>{
+    const box = document.createElement('div'); box.className='mini';
+    box.innerHTML = `<img src="${m.icon}" alt="${m.name}"><div class="mtext">${m.name}</div>`;
+    box.addEventListener('click', ()=> openSheet(m));
+    momentStrip.appendChild(box);
   });
+}
+seedMomentAll();
 
-  // Share: use Web Share API if available, fallback to whatsapp
-  shareBtn.addEventListener('click', ()=>{
-    const text = `${apps[0].name} — Download: ${apps[0].download}`;
-    if(navigator.share){
-      navigator.share({title:apps[0].name,text,text});
-    } else {
-      window.open(`https://wa.me/?text=${encodeURIComponent(text)}`,'_blank');
-    }
-  });
+// auto-scroll function
+function autoScrollMoment(){
+  if(!momentStrip) return;
+  autoPos += 220;
+  if(autoPos > momentStrip.scrollWidth - momentStrip.clientWidth) autoPos = 0;
+  momentStrip.scrollTo({left:autoPos, behavior:'smooth'});
+}
+let autoInterval = setInterval(autoScrollMoment, 3000);
 
-  overlay.addEventListener('click', closeSheet);
-  document.getElementById('dismissAge').addEventListener('click', ()=> document.getElementById('ageNotice').style.display='none');
+// pause on hover / focus
+momentStrip.addEventListener('mouseenter', ()=> clearInterval(autoInterval));
+momentStrip.addEventListener('mouseleave', ()=> autoInterval = setInterval(autoScrollMoment,3000));
 
-  // sheet share copy fallback
-  sheetShare.addEventListener('click', function(e){
-    e.preventDefault();
-    const url = sheetDownload.href || apps[0].download;
-    const txt = (sheetTitle.textContent || apps[0].name) + ' — ' + url;
-    if(navigator.share){
-      navigator.share({title:sheetTitle.textContent,text:txt,url:url}).catch(()=>{});
-    } else {
-      navigator.clipboard.writeText(txt).then(()=> alert('Share text copied to clipboard!')).catch(()=> window.open(sheetShare.href,'_blank'));
-    }
-  });
+/* ========= AGE NOTICE ========= */
+document.getElementById('dismissAge').addEventListener('click', ()=> document.getElementById('ageNotice').style.display='none');
+
+/* Accessibility: close sheet with Esc */
+document.addEventListener('keydown', (e)=>{
+  if(e.key === 'Escape') closeSheet();
+});
+
+/* optional: auto-show hero moment background glow every few seconds */
+setInterval(()=> {
+  document.querySelector('.hero').animate([{boxShadow:'0 18px 40px rgba(0,0,0,0.5)'},{boxShadow:'0 30px 80px rgba(255,200,80,0.06)'}],{duration:1200,fill:'forwards'});
+},8000);
+
 </script>
 </body>
 </html>
