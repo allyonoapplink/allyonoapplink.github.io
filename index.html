@@ -110,6 +110,10 @@
     .age-fixed{position:fixed;left:12px;right:12px;bottom:14px;padding:12px;border-radius:12px;background:linear-gradient(90deg,#ff4d4f,#c70000);color:#fff;font-weight:800;display:flex;align-items:center;gap:12px;z-index:9999}
     .age-fixed button{margin-left:auto;background:rgba(255,255,255,0.12);border:0;color:#fff;padding:8px 10px;border-radius:10px;font-weight:800}
     a:focus{outline:3px solid rgba(0,240,255,0.12);outline-offset:3px}
+
+    /* profile panel small tweaks */
+    #appProfile {transition: all .28s ease;}
+    #publicReviews div {transition: all .15s ease;}
   </style>
 </head>
 <body>
@@ -138,6 +142,7 @@
 
     <!-- Apps grid -->
     <div id="apps" class="apps-grid" role="list" aria-label="apps list">
+
       <!-- Good Slots -->
       <article class="app-card" role="listitem" id="good-slots">
         <div class="icon"><img loading="lazy" src="https://i.ibb.co/KccDBL1t/GoodSlots.png" alt="Good Slots app icon" width="64" height="64"></div>
@@ -147,7 +152,15 @@
           <p class="meta">🎁 ₹40 &nbsp; • &nbsp; 🏦 Min withdraw ₹100</p>
           <p style="margin:6px 0 0;color:#bfefff;font-size:13px">Good Slots is a casino slot app with daily spin rewards and easy signup. Fast installs via APK. Check app for KYC & withdrawal rules.</p>
         </div>
-        <div><a class="download-btn" href="https://sharegoodslots.im?pid=458075709&pkg=com.goodslotsa.dss" target="_blank" rel="noopener">Download</a></div>
+        <div>
+          <a class="download-btn"
+             href="https://sharegoodslots.im?pid=458075709&pkg=com.goodslotsa.dss"
+             data-app-id="good-slots"
+             data-app-name="Good Slots"
+             data-app-bonus="₹40"
+             data-app-icon="https://i.ibb.co/KccDBL1t/GoodSlots.png"
+             target="_blank" rel="noopener">Download</a>
+        </div>
       </article>
 
       <!-- 3 Patti Master -->
@@ -159,7 +172,15 @@
           <p class="meta">🎁 ₹60 &nbsp; • &nbsp; 🏦 Min withdraw ₹100</p>
           <p style="margin:6px 0 0;color:#bfefff;font-size:13px">3 Patti Master offers quick play and daily tournaments. Bonus shown is for new users; follow in-app tasks to unlock withdrawal.</p>
         </div>
-        <div><a class="download-btn" href="https://www.earntp.com/m/tn3kto" target="_blank" rel="noopener">Download</a></div>
+        <div>
+          <a class="download-btn"
+             href="https://www.earntp.com/m/tn3kto"
+             data-app-id="3patti-master"
+             data-app-name="3 Patti Master"
+             data-app-bonus="₹60"
+             data-app-icon="https://i.ibb.co/jkzQ0g9K/3PattiMaster.png"
+             target="_blank" rel="noopener">Download</a>
+        </div>
       </article>
 
       <!-- 3 Patti Gold -->
@@ -171,7 +192,15 @@
           <p class="meta">🎁 Special &nbsp; • &nbsp; 🏦 Check App</p>
           <p style="margin:6px 0 0;color:#bfefff;font-size:13px">3 Patti Gold runs promotional offers that vary by campaign. Install and check the welcome offer inside app for eligibility.</p>
         </div>
-        <div><a class="download-btn" href="https://www.earntp.com/gold/jexzd" target="_blank" rel="noopener">Download</a></div>
+        <div>
+          <a class="download-btn"
+             href="https://www.earntp.com/gold/jexzd"
+             data-app-id="3patti-gold"
+             data-app-name="3 Patti Gold"
+             data-app-bonus="Special - check app"
+             data-app-icon="https://i.ibb.co/W4DK6zQm/3PattiGold.png"
+             target="_blank" rel="noopener">Download</a>
+        </div>
       </article>
 
       <!-- Rummy SE -->
@@ -183,7 +212,15 @@
           <p class="meta">🎁 varies &nbsp; • &nbsp; 🏦 Check App</p>
           <p style="margin:6px 0 0;color:#bfefff;font-size:13px">Rummy SE is a skill-based rummy platform. New user bonuses vary; read app T&Cs for wagering and withdrawal criteria.</p>
         </div>
-        <div><a class="download-btn" href="https://www.rummyse.com/share/3g8pFxy" target="_blank" rel="noopener">Download</a></div>
+        <div>
+          <a class="download-btn"
+             href="https://www.rummyse.com/share/3g8pFxy"
+             data-app-id="rummy-se"
+             data-app-name="Rummy SE"
+             data-app-bonus="Varies (₹30–₹400)"
+             data-app-icon="https://i.ibb.co/fYvbwjMd/earnTP.png"
+             target="_blank" rel="noopener">Download</a>
+        </div>
       </article>
 
       <!-- BET51 -->
@@ -195,7 +232,15 @@
           <p class="meta">🎁 ₹51 &nbsp; • &nbsp; 🏦 Min withdraw ₹100</p>
           <p style="margin:6px 0 0;color:#bfefff;font-size:13px">BET51 is a casino-style app with spins and daily offers. Always check KYC and withdrawal conditions before depositing.</p>
         </div>
-        <div><a class="download-btn" href="https://wgo360.com/b/f4de1b" target="_blank" rel="noopener">Download</a></div>
+        <div>
+          <a class="download-btn"
+             href="https://wgo360.com/b/f4de1b"
+             data-app-id="bet51"
+             data-app-name="BET51 Casino"
+             data-app-bonus="₹51"
+             data-app-icon="https://i.ibb.co/nNdCqS3M/BET51.png"
+             target="_blank" rel="noopener">Download</a>
+        </div>
       </article>
 
       <!-- Taurus -->
@@ -207,8 +252,17 @@
           <p class="meta">🎁 ₹100 &nbsp; • &nbsp; 🏦 Min withdraw ₹150</p>
           <p style="margin:6px 0 0;color:#bfefff;font-size:13px">Taurus App has referral and first-deposit offers. Bonus and withdraw terms can change; check the app for latest offers.</p>
         </div>
-        <div><a class="download-btn" href="https://th1.my/BJGUO3/dgvl3pf" target="_blank" rel="noopener">Download</a></div>
+        <div>
+          <a class="download-btn"
+             href="https://th1.my/BJGUO3/dgvl3pf"
+             data-app-id="taurus"
+             data-app-name="Taurus App"
+             data-app-bonus="₹100"
+             data-app-icon="https://i.ibb.co/MDCzvZdK/taurus-app.png"
+             target="_blank" rel="noopener">Download</a>
+        </div>
       </article>
+
     </div>
 
     <!-- Tags / SEO copy -->
@@ -224,6 +278,70 @@
       </div>
     </div>
 
+    <!-- Join Our Channels (main area) -->
+    <div class="seo-box" style="margin-top:16px; text-align:center; padding:20px; border-radius:14px;">
+      <h3 style="margin:0; font-size:18px; color:#7fe6ff; font-weight:900;">Join Our Channels</h3>
+
+      <div style="margin-top:16px; display:flex; flex-direction:column; gap:14px; align-items:center;">
+
+        <a href="https://t.me/yonorummy_app"
+           target="_blank"
+           style="padding:14px 22px; background:#1da1ff; color:#fff; border-radius:999px; font-weight:900; text-decoration:none; width:80%; max-width:280px; text-align:center; box-shadow:0 8px 20px rgba(0,0,0,0.35);">
+           Join Now (Telegram)
+        </a>
+
+        <a href="https://wa.me/?text=🔥 Best Yono Games App Link → https://allyonoapplink.github.io"
+           target="_blank"
+           style="padding:14px 22px; background:#25D366; color:#012b10; border-radius:999px; font-weight:900; text-decoration:none; width:80%; max-width:280px; text-align:center; box-shadow:0 8px 20px rgba(0,0,0,0.25);">
+           WhatsApp
+        </a>
+
+        <a href="https://wa.me/?text=🔥 Download All Yono Games — Fast Working Links → https://allyonoapplink.github.io"
+           target="_blank"
+           style="padding:14px 22px; background:#39e639; color:#041f0c; border-radius:999px; font-weight:900; text-decoration:none; width:80%; max-width:280px; text-align:center; box-shadow:0 8px 20px rgba(0,0,0,0.25);">
+           📤 Share With Friends
+        </a>
+
+      </div>
+    </div>
+
+    <!-- ===== NEW: App profile / reviews panel (hidden until click) ===== -->
+    <section id="appProfile" style="display:none; margin-top:18px;">
+      <div style="background:linear-gradient(180deg,#082235,#051821); padding:16px; border-radius:12px;">
+        <div style="display:flex; gap:12px; align-items:center;">
+          <img id="profileIcon" src="" alt="app icon" width="72" height="72" style="border-radius:12px; object-fit:cover;">
+          <div>
+            <h2 id="profileName" style="margin:0; color:#7fe6ff;">App Name</h2>
+            <div id="profileBonus" style="color:#ffd86b; font-weight:800; margin-top:6px;">Signup Bonus</div>
+            <div id="profileMeta" style="color:#cfeeff; margin-top:6px; font-size:13px;">Min withdraw • details</div>
+          </div>
+          <div style="margin-left:auto; text-align:right;">
+            <div id="profileStars" style="font-size:18px; font-weight:900; color:#ffd24a;">★★★★★</div>
+            <div id="profileRatingCount" style="color:#cfeeff; font-size:12px;">0 reviews</div>
+          </div>
+        </div>
+
+        <!-- Quick actions (shown when profile visible) -->
+        <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+          <a id="profileDownload" href="#" target="_blank" rel="noopener" style="padding:10px 16px; border-radius:10px; background:linear-gradient(180deg,#ffd24a,#c99711); color:#041013; font-weight:900; text-decoration:none;">Download</a>
+
+          <a id="profileTelegram" href="https://t.me/yonorummy_app" target="_blank" rel="noopener" style="padding:10px 16px; border-radius:10px; background:#1da1ff; color:#fff; font-weight:900; text-decoration:none;">Join Now (Telegram)</a>
+
+          <a id="profileWhatsApp" href="https://wa.me/?text=🔥 Best Yono Games App Link → https://allyonoapplink.github.io" target="_blank" rel="noopener" style="padding:10px 16px; border-radius:10px; background:#25D366; color:#012b10; font-weight:900; text-decoration:none;">WhatsApp: <span id="whatsappName" style="font-weight:900;">Yono Support</span></a>
+
+          <a id="profileShare" href="#" style="padding:10px 16px; border-radius:10px; background:#39e639; color:#041f0c; font-weight:900; text-decoration:none;">📤 Share With Friends</a>
+        </div>
+
+        <!-- Public reviews list -->
+        <div id="publicReviews" style="margin-top:14px;">
+          <h4 style="color:#7fe6ff; margin:0 0 8px 0;">Public Reviews</h4>
+          <div id="reviewsList" style="display:flex;flex-direction:column;gap:10px;">
+            <!-- JS will inject review items here -->
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- footer links -->
     <nav class="footer-links" role="navigation" aria-label="footer links">
       <a href="#about" id="about-link">About Us</a>
@@ -232,32 +350,7 @@
       <a href="#privacy" id="privacy-link">Privacy Policy</a>
       <a href="#terms" id="terms-link">Terms & Conditions</a>
     </nav>
-<!-- Join Our Channels -->
-<div class="seo-box" style="margin-top:16px; text-align:center; padding:20px; border-radius:14px;">
-  <h3 style="margin:0; font-size:18px; color:#7fe6ff; font-weight:900;">Join Our Channels</h3>
 
-  <div style="margin-top:16px; display:flex; flex-direction:column; gap:14px; align-items:center;">
-
-    <a href="https://t.me/yonorummy_app"
-       target="_blank"
-       style="padding:14px 22px; background:#1da1ff; color:#fff; border-radius:999px; font-weight:900; text-decoration:none; width:80%; max-width:280px; text-align:center; box-shadow:0 8px 20px rgba(0,0,0,0.35);">
-       Join Now (Telegram)
-    </a>
-
-    <a href="https://wa.me/?text=🔥 Best Yono Games App Link → https://allyonoapplink.github.io"
-       target="_blank"
-       style="padding:14px 22px; background:#25D366; color:#012b10; border-radius:999px; font-weight:900; text-decoration:none; width:80%; max-width:280px; text-align:center; box-shadow:0 8px 20px rgba(0,0,0,0.25);">
-       WhatsApp
-    </a>
-
-    <a href="https://wa.me/?text=🔥 Download All Yono Games — Fast Working Links → https://allyonoapplink.github.io"
-       target="_blank"
-       style="padding:14px 22px; background:#39e639; color:#041f0c; border-radius:999px; font-weight:900; text-decoration:none; width:80%; max-width:280px; text-align:center; box-shadow:0 8px 20px rgba(0,0,0,0.25);">
-       📤 Share With Friends
-    </a>
-
-  </div>
-</div>
     <!-- robots/sitemap + final warning -->
     <div id="robot-section" role="contentinfo" aria-label="sitemap and warning">
       <div style="margin-top:12px">Sitemap: <a href="/sitemap.xml" target="_blank" rel="noopener">sitemap.xml</a> | Robots: <a href="/robots.txt" target="_blank" rel="noopener">robots.txt</a></div>
@@ -287,6 +380,145 @@
       if(el) el.addEventListener('click', function(e){ e.preventDefault(); document.querySelector('.seo-box').scrollIntoView({behavior:'smooth'}); });
     });
   </script>
+
+  <!-- ====== Interaction script (profile + reviews + share) ====== -->
+  <script>
+    // Mock public reviews database (replace with real API later if you want)
+    const REVIEWS_DB = {
+      "good-slots":[
+        {user:"Rohit",rating:5,text:"Great slots & quick payouts!"},
+        {user:"Anita",rating:4,text:"Bonus credited fast, good UI."}
+      ],
+      "3patti-master":[
+        {user:"Sahil",rating:5,text:"Best Teen Patti experience."},
+        {user:"Priya",rating:4,text:"Nice tournaments."}
+      ],
+      "3patti-gold":[
+        {user:"Vikram",rating:4,text:"Special offers work sometimes."}
+      ],
+      "rummy-se":[
+        {user:"Suman",rating:5,text:"Rummy SE - very fair play."},
+        {user:"Neha",rating:4,text:"Good rewards."}
+      ],
+      "bet51":[
+        {user:"Amit",rating:5,text:"BET51 payouts were smooth."}
+      ],
+      "taurus":[
+        {user:"Kavya",rating:5,text:"Taurus referral is helpful."}
+      ]
+    };
+
+    // helper: build stars string (rounded average)
+    function buildStars(avg){
+      const full = Math.round(avg);
+      return '★'.repeat(full) + '☆'.repeat(5-full);
+    }
+
+    // fill profile area with reviews for appId
+    function showProfileFor(appId, meta){
+      const profile = document.getElementById('appProfile');
+      const icon = document.getElementById('profileIcon');
+      const name = document.getElementById('profileName');
+      const bonus = document.getElementById('profileBonus');
+      const metaEl = document.getElementById('profileMeta');
+      const starsEl = document.getElementById('profileStars');
+      const countEl = document.getElementById('profileRatingCount');
+      const downloadBtn = document.getElementById('profileDownload');
+      const reviewsList = document.getElementById('reviewsList');
+
+      // set text
+      icon.src = meta.icon || '';
+      name.textContent = meta.name || 'App';
+      bonus.textContent = 'Signup Bonus: ' + (meta.bonus || '—');
+      metaEl.textContent = meta.meta || '';
+      downloadBtn.href = meta.href || '#';
+      downloadBtn.target = '_blank';
+
+      // reviews from DB
+      const reviews = REVIEWS_DB[appId] || [];
+      reviewsList.innerHTML = '';
+      if(reviews.length){
+        let avg = reviews.reduce((s,r)=>s+r.rating,0)/reviews.length;
+        starsEl.textContent = buildStars(avg);
+        countEl.textContent = reviews.length + (reviews.length>1? ' reviews':' review');
+        reviews.forEach(r=>{
+          const node = document.createElement('div');
+          node.style.background = '#071827';
+          node.style.padding = '10px';
+          node.style.borderRadius = '8px';
+          node.style.display = 'flex';
+          node.style.flexDirection = 'column';
+          node.innerHTML = '<strong style="color:#ffd86b">'+ r.user +'</strong>';
+          const stars = document.createElement('div');
+          stars.textContent = '★'.repeat(r.rating) + '☆'.repeat(5-r.rating);
+          stars.style.color = '#ffd24a';
+          stars.style.marginTop = '6px';
+          const text = document.createElement('div');
+          text.style.color = '#cfeeff';
+          text.style.fontSize = '13px';
+          text.style.marginTop = '6px';
+          text.textContent = r.text;
+          node.appendChild(stars);
+          node.appendChild(text);
+          reviewsList.appendChild(node);
+        });
+      } else {
+        starsEl.textContent = '☆☆☆☆☆';
+        countEl.textContent = 'No reviews yet';
+        reviewsList.innerHTML = '<div style="color:#cfeeff">Be the first to review this app.</div>';
+      }
+
+      // show profile and scroll into view
+      profile.style.display='block';
+      profile.scrollIntoView({behavior:'smooth', block:'center'});
+    }
+
+    // Attach click behavior to all download-btn anchors
+    document.querySelectorAll('a.download-btn').forEach(a=>{
+      a.addEventListener('click', function(e){
+        // collect metadata from data attributes
+        const appId = a.dataset.appId || 'unknown';
+        const meta = {
+          name: a.dataset.appName || 'App',
+          bonus: a.dataset.appBonus || '',
+          icon: a.dataset.appIcon || '',
+          href: a.href || a.getAttribute('href'),
+          meta: '' // optionally fill min withdraw etc
+        };
+
+        // open link in new tab (safe)
+        try { window.open(a.href, '_blank'); } catch(err){ /* fallback */ }
+
+        // show profile on page
+        showProfileFor(appId, meta);
+
+        // prevent navigating in the same tab (we already opened in new)
+        e.preventDefault();
+      });
+    });
+
+    // Share button: use navigator.share or clipboard fallback
+    const shareBtn = document.getElementById('profileShare');
+    if(shareBtn){
+      shareBtn.addEventListener('click', function(e){
+        const name = document.getElementById('profileName').textContent || 'All Yono Games';
+        const url = location.href;
+        const text = `Check ${name} — ${url}`;
+        if(navigator.share){
+          navigator.share({title:name, text:text, url:url}).catch(()=>{ /* cancelled */ });
+        } else if(navigator.clipboard){
+          navigator.clipboard.writeText(text).then(()=>{ alert('Link copied to clipboard'); }).catch(()=>{ alert('Copy failed'); });
+        } else {
+          alert('Share not supported on this browser.');
+        }
+      });
+    }
+
+    // Optional: customize WhatsApp name shown
+    document.getElementById('whatsappName').textContent = 'Yono Support'; // change as you like
+
+    // Optional: If you want profile to hide, user can scroll away or we can add a close button later
+  </script>
+
 </body>
 </html>
-
