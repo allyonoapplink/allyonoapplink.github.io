@@ -5,46 +5,44 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>All Yono Games — Download Now</title>
   <meta name="description" content="Fast Yono Games links — Teen Patti, Rummy SE, BET51, Taurus, Good Slots. 18+." />
+
+  <!-- Perf: preconnect to likely hosts (replace/extend with your hosts) -->
+  <link rel="preconnect" href="https://i.ibb.co">
+  <link rel="preconnect" href="https://wgo360.com">
+  <link rel="preconnect" href="https://www.earntp.com">
+  <link rel="preconnect" href="https://www.rummyse.com">
+
   <style>
-    :root{
-      --bg:#051421; --card:#0d2a36; --accent:#06c6ff; --gold:#f0b539; --muted:#9fb6c2;
-    }
+    :root{--bg:#051421;--card:#0d2a36;--accent:#06c6ff;--gold:#f0b539;--muted:#9fb6c2}
     *{box-sizing:border-box}
-    body{
-      margin:0;font-family:Inter,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#03121a,#071a24);color:#cfe8f2;
-      -webkit-font-smoothing:antialiased;
-    }
+    body{margin:0;font-family:Inter,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#03121a,#071a24);color:#cfe8f2}
     .wrap{max-width:780px;margin:14px auto;padding:16px}
     .hero{background:linear-gradient(180deg,#062230,#031521);border-radius:14px;padding:16px;text-align:center}
     .hero h1{margin:0;color:var(--accent);font-size:20px}
     .intro{background:rgba(255,255,255,0.02);padding:12px;border-radius:12px;color:var(--muted);margin-top:12px}
-
     .app-list{margin-top:16px}
     .card{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.03));border-radius:12px;padding:14px;display:flex;gap:12px;align-items:center;margin-bottom:14px;box-shadow:0 6px 18px rgba(1,6,10,0.5)}
-    .icon{width:64px;height:64px;border-radius:12px;background:linear-gradient(180deg,#0b3340,#05202a);display:flex;align-items:center;justify-content:center;color:var(--gold);font-weight:800;font-size:16px;flex-shrink:0}
+    .icon{width:64px;height:64px;border-radius:12px;background:#062b36;display:flex;align-items:center;justify-content:center;color:var(--gold);font-weight:800;font-size:14px;flex-shrink:0;overflow:hidden}
+    .icon img{width:100%;height:100%;object-fit:cover;display:block}
     .meta{flex:1}
     .meta h3{margin:0;color:#37d2ff;font-weight:700;font-size:18px}
     .meta p{margin:8px 0 0;color:var(--muted);font-size:13px;line-height:1.28}
     .actions{display:flex;flex-direction:column;align-items:flex-end;gap:10px}
     .btn{padding:12px 18px;border-radius:12px;border:0;cursor:pointer;font-weight:800;min-width:110px}
     .btn-download{background:linear-gradient(180deg,var(--gold), #d89c2e);color:#07121a;box-shadow:0 6px 12px rgba(0,0,0,0.45)}
-
     .channels{margin-top:22px;background:linear-gradient(180deg,#0b2330,#071420);border-radius:12px;padding:18px;text-align:center}
-    .channels .row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-bottom:12px}
+    .row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-bottom:12px}
     .btn-channel{padding:12px 22px;border-radius:28px;border:0;font-weight:800;cursor:pointer;min-width:200px}
     .btn-telegram{background:linear-gradient(180deg,#31a4ff,#1a7fe6);color:white}
     .btn-whatsapp{background:linear-gradient(180deg,#23c75b,#1aa84a);color:#04241a}
     .btn-share{background:linear-gradient(180deg,#3cd07a,#14a857);color:#02160b;min-width:280px}
-
     .tags{margin-top:18px;display:flex;gap:8px;flex-wrap:wrap}
     .tag{background:rgba(255,255,255,0.03);padding:8px 12px;border-radius:100px;color:#d8b85a;font-weight:700}
-
     .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;z-index:10000}
     .modal{background:linear-gradient(180deg,#0b2730,#04121a);padding:20px;border-radius:12px;max-width:480px;width:92%;text-align:center;color:white;box-shadow:0 16px 60px rgba(0,0,0,0.8)}
     .modal h2{margin:0 0 8px;font-size:20px;color:#ffd6a1}
     .modal p{color:#f9d6d6;margin-bottom:14px}
     .modal .ok{background:#ff5a5a;color:white;border:0;padding:10px 16px;border-radius:10px;font-weight:800;cursor:pointer}
-
     @media (max-width:480px){
       .card{flex-direction:column;align-items:flex-start}
       .actions{width:100%;flex-direction:row;justify-content:space-between}
@@ -77,7 +75,7 @@
       </div>
     </div>
 
-    <div class="tags" style="margin-top:18px">
+    <div class="tags">
       <div class="tag">All Yono Games App Update</div>
       <div class="tag">Teen Patti</div>
       <div class="tag">Rummy SE</div>
@@ -96,62 +94,124 @@
   </div>
 
   <script>
-    /* ********* APPS: Update downloadUrl to your real links ********* */
+    /* ======= APPS: set icons and final direct download URLs here =======
+       Replace iconSrc with your old photo URLs (i.ibb.co or your CDN).
+       Use the fastest direct page or target (avoid long trackers) for downloadUrl.
+    */
     const apps = [
-      {id:'goodslots',name:'Good Slots',bonus:'₹40',min:'₹100', icon:'GS', downloadUrl:'https://wgo360.com/b/f4de1b'},
-      {id:'3patti',name:'3 Patti Master',bonus:'₹60',min:'₹100', icon:'3P', downloadUrl:'https://www.earntp.com/gold/jexzd'},
-      {id:'3pattigold',name:'3 Patti Gold',bonus:'Special',min:'Check App', icon:'3G', downloadUrl:'https://www.rummyse.com/share/3g8pFxy'},
-      {id:'rummyse',name:'Rummy SE',bonus:'Varies',min:'Check App', icon:'RS', downloadUrl:'https://th1.my/BJGUO3/dgvl3pf'},
-      {id:'bet51',name:'BET51 Casino',bonus:'₹51',min:'₹100', icon:'B51', downloadUrl:'https://example.com/bet51'},
-      {id:'taurus',name:'Taurus App',bonus:'₹100',min:'₹150', icon:'TA', downloadUrl:'https://example.com/taurus'}
+      {
+        id:'goodslots',
+        name:'Good Slots',
+        bonus:'₹40',
+        min:'₹100',
+        iconSrc:'https://i.ibb.co/your-goodslots-icon.png',   // <-- replace with your old photo
+        downloadUrl:'https://wgo360.com/b/f4de1b'             // your existing fast link
+      },
+      {
+        id:'3patti',
+        name:'3 Patti Master',
+        bonus:'₹60',
+        min:'₹100',
+        iconSrc:'https://i.ibb.co/your-3patti-icon.png',
+        downloadUrl:'https://www.earntp.com/gold/jexzd'
+      },
+      {
+        id:'3pattigold',
+        name:'3 Patti Gold',
+        bonus:'Special',
+        min:'Check App',
+        iconSrc:'https://i.ibb.co/your-3pattigold-icon.png',
+        downloadUrl:'https://www.rummyse.com/share/3g8pFxy'
+      },
+      {
+        id:'rummyse',
+        name:'Rummy SE',
+        bonus:'Varies',
+        min:'Check App',
+        iconSrc:'https://i.ibb.co/your-rummyse-icon.png',
+        downloadUrl:'https://th1.my/BJGUO3/dgvl3pf'
+      },
+      {
+        id:'bet51',
+        name:'BET51 Casino',
+        bonus:'₹51',
+        min:'₹100',
+        iconSrc:'https://i.ibb.co/your-bet51-icon.png',
+        downloadUrl:'https://example.com/bet51'
+      },
+      {
+        id:'taurus',
+        name:'Taurus App',
+        bonus:'₹100',
+        min:'₹150',
+        iconSrc:'https://i.ibb.co/your-taurus-icon.png',
+        downloadUrl:'https://example.com/taurus'
+      }
     ];
 
+    // Build UI
     const appList = document.getElementById('appList');
+    apps.forEach(a => {
+      const c = document.createElement('div'); c.className='card';
+      const icon = document.createElement('div'); icon.className='icon';
+      const img = document.createElement('img');
+      img.src = a.iconSrc;
+      // fallback to initials when image not load
+      img.onerror = function(){ this.style.display = 'none'; icon.textContent = a.name.split(' ').map(s=>s[0]).slice(0,2).join(''); }
+      img.alt = a.name;
+      icon.appendChild(img);
 
-    function buildCard(app){
-      const card = document.createElement('div'); card.className='card';
-      const icon = document.createElement('div'); icon.className='icon'; icon.textContent=app.icon;
       const meta = document.createElement('div'); meta.className='meta';
-      const h3 = document.createElement('h3'); h3.textContent=app.name;
-      const p = document.createElement('p'); p.innerHTML = `<strong style="color:var(--gold)">${'Signup Bonus: ' + app.bonus}</strong> • Min withdraw ${app.min}<br><span style="color:var(--muted);font-weight:600">Install and check app for KYC & withdrawal rules.</span>`;
+      const h3 = document.createElement('h3'); h3.textContent = a.name;
+      const p = document.createElement('p');
+      p.innerHTML = `<strong style="color:var(--gold)">${'Signup Bonus: ' + a.bonus}</strong> • Min withdraw ${a.min}<br><span style="color:var(--muted);font-weight:600">Install and check app for KYC & withdrawal rules.</span>`;
       meta.appendChild(h3); meta.appendChild(p);
 
       const actions = document.createElement('div'); actions.className='actions';
       const btn = document.createElement('button');
-      btn.className='btn btn-download';
-      btn.textContent='Download';
-      btn.setAttribute('data-link', app.downloadUrl);
-      btn.addEventListener('click', onDownload);
+      btn.className = 'btn btn-download';
+      btn.textContent = 'Download';
+      btn.setAttribute('data-link', a.downloadUrl);
+      // fastest redirect: replace (doesn't add history entry)
+      btn.addEventListener('click', e => {
+        const link = e.currentTarget.getAttribute('data-link') || '#';
+        // small safety: confirm age accepted
+        if(document.getElementById('ageModal').style.display !== 'none'){
+          // if age modal still visible, force it closed first
+          document.getElementById('ageModal').style.display = 'none';
+        }
+        try { window.location.replace(link); }
+        catch(err) { window.location.href = link; }
+      });
+
       actions.appendChild(btn);
+      c.appendChild(icon); c.appendChild(meta); c.appendChild(actions);
+      appList.appendChild(c);
 
-      card.appendChild(icon);
-      card.appendChild(meta);
-      card.appendChild(actions);
-      return card;
-    }
-
-    apps.forEach(a=>appList.appendChild(buildCard(a)));
-
-    // DOWNLOAD: immediate fast redirect — using replace() so back won't navigate to this page
-    function onDownload(e){
-      const link = e.currentTarget.getAttribute('data-link') || '#';
-      try{
-        // immediate replace — fastest behavior and avoids adding this page to history
-        window.location.replace(link);
-      }catch(err){
-        window.location.href = link;
+      // request early prefetch for download target (hint to browser)
+      if(a.downloadUrl){
+        const l = document.createElement('link');
+        l.rel = 'preload';
+        l.as = 'document';
+        l.href = a.downloadUrl;
+        document.head.appendChild(l);
       }
-    }
-
-    // Age modal behavior
-    const ageModal = document.getElementById('ageModal');
-    document.getElementById('ageOk').addEventListener('click', ()=>{
-      ageModal.style.display = 'none';
     });
 
-    // Share
-    document.getElementById('shareBtn').addEventListener('click', async ()=>{
-      const shareData = {title:'All Yono Games — Download Now', text:'Fast Yono Games links', url:location.href};
+    // Age modal logic
+    const ageModal = document.getElementById('ageModal');
+    document.getElementById('ageOk').addEventListener('click', () => {
+      ageModal.style.display = 'none';
+      try { localStorage.setItem('age_ok', '1'); } catch(e){}
+    });
+    // show modal if not accepted
+    try{
+      if(localStorage.getItem('age_ok') === '1'){ ageModal.style.display = 'none'; }
+    }catch(e){ /* ignore */ }
+
+    // share
+    document.getElementById('shareBtn').addEventListener('click', async () => {
+      const shareData = {title:'All Yono Games — Download Now', text:'Fast links to Yono games', url:location.href};
       if(navigator.share){ try{ await navigator.share(shareData); }catch(e){} }
       else {
         try{ await navigator.clipboard.writeText(location.href); alert('Link copied to clipboard'); }
@@ -159,7 +219,7 @@
       }
     });
 
-    // NOTE: Replace downloadUrl values above with your final real links before publishing.
+    // Optional: if you want to force older icons to be fetched fresh, add cache-busting query param when updating iconSrcs.
   </script>
 </body>
 </html>
