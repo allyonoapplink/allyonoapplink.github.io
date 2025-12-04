@@ -4,128 +4,51 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>All Yono Games — Download Now</title>
-  <meta name="description" content="All Yono Games app links — Teen Patti, Rummy SE, BET51, Taurus, Good Slots. Fast working download buttons. Play responsibly (18+)." />
-
+  <meta name="description" content="Fast Yono Games links — Teen Patti, Rummy SE, BET51, Taurus, Good Slots. 18+." />
   <style>
     :root{
-      --bg:#051421;
-      --card:#0d2a36;
-      --card-2:#0b2a34;
-      --accent:#06c6ff;
-      --gold:#f0b539;
-      --green:#25c36a;
-      --btn-blue:#1a9eff;
-      --muted:#9fb6c2;
+      --bg:#051421; --card:#0d2a36; --accent:#06c6ff; --gold:#f0b539; --muted:#9fb6c2;
     }
-    html,body{height:100%}
+    *{box-sizing:border-box}
     body{
-      margin:0;
-      font-family:Inter, "Segoe UI", Roboto, Arial, sans-serif;
-      background:linear-gradient(180deg,#03121a 0%, #071a24 100%);
-      color:#cfe8f2;
+      margin:0;font-family:Inter,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#03121a,#071a24);color:#cfe8f2;
       -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
     }
-    .wrap{max-width:720px;margin:18px auto;padding:18px;}
-    .hero{
-      background:linear-gradient(180deg,#062230, #031521);
-      border-radius:14px;
-      padding:18px;
-      text-align:center;
-      box-shadow:0 6px 20px rgba(0,0,0,.6), inset 0 -6px 12px rgba(255,255,255,0.02);
-    }
-    .hero h1{margin:0;font-size:22px;color:var(--accent); font-weight:800}
-    .hero small{display:block;color:#9ad9f0;margin-top:6px}
+    .wrap{max-width:780px;margin:14px auto;padding:16px}
+    .hero{background:linear-gradient(180deg,#062230,#031521);border-radius:14px;padding:16px;text-align:center}
+    .hero h1{margin:0;color:var(--accent);font-size:20px}
+    .intro{background:rgba(255,255,255,0.02);padding:12px;border-radius:12px;color:var(--muted);margin-top:12px}
 
-    .content{margin-top:18px}
-    .intro{
-      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
-      padding:14px;border-radius:12px;color:var(--muted);
-    }
-
-    /* app list */
-    .app-list{margin-top:18px}
-    .card{
-      background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.03));
-      border-radius:12px;
-      padding:14px;
-      display:flex;
-      gap:12px;
-      align-items:center;
-      margin-bottom:14px;
-      box-shadow: 0 6px 18px rgba(1,6,10,0.5);
-    }
-    .icon{
-      width:66px;height:66px;border-radius:12px;
-      background:linear-gradient(180deg,#0b3340,#05202a);
-      display:flex;align-items:center;justify-content:center;
-      color:var(--gold);font-weight:700;font-size:14px;
-      flex-shrink:0;
-    }
+    .app-list{margin-top:16px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.03));border-radius:12px;padding:14px;display:flex;gap:12px;align-items:center;margin-bottom:14px;box-shadow:0 6px 18px rgba(1,6,10,0.5)}
+    .icon{width:64px;height:64px;border-radius:12px;background:linear-gradient(180deg,#0b3340,#05202a);display:flex;align-items:center;justify-content:center;color:var(--gold);font-weight:800;font-size:16px;flex-shrink:0}
     .meta{flex:1}
     .meta h3{margin:0;color:#37d2ff;font-weight:700;font-size:18px}
     .meta p{margin:8px 0 0;color:var(--muted);font-size:13px;line-height:1.28}
-    .actions{display:flex;flex-direction:column;gap:10px;align-items:flex-end}
+    .actions{display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+    .btn{padding:12px 18px;border-radius:12px;border:0;cursor:pointer;font-weight:800;min-width:110px}
+    .btn-download{background:linear-gradient(180deg,var(--gold), #d89c2e);color:#07121a;box-shadow:0 6px 12px rgba(0,0,0,0.45)}
 
-    .btn{
-      padding:12px 18px;border-radius:12px;border:0;cursor:pointer;font-weight:700;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.45), inset 0 -3px 0 rgba(0,0,0,0.08);
-    }
-    .btn-download{
-      background:linear-gradient(180deg,var(--gold), #d89c2e);
-      color:#07121a;
-      min-width:110px;
-      text-align:center;
-      font-size:16px;
-    }
-    /* remove open buttons - we do NOT show open */
-
-    /* Footer / channels */
-    .channels{
-      margin-top:20px;
-      background:linear-gradient(180deg,#0b2330,#071420);
-      border-radius:12px;padding:18px; text-align:center;
-      box-shadow:0 8px 24px rgba(0,0,0,0.45);
-    }
-    .channels .row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-bottom:14px}
-    .channels .btn-channel{
-      padding:14px 22px;border-radius:28px;border:0;font-weight:700;cursor:pointer;
-      min-width:220px;
-    }
+    .channels{margin-top:22px;background:linear-gradient(180deg,#0b2330,#071420);border-radius:12px;padding:18px;text-align:center}
+    .channels .row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-bottom:12px}
+    .btn-channel{padding:12px 22px;border-radius:28px;border:0;font-weight:800;cursor:pointer;min-width:200px}
     .btn-telegram{background:linear-gradient(180deg,#31a4ff,#1a7fe6);color:white}
     .btn-whatsapp{background:linear-gradient(180deg,#23c75b,#1aa84a);color:#04241a}
-    .btn-share{background:linear-gradient(180deg,#3cd07a,#14a857);color:#02160b;min-width:320px}
+    .btn-share{background:linear-gradient(180deg,#3cd07a,#14a857);color:#02160b;min-width:280px}
 
-    /* tags */
     .tags{margin-top:18px;display:flex;gap:8px;flex-wrap:wrap}
     .tag{background:rgba(255,255,255,0.03);padding:8px 12px;border-radius:100px;color:#d8b85a;font-weight:700}
 
-    /* warning */
-    .warning{
-      position:fixed;left:12px;right:12px;bottom:12px;border-radius:12px;padding:14px 18px;background:linear-gradient(90deg,#ff5a5a,#ff2d2d);
-      color:white;font-weight:700;display:flex;align-items:center;justify-content:space-between;z-index:9999;
-      box-shadow:0 12px 30px rgba(0,0,0,0.6);
-    }
-    .warning button{background:rgba(255,255,255,0.12);border:0;padding:8px 12px;border-radius:8px;color:white;font-weight:800;cursor:pointer}
-
-    /* modal 18+ */
     .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;z-index:10000}
-    .modal{background:linear-gradient(180deg,#0b2730,#04121a);padding:20px;border-radius:12px;max-width:420px;width:92%;text-align:center;color:white;box-shadow:0 16px 60px rgba(0,0,0,0.8)}
+    .modal{background:linear-gradient(180deg,#0b2730,#04121a);padding:20px;border-radius:12px;max-width:480px;width:92%;text-align:center;color:white;box-shadow:0 16px 60px rgba(0,0,0,0.8)}
     .modal h2{margin:0 0 8px;font-size:20px;color:#ffd6a1}
     .modal p{color:#f9d6d6;margin-bottom:14px}
     .modal .ok{background:#ff5a5a;color:white;border:0;padding:10px 16px;border-radius:10px;font-weight:800;cursor:pointer}
 
-    /* toast */
-    .toast{
-      position:fixed;left:50%;transform:translateX(-50%);bottom:26px;padding:10px 16px;border-radius:12px;background:rgba(0,0,0,0.8);color:white;z-index:12000;display:none;
-      box-shadow:0 10px 40px rgba(0,0,0,0.6);
-    }
-
-    @media (max-width:420px){
-      .channels .btn-share{min-width:100%}
-      .actions{align-items:flex-end}
+    @media (max-width:480px){
       .card{flex-direction:column;align-items:flex-start}
       .actions{width:100%;flex-direction:row;justify-content:space-between}
+      .btn-share{min-width:100%}
     }
   </style>
 </head>
@@ -133,55 +56,37 @@
   <div class="wrap">
     <div class="hero">
       <h1>🔥 All Yono Games App — Download Now</h1>
-      <small>Fast links for Teen Patti, Rummy SE, BET51, Taurus, Good Slots & more — 18+ only</small>
+      <div style="color:#9fb6c2;margin-top:6px;font-weight:700">Fast links — click Download to open directly</div>
     </div>
 
-    <div class="content">
-      <div class="intro">
-        <strong>All Yono App Links</strong>
-        <p>Download latest Yono Games: Teen Patti, Rummy SE, BET51, Taurus App, Good Slots and other earning apps. Daily updates & signup bonuses shown per app. Play responsibly — you must be 18+.</p>
-      </div>
+    <div class="intro">
+      <strong>All Yono App Links</strong>
+      <p>Download latest Yono Games: Teen Patti, Rummy SE, BET51, Taurus App, Good Slots and other earning apps. Play responsibly — you must be 18+.</p>
+    </div>
 
-      <!-- APP LIST -->
-      <div class="app-list" id="appList">
-        <!-- Cards are injected by JS for easy edit -->
-      </div>
+    <div class="app-list" id="appList"></div>
 
-      <!-- Channels -->
-      <div class="channels">
-        <div style="font-weight:800;color:var(--accent);margin-bottom:14px">Join Our Channels</div>
-        <div class="row">
-          <a id="tgBtn" class="btn-channel btn-telegram" href="https://t.me/example_channel" target="_blank" rel="noopener">Join Now (Telegram)</a>
-          <a id="waBtn" class="btn-channel btn-whatsapp" href="https://wa.me/919000000000" target="_blank" rel="noopener">WhatsApp</a>
-        </div>
-        <div>
-          <button id="shareBtn" class="btn-channel btn-share">📮 Share With Friends</button>
-        </div>
+    <div class="channels">
+      <div style="font-weight:800;color:var(--accent);margin-bottom:12px">Join Our Channels</div>
+      <div class="row">
+        <a id="tgBtn" class="btn-channel btn-telegram" href="https://t.me/example_channel" target="_blank" rel="noopener">Join Now (Telegram)</a>
+        <a id="waBtn" class="btn-channel btn-whatsapp" href="https://wa.me/919000000000" target="_blank" rel="noopener">WhatsApp</a>
       </div>
-
-      <!-- tags / footer -->
-      <div class="tags" style="margin-top:18px">
-        <div class="tag">All Yono Games App Update</div>
-        <div class="tag">Teen Patti</div>
-        <div class="tag">Rummy SE</div>
-        <div class="tag">Real Cash Games</div>
-        <div class="tag">Slots</div>
+      <div>
+        <button id="shareBtn" class="btn-channel btn-share">📮 Share With Friends</button>
       </div>
+    </div>
 
-      <div style="height:26px"></div>
-      <div style="text-align:center;color:var(--accent);font-weight:800">About Us & Policies</div>
-      <div style="display:flex;gap:18px;justify-content:center;margin-top:12px;flex-wrap:wrap;color:#2ce0ff;font-weight:700">
-        <a href="#about" style="text-decoration:none;color:inherit">About Us</a>
-        <a href="#disclaimer" style="text-decoration:none;color:inherit">Disclaimer</a>
-        <a href="#contact" style="text-decoration:none;color:inherit">Contact Us</a>
-        <a href="#privacy" style="text-decoration:none;color:inherit">Privacy Policy</a>
-        <a href="#terms" style="text-decoration:none;color:inherit">Terms & Conditions</a>
-      </div>
-
+    <div class="tags" style="margin-top:18px">
+      <div class="tag">All Yono Games App Update</div>
+      <div class="tag">Teen Patti</div>
+      <div class="tag">Rummy SE</div>
+      <div class="tag">Real Cash Games</div>
+      <div class="tag">Slots</div>
     </div>
   </div>
 
-  <!-- 18+ Modal -->
+  <!-- Age modal (must accept to use) -->
   <div id="ageModal" class="modal-backdrop" style="display:flex">
     <div class="modal">
       <h2>⚠️ Warning: 18+ Only</h2>
@@ -190,140 +95,71 @@
     </div>
   </div>
 
-  <!-- Fixed warning -->
-  <div id="fixedWarn" class="warning" style="display:none">
-    <div>This website contains 18+ real-money gaming content. You must be 18+ to continue.</div>
-    <div><button id="warnOk">OK</button></div>
-  </div>
-
-  <!-- Toast -->
-  <div id="toast" class="toast">Preparing download…</div>
-
   <script>
-    /************* APPS DATA (final list) *************
-      NOTE: Replace the `downloadUrl` values with your real links.
-      I removed the 4 extra slow/placeholder apps as requested.
-    **************************************************/
+    /* ********* APPS: Update downloadUrl to your real links ********* */
     const apps = [
-      {id:'goodslots',name:'Good Slots',bonus:'₹40',min:'₹100', iconText:'GS', downloadUrl:'https://example.com/download/goodslots.apk'},
-      {id:'3pattimaster',name:'3 Patti Master',bonus:'₹60',min:'₹100', iconText:'3P', downloadUrl:'https://example.com/download/3pattimaster.apk'},
-      {id:'3pattigold',name:'3 Patti Gold',bonus:'Special',min:'Check App', iconText:'3G', downloadUrl:'https://example.com/download/3pattigold.apk'},
-      {id:'rummyse',name:'Rummy SE',bonus:'Varies',min:'Check App', iconText:'RS', downloadUrl:'https://example.com/download/rummyse.apk'},
-      {id:'bet51',name:'BET51 Casino',bonus:'₹51',min:'₹100', iconText:'B51', downloadUrl:'https://example.com/download/bet51.apk'},
-      {id:'taurus',name:'Taurus App',bonus:'₹100',min:'₹150', iconText:'TA', downloadUrl:'https://example.com/download/taurus.apk'}
+      {id:'goodslots',name:'Good Slots',bonus:'₹40',min:'₹100', icon:'GS', downloadUrl:'https://wgo360.com/b/f4de1b'},
+      {id:'3patti',name:'3 Patti Master',bonus:'₹60',min:'₹100', icon:'3P', downloadUrl:'https://www.earntp.com/gold/jexzd'},
+      {id:'3pattigold',name:'3 Patti Gold',bonus:'Special',min:'Check App', icon:'3G', downloadUrl:'https://www.rummyse.com/share/3g8pFxy'},
+      {id:'rummyse',name:'Rummy SE',bonus:'Varies',min:'Check App', icon:'RS', downloadUrl:'https://th1.my/BJGUO3/dgvl3pf'},
+      {id:'bet51',name:'BET51 Casino',bonus:'₹51',min:'₹100', icon:'B51', downloadUrl:'https://example.com/bet51'},
+      {id:'taurus',name:'Taurus App',bonus:'₹100',min:'₹150', icon:'TA', downloadUrl:'https://example.com/taurus'}
     ];
 
     const appList = document.getElementById('appList');
 
-    function createCard(app){
-      const card = document.createElement('div');
-      card.className = 'card';
+    function buildCard(app){
+      const card = document.createElement('div'); card.className='card';
+      const icon = document.createElement('div'); icon.className='icon'; icon.textContent=app.icon;
+      const meta = document.createElement('div'); meta.className='meta';
+      const h3 = document.createElement('h3'); h3.textContent=app.name;
+      const p = document.createElement('p'); p.innerHTML = `<strong style="color:var(--gold)">${'Signup Bonus: ' + app.bonus}</strong> • Min withdraw ${app.min}<br><span style="color:var(--muted);font-weight:600">Install and check app for KYC & withdrawal rules.</span>`;
+      meta.appendChild(h3); meta.appendChild(p);
 
-      const icon = document.createElement('div');
-      icon.className = 'icon';
-      icon.textContent = app.iconText;
-
-      const meta = document.createElement('div');
-      meta.className = 'meta';
-      const h3 = document.createElement('h3');
-      h3.textContent = app.name;
-      const p = document.createElement('p');
-      p.innerHTML = `<strong style="color:var(--gold)">${'Signup Bonus: ' + app.bonus}</strong> • Min withdraw ${app.min}<br><span style="color:var(--muted);font-weight:600">Install and check app for KYC & withdrawal rules.</span>`;
-      meta.appendChild(h3);
-      meta.appendChild(p);
-
-      const actions = document.createElement('div');
-      actions.className = 'actions';
-      // download only button (one-tap)
+      const actions = document.createElement('div'); actions.className='actions';
       const btn = document.createElement('button');
-      btn.className = 'btn btn-download';
-      btn.textContent = 'Download';
+      btn.className='btn btn-download';
+      btn.textContent='Download';
       btn.setAttribute('data-link', app.downloadUrl);
-      btn.addEventListener('click', onDownloadClick);
+      btn.addEventListener('click', onDownload);
       actions.appendChild(btn);
 
       card.appendChild(icon);
       card.appendChild(meta);
       card.appendChild(actions);
-
       return card;
     }
 
-    // inject cards
-    apps.forEach(a => appList.appendChild(createCard(a)));
+    apps.forEach(a=>appList.appendChild(buildCard(a)));
 
-    /* download click: show toast then location.replace to avoid history entry */
-    const toast = document.getElementById('toast');
-
-    function showToast(text){
-      toast.textContent = text || 'Preparing download…';
-      toast.style.display = 'block';
-    }
-    function hideToast(){
-      toast.style.display = 'none';
-    }
-
-    function onDownloadClick(e){
+    // DOWNLOAD: immediate fast redirect — using replace() so back won't navigate to this page
+    function onDownload(e){
       const link = e.currentTarget.getAttribute('data-link') || '#';
-      // fast visual feedback
-      showToast('Preparing download...');
-      // small delay for user to see toast then redirect
-      setTimeout(()=>{
-        try{
-          // replace so back won't go to our page (helps with "back bahar" problem)
-          window.location.replace(link);
-        }catch(err){
-          // fallback
-          window.location.href = link;
-        }
-      }, 600);
+      try{
+        // immediate replace — fastest behavior and avoids adding this page to history
+        window.location.replace(link);
+      }catch(err){
+        window.location.href = link;
+      }
     }
 
-    /* AGE MODAL behavior */
+    // Age modal behavior
     const ageModal = document.getElementById('ageModal');
-    const ageOk = document.getElementById('ageOk');
-    const fixedWarn = document.getElementById('fixedWarn');
-    const warnOk = document.getElementById('warnOk');
-
-    ageOk.addEventListener('click', ()=>{
+    document.getElementById('ageOk').addEventListener('click', ()=>{
       ageModal.style.display = 'none';
-      // show small fixed warning bar after dismiss
-      fixedWarn.style.display = 'flex';
     });
-    warnOk.addEventListener('click', ()=> fixedWarn.style.display='none');
 
-    /* Share button */
-    const shareBtn = document.getElementById('shareBtn');
-    shareBtn.addEventListener('click', async ()=>{
-      const shareData = {
-        title: 'All Yono Games — Download Now',
-        text: 'Download latest Yono Games (Good Slots, 3 Patti, Rummy SE & more) — fast links',
-        url: location.href
-      };
-      if(navigator.share){
-        try{ await navigator.share(shareData); }catch(e){}
-      }else{
-        // fallback: copy URL
-        try{
-          await navigator.clipboard.writeText(location.href);
-          alert('Link copied! Share in WhatsApp/Telegram.');
-        }catch(e){
-          prompt('Copy this link', location.href);
-        }
+    // Share
+    document.getElementById('shareBtn').addEventListener('click', async ()=>{
+      const shareData = {title:'All Yono Games — Download Now', text:'Fast Yono Games links', url:location.href};
+      if(navigator.share){ try{ await navigator.share(shareData); }catch(e){} }
+      else {
+        try{ await navigator.clipboard.writeText(location.href); alert('Link copied to clipboard'); }
+        catch(e){ prompt('Copy this link', location.href); }
       }
     });
 
-    /* quick guard: hide "open" buttons or other UI if injected by other scripts */
-    // (Just a safety — we control markup so normally none present)
-    window.addEventListener('load', ()=>{
-      const opens = document.querySelectorAll('.btn-open, button.open');
-      opens.forEach(o=>o.remove());
-    });
-
-    /* Accessibility: hide toast after some time (in case redirect didn't happen) */
-    setInterval(()=>{ hideToast(); }, 4000);
-
-    /***** NOTE: Replace placeholder links above with your real URLs *****/
+    // NOTE: Replace downloadUrl values above with your final real links before publishing.
   </script>
 </body>
 </html>
