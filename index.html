@@ -1,3 +1,50 @@
+/* ===== OLD PROFILE MOMENT / ANIMATION ===== */
+
+/* Header float animation */
+header > div {
+  animation: headerFloat 4s ease-in-out infinite;
+}
+
+@keyframes headerFloat {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-4px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Rocket shine animation */
+header .rocket-icon, 
+header div[style*="background:linear-gradient(180deg"] {
+  position: relative;
+  overflow: hidden;
+}
+
+header div[style*="background:linear-gradient(180deg"]::after {
+  content: "";
+  position: absolute;
+  top: 0; left: -120%;
+  width: 200%; height: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.4), rgba(255,255,255,0));
+  animation: rocketShine 2.8s linear infinite;
+}
+
+@keyframes rocketShine {
+  0% { transform: translateX(-120%); }
+  50% { transform: translateX(120%); }
+  100% { transform: translateX(120%); }
+}
+
+/* Button hover pulse */
+.topbar a,
+.topbar button {
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.topbar a:hover,
+.topbar button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,255,255,0.25);
+}
+
 <!-- ===== OLD PROFILE HEADER (paste & replace existing header) ===== -->
 <header style="max-width:980px;margin:0 auto 18px;padding:10px 6px;">
   <div style="display:flex;align-items:center;justify-content:space-between;background:#0f2138;padding:10px;border-radius:10px;">
@@ -76,3 +123,4 @@
     });
   })();
 </script>
+
