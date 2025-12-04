@@ -1,8 +1,9 @@
-<!-- ===== SIMPLE OLD PROFILE HEADER (NO ANIMATION) ===== -->
+<!-- ===== OLD PROFILE HEADER (paste & replace existing header) ===== -->
 <header style="max-width:980px;margin:0 auto 18px;padding:10px 6px;">
   <div style="display:flex;align-items:center;justify-content:space-between;background:#0f2138;padding:10px;border-radius:10px;">
     <!-- left: logo + site name -->
     <div style="display:flex;align-items:center;gap:10px;">
+      <!-- rocket icon: change src if you have your image -->
       <div style="width:44px;height:44px;border-radius:10px;background:linear-gradient(180deg,#ffd24a,#c99711);display:flex;align-items:center;justify-content:center;font-weight:900;color:#041013;">
         🚀
       </div>
@@ -29,12 +30,13 @@
   </div>
 </header>
 
-<!-- Panels will be created by JS below (keeps header code clean) -->
+<!-- small JS to toggle panels (paste near end of body or in your main script) -->
 <script>
   (function(){
     var robotBtn = document.getElementById('robotBtnHeader');
     var menuBtn = document.getElementById('menuBtnHeader');
 
+    // create panels if not exist (keeps original profile untouched visually)
     function createPanel(id, rightPx){
       var panel = document.getElementById(id);
       if(panel) return panel;
@@ -48,21 +50,15 @@
       panel.style.borderRadius = '8px';
       panel.style.display = 'none';
       panel.style.zIndex = 9999;
-      panel.style.boxShadow = '0 10px 30px rgba(0,0,0,0.4)';
       document.body.appendChild(panel);
       return panel;
     }
 
     var robotPanel = createPanel('robotPanelHeader','120px');
-    robotPanel.innerHTML = ''
-      + '<a href="#apps" style="display:block;color:#e6f7f7;padding:8px 10px;text-decoration:none;border-radius:6px;">All Games (Open)</a>'
-      + '<a href="/robots.txt" target="_blank" style="display:block;color:#e6f7f7;padding:8px 10px;text-decoration:none;border-radius:6px;">robots.txt</a>';
+    robotPanel.innerHTML = '<a href=\"#apps\" style=\"display:block;color:#e6f7f7;padding:8px 10px;text-decoration:none;border-radius:6px;\">All Games (Open)</a><a href=\"/robots.txt\" target=\"_blank\" style=\"display:block;color:#e6f7f7;padding:8px 10px;text-decoration:none;border-radius:6px;\">robots.txt</a>';
 
     var menuPanel = createPanel('menuPanelHeader','12px');
-    menuPanel.innerHTML = ''
-      + '<a href="#about" style="display:block;color:#e6f7f7;padding:8px 10px;text-decoration:none;border-radius:6px;">About</a>'
-      + '<a href="#contact" style="display:block;color:#e6f7f7;padding:8px 10px;text-decoration:none;border-radius:6px;">Contact</a>'
-      + '<a href="#disclaimer" style="display:block;color:#e6f7f7;padding:8px 10px;text-decoration:none;border-radius:6px;">Disclaimer</a>';
+    menuPanel.innerHTML = '<a href=\"#about\" style=\"display:block;color:#e6f7f7;padding:8px 10px;text-decoration:none;border-radius:6px;\">About</a><a href=\"#contact\" style=\"display:block;color:#e6f7f7;padding:8px 10px;text-decoration:none;border-radius:6px;\">Contact</a><a href=\"#disclaimer\" style=\"display:block;color:#e6f7f7;padding:8px 10px;text-decoration:none;border-radius:6px;\">Disclaimer</a>';
 
     robotBtn && robotBtn.addEventListener('click', function(e){
       e.stopPropagation();
