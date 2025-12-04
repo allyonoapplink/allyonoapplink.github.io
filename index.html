@@ -1,26 +1,144 @@
-<!-- Join Our Channels -->
-<div class="seo-box" style="margin-top:16px; text-align:center; padding:20px; border-radius:14px;">
-  <h3 style="margin:0; font-size:18px; color:#7fe6ff; font-weight:900;">Join Our Channels</h3>
+<!-- === Compact single-CTA join box (replace previous join-box) === -->
+<style>
+/* Put this inside your existing <style> or a new <style> block in head */
+.join-fixed {
+  max-width:900px;
+  margin:18px auto 0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:12px;
+  padding:16px;
+  background:linear-gradient(180deg,#071b2b,#05131a);
+  border-radius:12px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.45);
+}
 
-  <div style="margin-top:16px; display:flex; flex-direction:column; gap:14px; align-items:center;">
+/* main CTA */
+.join-cta{
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  padding:12px 30px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:900;
+  color:#071212;
+  background:linear-gradient(180deg,#ffd24a,#c99711);
+  box-shadow:0 12px 30px rgba(0,0,0,0.35);
+}
 
-    <a href="https://t.me/yonorummy_app"
-       target="_blank"
-       style="padding:14px 22px; background:#1da1ff; color:#fff; border-radius:999px; font-weight:900; text-decoration:none; width:80%; max-width:280px; text-align:center; box-shadow:0 8px 20px rgba(0,0,0,0.35);">
-       Join Now (Telegram)
-    </a>
+/* small pager to switch CTA (dots) */
+.join-switch{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  margin-left:8px;
+}
+.join-dot{
+  width:12px;height:12px;border-radius:50%;
+  background:rgba(255,255,255,0.06);
+  box-shadow:0 4px 12px rgba(0,0,0,0.4);
+  cursor:pointer;
+  border:2px solid transparent;
+}
+.join-dot.active{
+  background:linear-gradient(180deg,#ffd24a,#ff9f2b);
+  border-color:rgba(0,0,0,0.15);
+  box-shadow:0 8px 26px rgba(255,160,20,0.12);
+}
 
-    <a href="https://wa.me/?text=🔥 Best Yono Games App Link → https://allyonoapplink.github.io"
-       target="_blank"
-       style="padding:14px 22px; background:#25D366; color:#012b10; border-radius:999px; font-weight:900; text-decoration:none; width:80%; max-width:280px; text-align:center; box-shadow:0 8px 20px rgba(0,0,0,0.25);">
-       WhatsApp
-    </a>
+/* label under CTA for small hint */
+.join-hint{font-size:13px;color:#9fb0c9;margin-top:8px;text-align:center}
 
-    <a href="https://wa.me/?text=🔥 Download All Yono Games — Fast Working Links → https://allyonoapplink.github.io"
-       target="_blank"
-       style="padding:14px 22px; background:#39e639; color:#041f0c; border-radius:999px; font-weight:900; text-decoration:none; width:80%; max-width:280px; text-align:center; box-shadow:0 8px 20px rgba(0,0,0,0.25);">
-       📤 Share With Friends
-    </a>
+/* Responsive: smaller CTA on narrow screens */
+@media(max-width:420px){
+  .join-cta{padding:10px 18px;font-size:15px}
+  .join-fixed{padding:12px}
+}
+</style>
 
+<div class="join-fixed" aria-label="join-channel">
+  <!-- Primary CTA (we'll swap href/text via JS) -->
+  <a id="primaryCta" class="join-cta" href="https://t.me/yonorummy_app" target="_blank" rel="noopener">
+    <span id="ctaIcon">📣</span>
+    <span id="ctaText">Join Now (Telegram)</span>
+  </a>
+
+  <!-- Switch dots: 3 options (Telegram / WhatsApp / Share) -->
+  <div class="join-switch" role="tablist" aria-label="choose channel">
+    <div class="join-dot active" data-type="telegram" title="Telegram" role="tab" aria-selected="true"></div>
+    <div class="join-dot" data-type="whatsapp" title="WhatsApp" role="tab" aria-selected="false"></div>
+    <div class="join-dot" data-type="share" title="Share" role="tab" aria-selected="false"></div>
   </div>
 </div>
+
+<div class="join-hint" id="joinHint">Click the dot to switch: Telegram / WhatsApp / Share</div>
+
+<script>
+// JS to switch CTA when user clicks a dot.
+// Replace links/text/icons as needed.
+
+const dots = document.querySelectorAll('.join-dot');
+const primaryCta = document.getElementById('primaryCta');
+const ctaText = document.getElementById('ctaText');
+const ctaIcon = document.getElementById('ctaIcon');
+const joinHint = document.getElementById('joinHint');
+
+const variants = {
+  telegram: {
+    href: 'https://t.me/yonorummy_app', // change to your telegram link
+    text: 'Join Now (Telegram)',
+    icon: '📣',
+    aria: 'Join Telegram channel'
+  },
+  whatsapp: {
+    href: 'https://wa.me/?text=Check%20these%20apps%20→%20https://allyonoapplink.github.io', // change to your WA share link
+    text: 'WhatsApp',
+    icon: '💬',
+    aria: 'Open WhatsApp'
+  },
+  share: {
+    href: 'https://wa.me/?text=🔥%20Check%20these%20earning%20apps%20→%20https://allyonoapplink.github.io', // fallback share
+    text: 'Share With Friends',
+    icon: '📤',
+    aria: 'Share this page'
+  }
+};
+
+// initialize (default shows telegram)
+function setVariant(name){
+  const v = variants[name];
+  primaryCta.setAttribute('href', v.href);
+  primaryCta.setAttribute('aria-label', v.aria);
+  ctaText.textContent = v.text;
+  ctaIcon.textContent = v.icon;
+
+  // update dots active state / aria
+  dots.forEach(d => {
+    const t = d.getAttribute('data-type');
+    if(t === name){
+      d.classList.add('active');
+      d.setAttribute('aria-selected','true');
+    } else {
+      d.classList.remove('active');
+      d.setAttribute('aria-selected','false');
+    }
+  });
+
+  // small hint update (optional)
+  joinHint.textContent = (name === 'share') ? 'Share this page with friends' : 'Open channel';
+}
+
+// dot click
+dots.forEach(dot=>{
+  dot.addEventListener('click', function(){
+    const type = this.getAttribute('data-type');
+    setVariant(type);
+  });
+});
+
+// optional: support swipe / keyboard later
+// By default set telegram
+setVariant('telegram');
+</script>
