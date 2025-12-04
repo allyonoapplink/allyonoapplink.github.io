@@ -1,189 +1,300 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hi">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>All Yono App Update • Rummy • Teen Patti • New Games 2025</title>
   <meta name="description" content="Download All Yono Games links: Teen Patti, Rummy, 3 Patti Master, 3 Patti Gold, BET51, Taurus App, Good Slots, earning apps 2025. Fast updates." />
   <style>
     :root{
-      --bg:#061223; --card:#0c2636; --muted:#9fb0c9; --accent:#00f0ff;
-      --gold1:#ffd24a; --gold2:#c99711; --neon:rgba(0,240,255,0.18);
-      --ok:#25D366; --danger:linear-gradient(90deg,#ff4d4f,#c70000);
-      --radius:14px; --maxw:780px;
+      --bg:#08111f;
+      --card:#0f2138;
+      --accent:#00e6ff;
+      --gold1:#ffd247;
+      --gold2:#c99711;
+      --text:#e6f7ff;
+      --muted:#9fb0c9;
+      --tag-bg:#062233;
     }
     *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),#041027 120%);color:#e6f7ff}
-    .wrap{max-width:var(--maxw);margin:18px auto;padding:16px 14px 170px}
-    .header{background:rgba(6,18,35,0.9);padding:18px;border-radius:var(--radius);text-align:center;margin-bottom:14px}
-    .header h1{margin:0;font-weight:900;color:var(--accent);font-size:20px}
-
-    /* Banner + CTA */
-    .video-banner{margin:0 auto 18px;border-radius:18px;padding:18px;background:linear-gradient(135deg,#ffb86b 0%, #ffe47a 30%, #60e6ff 70%);box-shadow:0 18px 45px rgba(0,0,0,0.55);text-align:center}
-    .video-frame{height:150px;border-radius:12px;margin-bottom:12px;background:linear-gradient(180deg,#031826,#072a35);display:flex;align-items:center;justify-content:center;font-weight:900}
-    .video-cta{display:inline-flex;align-items:center;gap:12px;padding:18px 40px;border-radius:999px;background:linear-gradient(180deg,#ffd24a,#c99711);color:#071212;font-weight:900;text-decoration:none;box-shadow:0 24px 60px rgba(0,0,0,0.6);position:relative;z-index:2}
-    .video-cta::after{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:100%;height:100%;border-radius:999px;animation:ledPulse 2.2s infinite}
-    @keyframes ledPulse{0%{box-shadow:0 4px 22px rgba(255,200,60,0.12)}50%{box-shadow:0 18px 48px rgba(255,200,60,0.22)}100%{box-shadow:0 4px 22px rgba(255,200,60,0.12)}}
-
-    /* App cards */
-    .apps-grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:14px}
-    @media(min-width:420px){.apps-grid{grid-template-columns:repeat(2,1fr)}}
-    .app-card{display:flex;gap:12px;align-items:center;background:linear-gradient(180deg,#0c2636,#072b3b);padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
-    .icon{width:64px;height:64px;border-radius:12px;flex:0 0 64px;overflow:hidden;background:#001a2b;display:flex;align-items:center;justify-content:center}
-    .app-info h3{margin:0 0 6px;font-size:16px;color:var(--accent)}
-    .meta{font-size:13px;color:var(--muted);display:flex;gap:10px;align-items:center}
-    .download-btn{display:inline-block;padding:12px 20px;border-radius:14px;text-decoration:none;font-weight:900;color:#071212;background:linear-gradient(180deg,var(--gold1),var(--gold2));box-shadow:0 8px 20px rgba(0,0,0,0.45);transition:transform .14s}
-
-    /* tags */
-    .info-block{background:rgba(5,24,38,0.9);padding:14px;border-radius:12px;margin-top:14px}
-    .tag-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-    .tag{background:rgba(255,255,255,0.03);padding:8px 12px;border-radius:999px;font-weight:800;font-size:13px;color:#ffd86b;box-shadow:0 6px 18px rgba(0,0,0,0.35);display:inline-flex;align-items:center;gap:8px;position:relative;overflow:visible}
-
-    /* moment dot + pulse (used when .moment class present) */
-    .tag.moment::after{
-      content:"";
-      position:absolute;right:-8px;top:-8px;width:16px;height:16px;border-radius:50%;
-      background:radial-gradient(circle,#ffd24a,#ff8f00);
-      box-shadow:0 6px 18px rgba(255,150,20,0.35);
-      animation:badgePulse 1.6s infinite;
+    body{
+      margin:0;
+      font-family:Arial,Helvetica,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
     }
-    @keyframes badgePulse{0%{transform:scale(.9)}50%{transform:scale(1.08)}100%{transform:scale(.95)}}
+    .container{max-width:980px;margin:0 auto;padding:18px 14px 80px;}
 
-    /* pulse-once class for temporary animation */
-    .tag.pulse-once{animation:flashScale .6s ease-in-out 0s 1}
-    @keyframes flashScale{0%{transform:scale(1)}30%{transform:scale(1.06)}100%{transform:scale(1)}}
+    /* header */
+    .site-header{
+      text-align:center;
+      background:#0f1a34;
+      padding:16px;
+      border-radius:12px;
+      color:var(--accent);
+      font-weight:800;
+      font-size:20px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.4);
+      margin-bottom:14px;
+    }
 
-    /* footer / links */
-    .footer-links{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:14px}
-    .footer-links a{color:var(--accent);text-decoration:none;font-weight:800;cursor:pointer}
+    /* hero/banner */
+    .hero{
+      background: linear-gradient(135deg,#ff6b6b 0%, #ffd166 30%, #6be7ff 60%, #7effc0 100%);
+      border-radius:14px;
+      padding:14px;
+      margin-bottom:14px;
+      color:#00151b;
+    }
+    .hero .title{font-weight:900;font-size:20px;text-align:center;margin:8px 0;}
+    .hero .subtitle{color:#072b36;text-align:center;margin:6px 0 12px;font-size:14px;}
+    .cta-anamasal{
+      display:inline-block;
+      margin:0 auto;
+      background:linear-gradient(180deg,var(--gold1),var(--gold2));
+      color:#000;
+      padding:12px 28px;
+      border-radius:999px;
+      font-weight:900;
+      box-shadow:0 12px 28px rgba(0,0,0,0.35);
+      text-decoration:none;
+      font-size:16px;
+    }
 
-    /* robot/warning */
-    #robot-section{margin-top:26px;padding:16px;background:#071027;border-radius:12px;color:#dceeff;border:1px solid rgba(255,255,255,0.03)}
-    .final-warning{margin-top:12px;background:var(--danger);padding:12px;border-radius:8px;color:#fff;font-weight:800;text-align:center}
+    /* apps grid */
+    .apps-grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:12px;
+      margin-top:12px;
+    }
+    @media (min-width:600px){
+      .apps-grid{grid-template-columns:repeat(2,1fr)}
+    }
 
-    /* responsive */
-    @media(max-width:420px){.download-btn{padding:10px 14px;font-size:15px}.video-cta{padding:14px 28px;font-size:16px}}
+    .app-card{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      background:var(--card);
+      padding:12px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,0.03);
+      box-shadow:0 8px 18px rgba(0,0,0,0.35);
+    }
+    .app-card .icon{
+      width:64px;height:64px;border-radius:12px;flex:0 0 64px;object-fit:cover;background:#062233;display:inline-block;
+      box-shadow:0 6px 16px rgba(0,0,0,0.4);
+    }
+    .app-info{flex:1;min-width:0}
+    .app-info h3{margin:0;font-size:16px;color:var(--accent);font-weight:800}
+    .meta{margin-top:6px;color:var(--muted);font-size:13px;display:flex;gap:10px;align-items:center}
+    .meta .bonus{color:#ffe55f;font-weight:700}
+    .meta .withdraw{color:#b6fffa;font-weight:700}
+
+    .app-actions{flex:0 0 auto}
+    .download-btn{
+      display:inline-block;
+      min-width:86px;
+      text-align:center;
+      padding:10px 14px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:900;
+      color:#000;
+      background:linear-gradient(180deg,var(--gold1),var(--gold2));
+      box-shadow:0 12px 28px rgba(0,0,0,0.28);
+    }
+
+    /* info block */
+    .info-block{
+      background:#0b2130;padding:14px;border-radius:12px;margin-top:16px;color:var(--text);
+    }
+    .info-block h3{margin:0 0 10px;color:#4dd3ff}
+    .info-block p{color:#cfe8ff;margin:0}
+
+    /* tags layout */
+    .tags-wrap{margin-top:18px;background:var(--card);padding:14px;border-radius:12px;}
+    .tag-title{color:#ffd857;font-weight:800;margin:0 0 12px}
+    .tag-row{display:flex;flex-wrap:wrap;gap:10px}
+    .tag{
+      background:var(--tag-bg);
+      padding:10px 14px;border-radius:999px;color:#ffd98a;font-weight:800;box-shadow:0 8px 18px rgba(0,0,0,0.35);
+      position:relative;
+    }
+    /* "moment" small LED dot for selected tags */
+    .tag.moment::after{
+      content:'';
+      width:12px;height:12px;border-radius:50%;
+      background:linear-gradient(180deg,#ffd54f,#ffb300);
+      position:absolute;right:-8px;top:-8px;box-shadow:0 6px 12px rgba(255,160,30,0.25);
+    }
+
+    /* footer links */
+    .footer-links{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;margin-top:18px;color:var(--accent);font-weight:800}
+    .footer-links a{color:var(--accent);text-decoration:none}
+
+    /* robots / sitemap + final warning (not fixed) */
+    #robot-section{margin-top:24px;background:#071027;padding:14px;border-radius:12px;color:#dceeff;border:1px solid rgba(255,255,255,0.03)}
+    #robot-section h4{color:#7ed6ff;margin:0 0 6px}
+    #robot-section .robot-links a{color:#8fe6ff;text-decoration:underline}
+
+    .final-warning{
+      background:linear-gradient(90deg,#e53935 0%,#b30000 100%);
+      color:#fff;padding:12px;border-radius:10px;font-weight:800;text-align:center;margin-top:12px;
+    }
+
+    /* small screens adjustments */
+    @media (max-width:420px){
+      .app-card{padding:10px}
+      .app-card .icon{width:56px;height:56px;flex:0 0 56px}
+      .download-btn{padding:8px 12px;min-width:72px}
+      .cta-anamasal{padding:10px 20px;font-size:15px}
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="header" role="banner"><h1>🔥 All Yono Games App – Download Now</h1></div>
+  <div class="container">
+    <div class="site-header">🔥 All Yono Games App – Download Now</div>
 
-    <div class="video-banner" role="region">
-      <div class="video-frame">All Yono Games App Update — Latest 2025</div>
-      <a class="video-cta" href="#apps" id="anamasal-cta">Anamasal 🚀</a>
+    <!-- HERO -->
+    <div class="hero" role="region" aria-label="Hero">
+      <div class="frame-title" style="text-align:center;font-weight:900;color:#00151b">All Yono Games App Update</div>
+      <div class="title">😄 All Yono App Link – Download Now</div>
+      <div class="subtitle">Latest Teen Patti • Rummy • Slots • Casino — Fast All-New updates (2025)</div>
+      <div style="text-align:center;margin-top:6px"><a class="cta-anamasal" href="#apps">Anamasal 🚀</a></div>
     </div>
 
-    <div class="info-block" aria-label="intro">
-      <h3 style="margin:0 0 6px;color:#6eeaff">All Yono App Links</h3>
-      <p style="margin:0;color:#9fb0c9">Download all latest Yono Games, Teen Patti, Rummy SE, BET51, Taurus App, Good Slots and earning apps.</p>
-    </div>
-
-    <!-- apps -->
-    <div class="apps-grid" id="apps">
-      <!-- one example card (others same) -->
+    <!-- APPS LIST -->
+    <div id="apps" class="apps-grid" aria-live="polite">
+      <!-- card 1 -->
       <div class="app-card">
-        <div class="icon"><img src="https://i.ibb.co/KccDBL1t/GoodSlots.png" alt="Good Slots" style="width:64px;height:64px;object-fit:cover;border-radius:8px"></div>
-        <div class="app-info"><h3>Good Slots</h3><div class="meta"><div>🎁 ₹40</div><div>🏦 ₹100</div></div></div>
-        <a class="download-btn" href="https://sharegoodslots.im?pid=458075709&pkg=com.goodslotsa.dss" target="_blank" rel="noopener">Download</a>
+        <img class="icon" src="https://i.ibb.co/KccDBL1t/GoodSlots.png" alt="Good Slots icon">
+        <div class="app-info">
+          <h3>Good Slots</h3>
+          <div class="meta"><span class="bonus">🎁 ₹40</span><span class="withdraw">🏦 ₹100</span></div>
+        </div>
+        <div class="app-actions"><a class="download-btn" href="https://sharegoodslots.im?pid=458075709&pkg=com.goodslotsa.dss" target="_blank" rel="noopener">Download</a></div>
       </div>
 
-      <!-- other cards omitted for brevity but should be same structure (3 Patti Master, 3 Patti Gold, Rummy SE, BET51, Taurus) -->
-      <!-- ... -->
+      <!-- card 2 -->
+      <div class="app-card">
+        <img class="icon" src="https://i.ibb.co/jkzQ0g9K/3PattiMaster.png" alt="3 Patti Master icon">
+        <div class="app-info">
+          <h3>3 Patti Master</h3>
+          <div class="meta"><span class="bonus">🎁 ₹60</span><span class="withdraw">🏦 ₹100</span></div>
+        </div>
+        <div class="app-actions"><a class="download-btn" href="https://www.earntp.com/m/tn3kto" target="_blank" rel="noopener">Download</a></div>
+      </div>
+
+      <!-- card 3 -->
+      <div class="app-card">
+        <img class="icon" src="https://i.ibb.co/W4DK6zQm/3PattiGold.png" alt="3 Patti Gold icon">
+        <div class="app-info">
+          <h3>3 Patti Gold</h3>
+          <div class="meta"><span class="bonus">🎁 Special</span><span class="withdraw">🏦 Check App</span></div>
+        </div>
+        <div class="app-actions"><a class="download-btn" href="https://www.earntp.com/gold/jexzd" target="_blank" rel="noopener">Download</a></div>
+      </div>
+
+      <!-- card 4 -->
+      <div class="app-card">
+        <img class="icon" src="https://i.ibb.co/fYvbwjMd/earnTP.png" alt="Rummy SE icon">
+        <div class="app-info">
+          <h3>Rummy SE</h3>
+          <div class="meta"><span class="bonus">🎁 varies</span><span class="withdraw">🏦 Check App</span></div>
+        </div>
+        <div class="app-actions"><a class="download-btn" href="https://www.rummyse.com/share/3g8pFxy" target="_blank" rel="noopener">Download</a></div>
+      </div>
+
+      <!-- card 5 -->
+      <div class="app-card">
+        <img class="icon" src="https://i.ibb.co/nNdCqS3M/BET51.png" alt="BET51 icon">
+        <div class="app-info">
+          <h3>BET51 Casino</h3>
+          <div class="meta"><span class="bonus">🎁 ₹51</span><span class="withdraw">🏦 ₹100</span></div>
+        </div>
+        <div class="app-actions"><a class="download-btn" href="https://wgo360.com/b/f4de1b" target="_blank" rel="noopener">Download</a></div>
+      </div>
+
+      <!-- card 6 -->
+      <div class="app-card">
+        <img class="icon" src="https://i.ibb.co/MDCzvZdK/taurus-app.png" alt="Taurus App icon">
+        <div class="app-info">
+          <h3>Taurus App</h3>
+          <div class="meta"><span class="bonus">🎁 ₹100</span><span class="withdraw">🏦 ₹150</span></div>
+        </div>
+        <div class="app-actions"><a class="download-btn" href="https://th1.my/BJGUO3/dgvl3pf" target="_blank" rel="noopener">Download</a></div>
+      </div>
     </div>
 
-    <!-- Tags area (About, Privacy, Terms have moment by default; Disclaimer tags initially no moment) -->
-    <div class="info-block" id="tags-area">
-      <strong style="color:#9fe6ff">Tags (About):</strong>
-      <div class="tag-list" aria-hidden="false">
-        <span class="tag moment">About: App Links</span>
-        <span class="tag moment">About: Updates</span>
+    <!-- short intro/info -->
+    <div class="info-block">
+      <h3>All Yono App Links</h3>
+      <p>Download all latest Yono Games, Teen Patti, Rummy SE, BET51, Taurus App, Good Slots and earning apps. Fast working links, daily updates and 100% working download buttons.</p>
+    </div>
+
+    <!-- TAGS (About / Disclaimer / Privacy / Terms) -->
+    <div class="tags-wrap" aria-hidden="false">
+      <div style="margin-bottom:12px;">
+        <div class="tag-title">Tags (About):</div>
+        <div class="tag-row">
+          <span class="tag moment">App Links</span>
+          <span class="tag moment">Updates</span>
+        </div>
       </div>
 
-      <strong style="color:#ffd86b;display:block;margin-top:12px">Tags (Disclaimer):</strong>
-      <div class="tag-list" id="disclaimer-tags">
-        <!-- NOTE: disclaimer tags DO NOT have .moment by default -->
-        <span class="tag" data-tag="disclaimer-1">Responsible Gaming</span>
-        <span class="tag" data-tag="disclaimer-2">Age Restriction</span>
-        <span class="tag" data-tag="disclaimer-3">Legal Notice</span>
+      <div style="margin-bottom:12px;">
+        <div class="tag-title">Tags (Disclaimer):</div>
+        <div class="tag-row">
+          <span class="tag">Responsible Gaming</span>
+          <span class="tag">Age Restriction</span>
+          <span class="tag">Legal Notice</span>
+        </div>
       </div>
 
-      <strong style="color:#ffd86b;display:block;margin-top:12px">Tags (Privacy):</strong>
-      <div class="tag-list">
-        <span class="tag moment">Cookies</span>
-        <span class="tag moment">Data</span>
-        <span class="tag moment">Contact</span>
+      <div style="margin-bottom:12px;">
+        <div class="tag-title">Tags (Privacy):</div>
+        <div class="tag-row">
+          <span class="tag moment">Cookies</span>
+          <span class="tag moment">Data</span>
+          <span class="tag moment">Contact</span>
+        </div>
       </div>
 
-      <strong style="color:#ffd86b;display:block;margin-top:12px">Tags (Terms):</strong>
-      <div class="tag-list">
-        <span class="tag moment">Use Policy</span>
-        <span class="tag moment">Age Limit</span>
-        <span class="tag moment">Liability</span>
+      <div>
+        <div class="tag-title">Tags (Terms):</div>
+        <div class="tag-row">
+          <span class="tag moment">Use Policy</span>
+          <span class="tag moment">Age Limit</span>
+          <span class="tag moment">Liability</span>
+        </div>
       </div>
     </div>
 
-    <!-- footer links -->
+    <!-- footer quick links -->
     <div class="footer-links" role="navigation" aria-label="footer links">
-      <a href="#about" id="link-about">About Us</a>
-      <a href="#disclaimer" id="link-disclaimer">Disclaimer</a>
-      <a href="#contact" id="link-contact">Contact Us</a>
-      <a href="#privacy" id="link-privacy">Privacy Policy</a>
-      <a href="#terms" id="link-terms">Terms & Conditions</a>
+      <a href="#about">About Us</a>
+      <a href="#disclaimer">Disclaimer</a>
+      <a href="#contact">Contact Us</a>
+      <a href="#privacy">Privacy Policy</a>
+      <a href="#terms">Terms & Conditions</a>
     </div>
 
-    <!-- robot + final warning -->
-    <div id="robot-section">
-      <h4 style="color:#8fe6ff;margin:0 0 8px">Robots / Sitemap</h4>
-      <div>Sitemap: <a href="/sitemap.xml">sitemap.xml</a> | Robots: <a href="/robots.txt">robots.txt</a></div>
-      <div class="final-warning">⚠️ Warning: This website contains <strong>18+ real-money gaming content</strong>. You must be 18+ to continue.</div>
+    <!-- ROBOTS / SITEMAP + final warning (non-fixed) -->
+    <div id="robot-section" role="contentinfo">
+      <h4>Robots / Sitemap</h4>
+      <p class="robot-links">Sitemap: <a href="sitemap.xml" target="_blank" rel="noopener">sitemap.xml</a> | Robots: <a href="robots.txt" target="_blank" rel="noopener">robots.txt</a></p>
+
+      <div class="final-warning" role="alert" aria-live="polite">
+        ⚠️ Warning: This website contains <strong>18+ real-money gaming content</strong>.
+        <div style="margin-top:6px;font-weight:700;font-size:13px">You must be 18+ to continue. Visitors under 18 must leave this site immediately.</div>
+      </div>
     </div>
+
   </div>
-
-<script>
-  // Smooth scroll and Disclaimer moment trigger
-  function smoothScrollTo(el) {
-    if(!el) return;
-    el.scrollIntoView({behavior:'smooth', block:'start'});
-  }
-
-  // When user clicks "Disclaimer" in footer, scroll and animate its tags
-  document.getElementById('link-disclaimer').addEventListener('click', function(e){
-    e.preventDefault();
-    // create/ensure a visible anchor for disclaimer tags (we'll scroll tags area)
-    var disclaimerTags = document.getElementById('disclaimer-tags');
-    smoothScrollTo(disclaimerTags);
-    // add .moment class to each disclaimer tag (so dot appears)
-    disclaimerTags.querySelectorAll('.tag').forEach(function(t){
-      t.classList.add('moment');      // show moment dot
-      // quick pulse animation to make it noticeable
-      t.classList.add('pulse-once');
-      // remove the temporary pulse class after animation ends so it can replay on next tap
-      setTimeout(function(){ t.classList.remove('pulse-once'); }, 900);
-    });
-  });
-
-  // Also wire other footer links to smooth-scroll
-  ['link-about','link-privacy','link-terms','link-contact'].forEach(function(id){
-    var el = document.getElementById(id);
-    if(!el) return;
-    el.addEventListener('click', function(e){
-      e.preventDefault();
-      // for demo we scroll to tags-area for these links; replace with real section anchors if available
-      smoothScrollTo(document.getElementById('tags-area'));
-    });
-  });
-
-  // Accessibility: allow keyboard activation
-  document.getElementById('link-disclaimer').addEventListener('keydown', function(e){
-    if(e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault(); this.click();
-    }
-  });
-
-  // If you want the disclaimer tags to lose moment after some time automatically, uncomment below:
-  // setTimeout(() => { document.querySelectorAll('#disclaimer-tags .tag').forEach(t=>t.classList.remove('moment')); }, 8000);
-</script>
 </body>
 </html>
-
