@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="hi">
 <head>
   <meta charset="utf-8" />
@@ -8,170 +8,151 @@
   <style>
     :root{
       --bg: #061223;
-      --surface: #0d2133;
-      --card: #0f2a40;
+      --card: #0c2636;
       --muted: #9fb0c9;
       --accent: #00f0ff;
-      --gold: #ffd247;
-      --cta1: linear-gradient(180deg,#ffd24a,#c99711);
-      --success: #25D366;
+      --gold1: #ffd24a;
+      --gold2: #c99711;
+      --neon: rgba(0,240,255,0.18);
+      --ok: #25D366;
       --danger: linear-gradient(90deg,#ff4d4f,#c70000);
       --radius: 14px;
-      --maxw: 980px;
+      --maxw: 780px;
+      --led-color: #ffd24a;
     }
     *{box-sizing:border-box}
-    html,body{height:100%}
     body{
       margin:0;
+      font-family:Inter, Arial, sans-serif;
       background:linear-gradient(180deg,var(--bg),#041027 120%);
       color:#e6f7ff;
-      font-family: Inter, Arial, sans-serif;
       -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.45;
     }
+    .wrap{max-width:var(--maxw);margin:18px auto;padding:16px 14px 170px;}
 
-    .wrap{max-width:var(--maxw);margin:18px auto;padding:16px 14px 180px;position:relative;}
-
-    .header{
-      background:var(--surface);
-      padding:18px;border-radius:var(--radius);
-      text-align:center;margin-bottom:14px;
-      box-shadow:0 10px 30px rgba(1,10,20,0.6);
-    }
-    .header h1{margin:0;font-size:20px;color:var(--accent);font-weight:900}
+    .header{background:rgba(6,18,35,0.9);padding:18px;border-radius:var(--radius);text-align:center;margin-bottom:14px;box-shadow:0 10px 30px rgba(0,0,0,0.55)}
+    .header h1{margin:0;font-weight:900;color:var(--accent);font-size:20px}
 
     /* Gradient banner + CTA */
-    .video-banner{
-      max-width:var(--maxw);
-      margin:0 auto 18px;
-      background:linear-gradient(135deg,#ffb86b 0%, #ffe47a 30%, #60e6ff 70%);
-      border-radius:18px;
-      padding:18px;
-      box-shadow:0 18px 45px rgba(0,0,0,0.55);
-      text-align:center;
-    }
-    .video-frame{
-      height:150px;background:linear-gradient(180deg,#031826,#072a35);
-      border-radius:12px;display:flex;align-items:center;justify-content:center;
-      margin-bottom:12px;color:#dff9ff;font-weight:900;font-size:18px;
-      box-shadow:inset 0 -6px 20px rgba(255,255,255,0.02);
-    }
+    .video-banner{max-width:var(--maxw);margin:0 auto 18px;border-radius:18px;padding:18px;background:linear-gradient(135deg,#ffb86b 0%, #ffe47a 30%, #60e6ff 70%);box-shadow:0 18px 45px rgba(0,0,0,0.55);text-align:center}
+    .video-frame{height:150px;border-radius:12px;margin-bottom:12px;background:linear-gradient(180deg,#031826,#072a35);display:flex;align-items:center;justify-content:center;color:#dff9ff;font-weight:900;font-size:18px;box-shadow:inset 0 -6px 20px rgba(255,255,255,0.02)}
     .video-banner h2{margin:0;font-size:22px;color:#001b1f}
     .video-banner p{margin:6px 0 12px;color:#072b36}
-    .video-cta{
-      display:inline-flex;align-items:center;gap:10px;justify-content:center;
-      padding:12px 26px;border-radius:999px;
-      background:var(--cta1);color:#03120a;font-weight:900;text-decoration:none;
-      font-size:16px;box-shadow:0 10px 30px rgba(0,0,0,0.45);
-      transform:translateZ(0);
+
+    /* ========== LED / 3D BUTTON STYLES ========== */
+    /* download button (card buttons) */
+    .download-btn{
+      display:inline-block;
+      padding:12px 20px;
+      border-radius:14px;
+      text-decoration:none;
+      font-weight:900;
+      color:#071212;
+      background:linear-gradient(180deg,var(--gold1),var(--gold2));
+      box-shadow:
+        0 8px 20px rgba(0,0,0,0.45),
+        0 6px 28px rgba(0,0,0,0.25) inset;
+      transition:transform .14s ease, box-shadow .14s ease;
+      position:relative;
+      overflow:visible;
+    }
+    /* LED glow pseudo-layer */
+    .download-btn::before{
+      content:"";
+      position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) scale(.9);
+      width:110%;height:110%;border-radius:14px;
+      filter:blur(18px);
+      background: radial-gradient(closest-side, rgba(255,215,80,0.12), rgba(255,140,20,0.02));
+      opacity:1;pointer-events:none;
+    }
+    /* strong text and scale effect on hover */
+    .download-btn:hover{
+      transform:translateY(-6px) scale(1.02);
+      box-shadow:0 18px 40px rgba(0,0,0,0.6), 0 0 30px var(--neon);
     }
 
-    /* Apps grid */
-    .apps-grid{
-      display:grid;
-      grid-template-columns:1fr;
-      gap:12px;
-      margin-top:14px;
+    /* Anamasal CTA (big 3D LED button) */
+    .video-cta{
+      display:inline-flex;align-items:center;gap:12px;justify-content:center;
+      padding:18px 40px;border-radius:999px;
+      background:linear-gradient(180deg,#ffd24a,#c99711);
+      color:#071212;font-weight:900;text-decoration:none;font-size:18px;
+      box-shadow:
+         0 24px 60px rgba(0,0,0,0.6),
+         0 0 28px rgba(0,240,255,0.08) inset,
+         0 0 30px rgba(255,210,60,0.12);
+      position:relative;z-index:2;transition:transform .18s cubic-bezier(.2,.9,.3,1);
     }
-    @media(min-width:420px){
-      .apps-grid{ grid-template-columns:repeat(2, 1fr); }
+    .video-cta::after{
+      content:"";
+      position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+      width:100%;height:100%;border-radius:999px;
+      box-shadow:0 0 0 rgba(255,210,60,0.0);
+      animation:ledPulse 2.2s infinite ease-in-out;
+      z-index:-1;
     }
-    .app-card{
-      display:flex;gap:12px;align-items:center;
-      background:linear-gradient(180deg,var(--card), #0b2940);
-      padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);
-      box-shadow:0 12px 30px rgba(0,0,0,0.45);
+    @keyframes ledPulse{
+      0%{box-shadow:0 4px 22px rgba(255,200,60,0.12);}
+      50%{box-shadow:0 18px 48px rgba(255,200,60,0.22);}
+      100%{box-shadow:0 4px 22px rgba(255,200,60,0.12);}
     }
-    .app-card .icon{
-      width:64px;height:64px;border-radius:12px;object-fit:cover;
-      flex:0 0 64px;background:#001a2b;
-      display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;
+    .video-cta:hover{transform:translateY(-8px) scale(1.02)}
+
+    /* Download button text bigger on mobile */
+    @media (max-width:420px){
+      .download-btn{padding:12px 18px;font-size:15px}
+      .video-cta{padding:14px 28px;font-size:16px}
     }
-    .app-info{flex:1}
+
+    /* APPS grid */
+    .apps-grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:14px}
+    @media(min-width:420px){.apps-grid{grid-template-columns:repeat(2,1fr)}}
+    .app-card{display:flex;gap:12px;align-items:center;background:linear-gradient(180deg,var(--card), #0b2940);padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 12px 30px rgba(0,0,0,0.45)}
+    .icon{width:64px;height:64px;border-radius:12px;flex:0 0 64px;overflow:hidden;background:#001a2b;display:flex;align-items:center;justify-content:center}
     .app-info h3{margin:0 0 6px;font-size:16px;color:var(--accent)}
     .meta{font-size:13px;color:var(--muted);display:flex;gap:10px;align-items:center}
-    .meta .bonus{color:#ffd86b;font-weight:800}
-    .meta .withdraw{color:#b6fffa;font-weight:800}
 
-    .dl-wrap{flex:0 0 auto}
-    .download-btn{
-      display:inline-block;padding:10px 14px;border-radius:10px;
-      background:linear-gradient(180deg,#ffd24a,#cc9211);
-      color:#041013;font-weight:900;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,0.25);
-    }
-    .download-btn:active{transform:translateY(1px)}
+    /* Info blocks and tags */
+    .info-block{background:rgba(5,24,38,0.9);padding:14px;border-radius:12px;margin-top:14px;box-shadow:0 10px 30px rgba(0,0,0,0.45)}
+    .tag-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .tag{background:rgba(255,255,255,0.03);padding:6px 10px;border-radius:999px;font-weight:800;font-size:13px;color:#ffd86b;box-shadow:0 6px 18px rgba(0,0,0,0.35);display:inline-flex;align-items:center;gap:8px}
+    .tag.moment{position:relative;overflow:visible}
+    .tag.moment::after{content:"";position:absolute;right:-10px;top:-10px;width:18px;height:18px;border-radius:50%;background:radial-gradient(circle,#ffd24a,#ff8f00);box-shadow:0 6px 18px rgba(255,150,20,0.35);animation:badgePulse 1.8s infinite;}
+    @keyframes badgePulse{0%{transform:scale(.9)}50%{transform:scale(1.08)}100%{transform:scale(.95)}}
 
-    /* descriptive blocks */
-    .info-block{
-      background:var(--surface);padding:14px;border-radius:12px;margin-top:14px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.45)
-    }
-    .info-block h3{color:#6eeaff;margin:0 0 8px}
-
-    .tag-bar{margin-top:12px;padding:10px;background:#021731;border-radius:10px;color:#bfefff;font-weight:800}
-
+    /* join / share */
     .join-box{margin-top:18px;padding:16px;background:#071b2b;border-radius:12px;text-align:center}
     .join-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:10px}
     .jbtn{padding:10px 18px;border-radius:999px;background:linear-gradient(180deg,#1da1ff,#0060c9);color:#fff;font-weight:900;text-decoration:none;box-shadow:0 8px 20px rgba(0,0,0,0.35)}
-    .share-btn{padding:10px 20px;border-radius:999px;background:var(--success);color:#032014;text-decoration:none;font-weight:900;box-shadow:0 8px 20px rgba(0,0,0,0.25)}
+    .share-btn{padding:10px 20px;border-radius:999px;background:var(--ok);color:#032014;text-decoration:none;font-weight:900;box-shadow:0 8px 20px rgba(0,0,0,0.25)}
 
-    /* footer links and sections */
     .footer-links{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:14px}
     .footer-links a{color:var(--accent);text-decoration:none;font-weight:800}
 
     .seo-box{margin-top:18px;background:#051a2a;padding:14px;border-radius:12px;color:#cfeeff}
     .seo-box h4{color:#7fe6ff;margin:0 0 8px}
 
-    /* robot / sitemap + final warning area (no tags included here) */
+    /* robots / final warning */
     #robot-section{margin-top:26px;padding:16px;background:#071027;border-radius:12px;color:#dceeff;border:1px solid rgba(255,255,255,0.03)}
     .robot-links a{color:#8fe6ff}
-    .final-warning{
-      margin-top:12px;background:var(--danger);padding:12px;border-radius:8px;color:#fff;font-weight:800;text-align:center;
-      box-shadow:0 10px 30px rgba(0,0,0,0.45)
-    }
+    .final-warning{margin-top:12px;background:var(--danger);padding:12px;border-radius:8px;color:#fff;font-weight:800;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,0.45)}
 
-    /* small dismissable fixed notice for mobile (keeps UX good) */
-    .age-fixed{
-      position:fixed;left:12px;right:12px;bottom:14px;padding:12px;border-radius:12px;background:linear-gradient(90deg,#ff4d4f,#c70000);color:#fff;font-weight:800;display:flex;align-items:center;gap:12px;z-index:9999;box-shadow:0 18px 50px rgba(0,0,0,0.6)
-    }
+    /* small fixed dismissable age notice for mobile (keeps UX good) */
+    .age-fixed{position:fixed;left:12px;right:12px;bottom:14px;padding:12px;border-radius:12px;background:linear-gradient(90deg,#ff4d4f,#c70000);color:#fff;font-weight:800;display:flex;align-items:center;gap:12px;z-index:9999;box-shadow:0 18px 50px rgba(0,0,0,0.6)}
     .age-fixed small{display:block;font-weight:600;color:rgba(255,255,255,0.95)}
     .age-fixed button{margin-left:auto;background:rgba(255,255,255,0.12);border:0;color:#fff;padding:8px 10px;border-radius:10px;font-weight:800}
 
-    /* Hidden About panel (sliding modal) */
-    .about-panel{
-      position:fixed;right:18px;bottom:18px;width:92%;max-width:420px;background:linear-gradient(180deg,#041b28,#072a35);border-radius:12px;padding:14px;box-shadow:0 30px 60px rgba(0,0,0,0.6);z-index:10000;transform:translateY(20px) scale(0.98);opacity:0;pointer-events:none;transition:all .25s ease;
-    }
-    .about-panel.open{transform:translateY(0) scale(1);opacity:1;pointer-events:auto}
-    .about-panel h3{margin:0 0 8px;color:#7fe6ff}
-    .about-panel p{margin:0 0 10px;color:#cfeeff}
-    .about-panel .close{position:absolute;right:10px;top:8px;background:transparent;border:0;color:#9fe6ff;font-weight:900}
-
-    /* Floating hidden button (small) */
-    .float-about{
-      position:fixed;right:18px;bottom:18px;width:52px;height:52px;border-radius:999px;background:linear-gradient(180deg,#ffb84a,#ff8a3a);display:flex;align-items:center;justify-content:center;z-index:10001;box-shadow:0 14px 40px rgba(0,0,0,0.5);cursor:pointer;border:4px solid rgba(255,255,255,0.06)
-    }
-    .float-about:focus{outline:3px solid rgba(0,240,255,0.18);outline-offset:3px}
-    .float-about span{font-weight:900;color:#04121a}
-
-    @media (min-width:980px){
-      .wrap{padding:28px}
-      .video-frame{height:180px}
-      .video-banner{padding:26px}
-    }
-
-    /* accessibility tweaks */
-    a:focus{outline:3px solid rgba(0,240,255,0.18);outline-offset:3px}
+    @media (min-width:980px){.wrap{padding:28px}.video-frame{height:180px}.video-banner{padding:26px}.video-cta{padding:18px 40px}}
   </style>
 </head>
 <body>
-  <div class="wrap" id="page">
-
-    <!-- header + banner -->
+  <div class="wrap">
+    <!-- header -->
     <div class="header" role="banner">
       <h1>🔥 All Yono Games App – Download Now</h1>
     </div>
 
+    <!-- banner with Anamasal CTA -->
     <div class="video-banner" role="region" aria-label="Top banner">
       <div class="video-frame" role="img" aria-label="All Yono Games preview">
         <div style="text-align:center">
@@ -180,22 +161,23 @@
         </div>
       </div>
 
+      <!-- LED 3D Anamasal CTA -->
       <a class="video-cta" href="#apps" id="anamasal-cta" aria-label="Anamasal download button">Anamasal 🚀</a>
     </div>
 
-    <!-- SEO intro -->
+    <!-- intro -->
     <div class="info-block" role="region" aria-label="intro">
-      <h3>All Yono App Links</h3>
-      <p style="margin:0;color:var(--muted)">Download all latest Yono Games, Teen Patti, Rummy SE, BET51, Taurus App, Good Slots and earning apps. Fast working links, daily updates and 100% working download buttons.</p>
+      <h3 style="margin:0 0 6px;color:#6eeaff">All Yono App Links</h3>
+      <p style="margin:0;color:#9fb0c9">Download all latest Yono Games, Teen Patti, Rummy SE, BET51, Taurus App, Good Slots and earning apps. Fast working links, daily updates and 100% working download buttons.</p>
     </div>
 
-    <!-- APPS GRID -->
+    <!-- apps grid -->
     <div class="apps-grid" id="apps" role="list" aria-label="apps list">
 
-      <!-- CARD 1 -->
+      <!-- Good Slots -->
       <div class="app-card" role="listitem">
         <div class="icon" aria-hidden="true">
-          <img src="https://i.ibb.co/KccDBL1t/GoodSlots.png" alt="Good Slots" style="width:64px;height:64px;border-radius:8px;object-fit:cover">
+          <img src="https://i.ibb.co/KccDBL1t/GoodSlots.png" alt="Good Slots" style="width:64px;height:64px;object-fit:cover;border-radius:8px">
         </div>
         <div class="app-info">
           <h3>Good Slots</h3>
@@ -206,10 +188,10 @@
         </div>
       </div>
 
-      <!-- CARD 2 -->
+      <!-- 3 Patti Master -->
       <div class="app-card" role="listitem">
         <div class="icon" aria-hidden="true">
-          <img src="https://i.ibb.co/jkzQ0g9K/3PattiMaster.png" alt="3 Patti Master" style="width:64px;height:64px;border-radius:8px;object-fit:cover">
+          <img src="https://i.ibb.co/jkzQ0g9K/3PattiMaster.png" alt="3 Patti Master" style="width:64px;height:64px;object-fit:cover;border-radius:8px">
         </div>
         <div class="app-info">
           <h3>3 Patti Master</h3>
@@ -220,10 +202,10 @@
         </div>
       </div>
 
-      <!-- CARD 3 -->
+      <!-- 3 Patti Gold -->
       <div class="app-card" role="listitem">
         <div class="icon" aria-hidden="true">
-          <img src="https://i.ibb.co/W4DK6zQm/3PattiGold.png" alt="3 Patti Gold" style="width:64px;height:64px;border-radius:8px;object-fit:cover">
+          <img src="https://i.ibb.co/W4DK6zQm/3PattiGold.png" alt="3 Patti Gold" style="width:64px;height:64px;object-fit:cover;border-radius:8px">
         </div>
         <div class="app-info">
           <h3>3 Patti Gold</h3>
@@ -234,10 +216,10 @@
         </div>
       </div>
 
-      <!-- CARD 4 -->
+      <!-- Rummy SE -->
       <div class="app-card" role="listitem">
         <div class="icon" aria-hidden="true">
-          <img src="https://i.ibb.co/fYvbwjMd/earnTP.png" alt="Rummy SE" style="width:64px;height:64px;border-radius:8px;object-fit:cover">
+          <img src="https://i.ibb.co/fYvbwjMd/earnTP.png" alt="Rummy SE" style="width:64px;height:64px;object-fit:cover;border-radius:8px">
         </div>
         <div class="app-info">
           <h3>Rummy SE</h3>
@@ -248,10 +230,10 @@
         </div>
       </div>
 
-      <!-- CARD 5 -->
+      <!-- BET51 -->
       <div class="app-card" role="listitem">
         <div class="icon" aria-hidden="true">
-          <img src="https://i.ibb.co/nNdCqS3M/BET51.png" alt="BET51" style="width:64px;height:64px;border-radius:8px;object-fit:cover">
+          <img src="https://i.ibb.co/nNdCqS3M/BET51.png" alt="BET51" style="width:64px;height:64px;object-fit:cover;border-radius:8px">
         </div>
         <div class="app-info">
           <h3>BET51 Casino</h3>
@@ -262,10 +244,10 @@
         </div>
       </div>
 
-      <!-- CARD 6 -->
+      <!-- Taurus App -->
       <div class="app-card" role="listitem">
         <div class="icon" aria-hidden="true">
-          <img src="https://i.ibb.co/MDCzvZdK/taurus-app.png" alt="Taurus App" style="width:64px;height:64px;border-radius:8px;object-fit:cover">
+          <img src="https://i.ibb.co/MDCzvZdK/taurus-app.png" alt="Taurus App" style="width:64px;height:64px;object-fit:cover;border-radius:8px">
         </div>
         <div class="app-info">
           <h3>Taurus App</h3>
@@ -278,75 +260,88 @@
 
     </div> <!-- .apps-grid -->
 
-    <!-- TAG BAR (keeps site SEO labels but NOT in robots/sitemap) -->
-    <div class="tag-bar" aria-hidden="false">
-      Tags: <strong style="color:#ffd86b">All Yono Games App Update</strong>, Teen Patti, Rummy SE, Real Cash Games India, Slots, Casino Apps
+    <!-- Tags -->
+    <div class="info-block" aria-label="tags">
+      <strong style="color:#9fe6ff">Tags</strong>
+      <div class="tag-list" role="list">
+        <span class="tag moment" role="listitem">All Yono Games App Update</span>
+        <span class="tag" role="listitem">Teen Patti</span>
+        <span class="tag" role="listitem">Rummy SE</span>
+        <span class="tag" role="listitem">Real Cash Games</span>
+        <span class="tag" role="listitem">Slots</span>
+        <span class="tag" role="listitem">Casino Apps</span>
+      </div>
     </div>
 
+    <!-- join area -->
     <div class="join-box" aria-label="join">
       <strong style="color:#9fe6ff">Join Our Channels</strong>
       <div class="join-row">
         <a class="jbtn" href="https://t.me/yonorummy_app" target="_blank" rel="noopener">Join Now (Telegram)</a>
-        <a class="jbtn" style="background:var(--success);color:#012b10" href="https://wa.me/?text=Check%20these%20apps%20→%20https://allyonoapplink.github.io" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="jbtn" style="background:var(--ok);color:#012b10" href="https://wa.me/?text=Check%20these%20apps%20→%20https://allyonoapplink.github.io" target="_blank" rel="noopener">WhatsApp</a>
         <a class="share-btn" href="https://wa.me/?text=🔥%20Check%20these%20earning%20apps%20→%20https://allyonoapplink.github.io" target="_blank" rel="noopener">📤 Share With Friends</a>
       </div>
     </div>
 
-    <!-- footer links (About/Disclaimer links open sections) -->
+    <!-- footer links -->
     <div class="footer-links" role="navigation" aria-label="footer links">
-      <a href="#about" id="footer-about">About Us</a>
-      <a href="#disclaimer" id="footer-disclaimer">Disclaimer</a>
+      <a href="#about">About Us</a>
+      <a href="#disclaimer">Disclaimer</a>
       <a href="#contact">Contact Us</a>
       <a href="#privacy">Privacy Policy</a>
       <a href="#terms">Terms & Conditions</a>
     </div>
 
-    <!-- SEO / popular searches & (brief) tags kept here; robots/sitemap BELOW will have no tags -->
+    <!-- SEO / popular searches + per-section tags -->
     <div class="seo-box" aria-label="popular searches">
       <h4>Popular Searches</h4>
       <p>All Yono App Link, Yono Rummy, Teen Patti, Good Slots, 3 Patti Master, Taurus App, BET51 Download, Real Cash Games, Best Earning Apps India, Rummy SE.</p>
-    </div>
 
-    <!-- DISCLAIMER SECTION (visible area - linked from footer) -->
-    <div id="disclaimer" class="info-block" style="margin-top:18px;">
-      <h3>Disclaimer</h3>
-      <p style="margin:0;color:var(--muted)">
-        This site lists third-party real-money gaming apps for informational purposes only. We do not operate the games. These apps may involve financial risk and can be addictive. Always check local law before playing. Users under 18 must not use these apps.
-      </p>
-    </div>
-
-    <!-- ROBOTS / SITEMAP + final warning (NO TAGS here as requested) -->
-    <div id="robot-section" role="contentinfo" aria-label="sitemap and final warning" style="margin-top:18px;">
-      <div style="background:#071027;padding:16px;border-radius:12px;color:#dceeff;border:1px solid rgba(255,255,255,0.03)">
-        <h4 style="margin:0 0 8px;color:#8fe6ff">Robots / Sitemap</h4>
-        <div class="robot-links" style="font-size:15px">
-          Sitemap: <a href="/sitemap.xml" target="_blank" rel="noopener">sitemap.xml</a> |
-          Robots: <a href="/robots.txt" target="_blank" rel="noopener">robots.txt</a>
+      <!-- Section-specific tags (you asked: add tags inside disclaimer/privacy/terms) -->
+      <div style="margin-top:10px">
+        <strong style="color:#ffd86b">Tags (About):</strong>
+        <div class="tag-list" style="margin-top:8px">
+          <span class="tag">About: App Links</span>
+          <span class="tag moment">About: Updates</span>
         </div>
 
-        <div class="final-warning" role="alert" aria-live="polite">
-          ⚠️ Warning: This website contains <strong>18+ real-money gaming content</strong>.
-          <div style="margin-top:8px;font-weight:600;font-size:14px;">You must be 18+ to continue. Visitors under 18 must leave this site immediately.</div>
+        <strong style="color:#ffd86b;display:block;margin-top:10px">Tags (Disclaimer):</strong>
+        <div class="tag-list" style="margin-top:8px">
+          <span class="tag">Responsible Gaming</span>
+          <span class="tag">Age Restriction</span>
+          <span class="tag">Legal Notice</span>
         </div>
+
+        <strong style="color:#ffd86b;display:block;margin-top:10px">Tags (Privacy):</strong>
+        <div class="tag-list" style="margin-top:8px">
+          <span class="tag">Cookies</span>
+          <span class="tag">Data</span>
+          <span class="tag">Contact</span>
+        </div>
+
+        <strong style="color:#ffd86b;display:block;margin-top:10px">Tags (Terms):</strong>
+        <div class="tag-list" style="margin-top:8px">
+          <span class="tag">Use Policy</span>
+          <span class="tag">Age Limit</span>
+          <span class="tag">Liability</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- robots / sitemap + final warning block -->
+    <div id="robot-section" role="contentinfo" aria-label="sitemap and final warning" style="margin-top:26px;padding:16px;background:#071027;border-radius:12px;color:#dceeff;border:1px solid rgba(255,255,255,0.03)">
+      <h4 style="margin:0 0 8px;color:#8fe6ff">Robots / Sitemap</h4>
+      <div class="robot-links">Sitemap: <a href="/sitemap.xml" target="_blank" rel="noopener">sitemap.xml</a> | Robots: <a href="/robots.txt" target="_blank" rel="noopener">robots.txt</a></div>
+
+      <div class="final-warning" role="alert" aria-live="polite">
+        ⚠️ Warning: This website contains <strong>18+ real-money gaming content</strong>.
+        <div style="margin-top:8px;font-weight:600;font-size:14px;">You must be 18+ to continue. Visitors under 18 must leave this site immediately.</div>
       </div>
     </div>
 
   </div> <!-- .wrap -->
 
-  <!-- FLOATING HIDDEN ABOUT BUTTON (tap to open about panel) -->
-  <button class="float-about" id="openAbout" aria-label="Open About panel" title="About">
-    <span>i</span>
-  </button>
-
-  <!-- About panel (hidden until opened) -->
-  <div class="about-panel" id="aboutPanel" role="dialog" aria-hidden="true" aria-label="About All Yono Games">
-    <button class="close" id="closeAbout" aria-label="Close About">✕</button>
-    <h3>About All Yono Games</h3>
-    <p>हम All Yono Games ऐप्स के लिंक और अपडेट शेयर करते हैं — ताज़ा वर्किंग डाउनलोड बटन, लिंक और छोटी टिप्स। हम ऐप्स को होस्ट नहीं करते।</p>
-    <p style="margin-top:10px;color:var(--muted)"><strong>Quick links:</strong> <a href="#disclaimer" style="color:#9fe6ff">Disclaimer</a> · <a href="#robot-section" style="color:#9fe6ff">Robots / Sitemap</a></p>
-  </div>
-
-  <!-- small fixed dismissable age notice for mobile (optional UX) -->
+  <!-- mobile dismissable age notice -->
   <div id="ageNotice" class="age-fixed" role="dialog" aria-label="age notice">
     <div style="flex:1">
       ⚠️ <strong>This website contains 18+ real-money gaming content.</strong>
@@ -357,66 +352,24 @@
 
 <script>
   // dismiss age notice
-  var dismissBtn = document.getElementById('dismissAge');
-  if(dismissBtn){
-    dismissBtn.addEventListener('click', function(){
-      var el = document.getElementById('ageNotice');
-      if(el) el.style.display = 'none';
-    });
-  }
+  document.getElementById('dismissAge').addEventListener('click', function(){
+    document.getElementById('ageNotice').style.display = 'none';
+  });
 
   // smooth scroll from CTA to apps
-  var cta = document.getElementById('anamasal-cta');
-  if(cta){
-    cta.addEventListener('click', function(e){
-      e.preventDefault();
-      document.querySelector('#apps').scrollIntoView({behavior:'smooth', block:'start'});
-    });
-  }
-
-  // ABOUT panel open/close (floating button + footer link)
-  var openAbout = document.getElementById('openAbout');
-  var aboutPanel = document.getElementById('aboutPanel');
-  var closeAbout = document.getElementById('closeAbout');
-  var footerAbout = document.getElementById('footer-about');
-
-  function showAbout(){
-    aboutPanel.classList.add('open');
-    aboutPanel.setAttribute('aria-hidden','false');
-    // focus for keyboard users:
-    closeAbout.focus();
-  }
-  function hideAbout(){
-    aboutPanel.classList.remove('open');
-    aboutPanel.setAttribute('aria-hidden','true');
-    openAbout.focus();
-  }
-
-  if(openAbout) openAbout.addEventListener('click', function(){ showAbout(); });
-  if(closeAbout) closeAbout.addEventListener('click', function(){ hideAbout(); });
-  if(footerAbout) footerAbout.addEventListener('click', function(e){
+  document.getElementById('anamasal-cta').addEventListener('click', function(e){
     e.preventDefault();
-    showAbout();
-    // scroll aboutPanel into view if small screen
-    aboutPanel.scrollIntoView({behavior:'smooth', block:'center'});
+    document.querySelector('#apps').scrollIntoView({behavior:'smooth', block:'start'});
   });
 
-  // also allow Esc key to close about panel
-  document.addEventListener('keydown', function(e){
-    if(e.key === 'Escape' && aboutPanel.classList.contains('open')) hideAbout();
-  });
-
-  // Footer Disclaimer link: scroll to disclaimer block
-  var footerDisc = document.getElementById('footer-disclaimer');
-  if(footerDisc){
-    footerDisc.addEventListener('click', function(e){
-      e.preventDefault();
-      var el = document.getElementById('disclaimer');
-      if(el) el.scrollIntoView({behavior:'smooth', block:'center'});
+  // small accessibility: open downloads in new tab with confirmation (optional)
+  document.querySelectorAll('.download-btn').forEach(btn=>{
+    btn.addEventListener('click', function(e){
+      // no blocking — just ensure target _blank; analytics can be added here if needed
     });
-  }
+  });
 
-  // set last updated date if present elsewhere
+  // set last updated if present (keeps compatibility)
   (function(){
     var d = new Date(), months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
     var el = document.getElementById('seo-last-updated');
