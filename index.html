@@ -1,105 +1,250 @@
 <!doctype html>
 <html lang="hi">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <title>All Yono Games — Download APKs & Signup Bonuses ₹35–₹500 | 2025</title>
-  <meta name="description" content="Download All Yono Games: Good Slots, 3 Patti Master, 3 Patti Gold, Rummy SE, BET51, Taurus App. Signup bonuses ₹35–₹500. Fast working links & daily updates.">
-  <meta name="keywords" content="All Yono Games, Yono Rummy, Good Slots, 3 Patti Master, BET51, Taurus App, signup bonus, download apk">
-  <meta name="robots" content="index,follow">
-  <link rel="canonical" href="https://allyonoapplink.github.io/">
-
-  <!-- OpenGraph -->
-  <meta property="og:title" content="All Yono Games — Download APKs & Signup Bonuses ₹35–₹500">
-  <meta property="og:description" content="Download Good Slots, 3 Patti Master, Rummy SE, BET51 and more. Signup bonuses listed per app.">
-  <meta property="og:image" content="https://i.ibb.co/KccDBL1t/GoodSlots.png">
-  <meta property="og:url" content="https://allyonoapplink.github.io/">
-  <meta property="og:type" content="website">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="All Yono Games — Signup Bonuses & Downloads">
-  <meta name="twitter:description" content="Join All Yono Games and claim signup bonuses. Latest Teen Patti, Rummy SE, Slots & Casino apps.">
-
-  <!-- Basic styles (kept minimal) -->
+  <link rel="icon" href="https://i.ibb.co/KccDBL1t/GoodSlots.png">
+  <meta name="description" content="Join All Yono Games — download Teen Patti, Rummy SE, BET51, Taurus and Good Slots. Signup bonuses ₹35–₹500, fast working links, daily updates (2025)." />
   <style>
-    :root{--bg:#061223;--card:#0f2a40;--accent:#00f0ff;--gold:#ffd247;--maxw:900px}
-    *{box-sizing:border-box} body{margin:0;font-family:Inter,Arial,sans-serif;background:linear-gradient(180deg,#061223,#021926);color:#e6f7ff}
-    .wrap{max-width:var(--maxw);margin:14px auto;padding:14px}
-    .header{padding:14px;background:#0f2138;border-radius:12px;text-align:center}
-    .header h1{margin:0;color:var(--accent)}
-    .grid{display:grid;gap:12px}
-    @media(min-width:720px){.grid{grid-template-columns:repeat(2,1fr)}}
-    .card{background:linear-gradient(180deg,#0b2a3b,#082235);padding:12px;border-radius:12px;display:flex;gap:12px;align-items:flex-start}
-    .card img{width:64px;height:64px;border-radius:10px;object-fit:cover}
-    .meta{color:#9fb0c9;font-size:13px;margin-top:6px}
-    .btn{display:inline-block;padding:8px 12px;border-radius:10px;background:linear-gradient(180deg,#ffd24a,#c99711);color:#041013;font-weight:900;text-decoration:none}
-    footer{margin-top:16px;text-align:center;color:#9fb0c9}
+    :root{
+      --bg:#061223; --card:#0f2a40; --muted:#9fb0c9; --accent:#00f0ff;
+      --gold1:#ffd24a; --gold2:#c99711; --maxw:780px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;font-family:Inter, Arial, sans-serif;background:linear-gradient(180deg,var(--bg),#031827);color:#e6f7ff}
+    .wrap{max-width:var(--maxw);margin:14px auto;padding:12px}
+    .header{background:#0f2138;padding:14px;border-radius:12px;text-align:center}
+    .header h1{margin:0;color:var(--accent);font-size:20px;font-weight:900}
+    .seo-box{background:#071827;padding:14px;border-radius:12px;color:#cfeeff;margin-top:12px}
+    .apps-grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:12px}
+    @media(min-width:420px){.apps-grid{grid-template-columns:repeat(2,1fr)}}
+    .app-card{display:flex;gap:12px;align-items:center;background:linear-gradient(180deg,#0b2a3b,#082235);padding:12px;border-radius:12px}
+    .icon{flex:0 0 64px}
+    .icon img{width:64px;height:64px;border-radius:10px;object-fit:cover}
+    .app-info h3{margin:0;color:var(--accent);font-size:16px}
+    .signup-bonus{color:#ffd86b;font-weight:800;margin-top:6px}
+    .meta{color:var(--muted);font-size:13px;margin-top:6px}
+    .download-btn{padding:12px 18px;border-radius:14px;background:linear-gradient(180deg,var(--gold1),var(--gold2));color:#041013;font-weight:900;text-decoration:none}
+    /* bottom sheet */
+    #backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.45);display:none;z-index:9998}
+    #sheet{position:fixed;left:0;right:0;bottom:-100%;margin:auto;max-width:760px;background:linear-gradient(180deg,#07202b,#05242f);border-radius:16px 16px 0 0;padding:16px;color:#fff;z-index:9999;transition:bottom .35s}
+    #sheet.open{bottom:12px}
+    .sheet-row{display:flex;gap:12px;align-items:center}
+    .sheet-icon img{width:56px;height:56px;border-radius:10px}
+    .sheet-download{display:block;margin-top:12px;padding:14px;border-radius:16px;background:linear-gradient(180deg,var(--gold1),var(--gold2));color:#041013;font-weight:900;text-align:center;text-decoration:none}
+    .public-reviews{margin-top:12px;color:#ffd86b}
+    .footer-links{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-top:18px;color:var(--accent)}
+    .age-fixed{position:fixed;left:12px;right:12px;bottom:14px;padding:12px;border-radius:12px;background:linear-gradient(90deg,#ff4d4f,#c70000);color:#fff;font-weight:800;display:flex;align-items:center;gap:12px;z-index:9997}
+    .age-fixed button{margin-left:auto;background:rgba(255,255,255,0.12);border:0;color:#fff;padding:8px 10px;border-radius:10px;font-weight:800}
   </style>
-
-  <!-- JSON-LD ItemList for index (helps search engines) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"ItemList",
-    "name":"All Yono Games - app list",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"url":"https://allyonoapplink.github.io/good-slots.html","name":"Good Slots"},
-      {"@type":"ListItem","position":2,"url":"https://allyonoapplink.github.io/3patti-master.html","name":"3 Patti Master"},
-      {"@type":"ListItem","position":3,"url":"https://allyonoapplink.github.io/taurus-app.html","name":"Taurus App"}
-    ]
-  }
-  </script>
 </head>
 <body>
   <div class="wrap">
-    <header class="header" role="banner">
-      <h1>🔥 All Yono Games — Download Now</h1>
-      <p style="margin:8px 0 0;color:#cfeeff">Signup bonuses ₹35–₹500 • Daily updates • Play responsibly (18+)</p>
-    </header>
+    <div class="header"><h1>🔥 All Yono Games App — Download Now</h1></div>
 
-    <main>
-      <section class="grid" aria-label="apps list" id="apps">
-        <!-- Good Slots card -->
-        <article class="card" id="good-slots">
-          <img loading="lazy" src="https://i.ibb.co/KccDBL1t/GoodSlots.png" alt="Good Slots">
-          <div>
-            <h3 style="margin:0;color:var(--accent)">Good Slots</h3>
-            <div class="meta">Signup bonus: ₹40 • Min withdraw ₹100</div>
-            <p style="margin:6px 0 8px;color:#bfefff;font-size:13px">Casino-style slots app with daily spins and welcome bonus. Install APK and check T&Cs in-app.</p>
-            <a class="btn" href="good-slots.html">Learn / Download</a>
-          </div>
-        </article>
+    <div class="seo-box">
+      <h3 style="margin:0;color:#7fe6ff">All Yono App Links</h3>
+      <p style="margin-top:8px;color:#cfeeff">Download latest Yono Games: Teen Patti, Rummy SE, BET51, Taurus App, Good Slots and other earning apps. Play responsibly — you must be 18+.</p>
+    </div>
 
-        <!-- 3 Patti Master card -->
-        <article class="card" id="3patti-master">
-          <img loading="lazy" src="https://i.ibb.co/jkzQ0g9K/3PattiMaster.png" alt="3 Patti Master">
-          <div>
-            <h3 style="margin:0;color:var(--accent)">3 Patti Master</h3>
-            <div class="meta">Signup bonus: ₹60 • Min withdraw ₹100</div>
-            <p style="margin:6px 0 8px;color:#bfefff;font-size:13px">3 Patti Master — fast tables & tournaments. Bonus shown for new users.</p>
-            <a class="btn" href="3patti-master.html">Learn / Download</a>
-          </div>
-        </article>
+    <div id="apps" class="apps-grid" aria-label="apps list">
+      <!-- sample cards - add / edit as needed -->
+      <article class="app-card" data-link="https://sharegoodslots.im?pid=458075709&pkg=com.goodslotsa.dss" data-img="https://i.ibb.co/KccDBL1t/GoodSlots.png" data-name="Good Slots" data-bonus="₹40">
+        <div class="icon"><img src="https://i.ibb.co/KccDBL1t/GoodSlots.png" alt=""></div>
+        <div class="app-info">
+          <h3>Good Slots</h3>
+          <div class="signup-bonus">Signup Bonus: ₹40</div>
+          <div class="meta">🎁 ₹40 • <span style="color:#9fb0c9">Min withdraw ₹100</span></div>
+        </div>
+        <div><a class="download-btn open-sheet" href="#">Download</a></div>
+      </article>
 
-        <!-- Taurus (example placeholder, link to separate page if made) -->
-        <article class="card" id="taurus">
-          <img loading="lazy" src="https://i.ibb.co/MDCzvZdK/taurus-app.png" alt="Taurus App">
-          <div>
-            <h3 style="margin:0;color:var(--accent)">Taurus App</h3>
-            <div class="meta">Signup bonus: ₹100 • Min withdraw ₹150</div>
-            <p style="margin:6px 0 8px;color:#bfefff;font-size:13px">Taurus offers referral & first-deposit bonuses — check app for details.</p>
-            <a class="btn" href="#apps">View</a>
-          </div>
-        </article>
+      <article class="app-card" data-link="https://www.earntp.com/m/tn3kto" data-img="https://i.ibb.co/jkzQ0g9K/3PattiMaster.png" data-name="3 Patti Master" data-bonus="₹60">
+        <div class="icon"><img src="https://i.ibb.co/jkzQ0g9K/3PattiMaster.png" alt=""></div>
+        <div class="app-info">
+          <h3>3 Patti Master</h3>
+          <div class="signup-bonus">Signup Bonus: ₹60</div>
+          <div class="meta">🎁 ₹60 • <span style="color:#9fb0c9">Min withdraw ₹100</span></div>
+        </div>
+        <div><a class="download-btn open-sheet" href="#">Download</a></div>
+      </article>
 
-      </section>
-    </main>
+      <article class="app-card" data-link="https://www.rummyse.com/share/3g8pFxy" data-img="https://i.ibb.co/fYvbwjMd/earnTP.png" data-name="Rummy SE" data-bonus="Varies">
+        <div class="icon"><img src="https://i.ibb.co/fYvbwjMd/earnTP.png" alt=""></div>
+        <div class="app-info">
+          <h3>Rummy SE</h3>
+          <div class="signup-bonus">Signup Bonus: Varies</div>
+          <div class="meta">🎁 varies • <span style="color:#9fb0c9">Check App</span></div>
+        </div>
+        <div><a class="download-btn open-sheet" href="#">Download</a></div>
+      </article>
+    </div>
 
-    <footer>
-      <div style="margin-top:12px">Sitemap: <a href="/sitemap.xml" style="color:#9fe6ff">sitemap.xml</a> | Robots: <a href="/robots.txt" style="color:#9fe6ff">robots.txt</a></div>
-      <div style="margin-top:8px">© All Yono Games — Play responsibly. 18+ only.</div>
-    </footer>
+    <div class="seo-box" style="margin-top:16px">
+      <h4 style="color:#7fe6ff;margin:0">Join Our Channels</h4>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px;align-items:center">
+        <a href="https://t.me/yonorummy_app" target="_blank" style="padding:12px 18px;background:#1da1ff;border-radius:999px;color:#fff;text-decoration:none;font-weight:800">Join Now (Telegram)</a>
+        <a href="https://wa.me/?text=🔥 Best Yono Games App Link → https://allyonoapplink.github.io" target="_blank" style="padding:12px 18px;background:#25D366;border-radius:999px;color:#012b10;text-decoration:none;font-weight:800">WhatsApp</a>
+        <a href="https://wa.me/?text=🔥 Download All Yono Games → https://allyonoapplink.github.io" target="_blank" style="padding:12px 18px;background:#39e639;border-radius:999px;color:#041f0c;text-decoration:none;font-weight:800">📤 Share With Friends</a>
+      </div>
+    </div>
+
+    <nav class="footer-links" aria-label="footer">
+      <a href="#about">About Us</a>
+      <a href="#disclaimer">Disclaimer</a>
+      <a href="#contact">Contact Us</a>
+      <a href="#privacy">Privacy Policy</a>
+      <a href="#terms">Terms & Conditions</a>
+    </nav>
+
   </div>
+
+  <!-- backdrop + bottom sheet -->
+  <div id="backdrop" aria-hidden="true"></div>
+  <div id="sheet" role="dialog" aria-hidden="true">
+    <div class="sheet-row">
+      <div class="sheet-icon"><img id="simg" src="" alt=""></div>
+      <div style="flex:1">
+        <div id="sname" style="font-weight:900;font-size:18px">App Name</div>
+        <div id="sbonus" style="color:#ffd86b;font-weight:800;margin-top:6px">Signup Bonus: ₹0</div>
+        <div style="color:#9fb0c9;margin-top:6px;font-size:13px">Min withdraw & terms: check app</div>
+      </div>
+      <div><button id="sclose" style="background:transparent;border:0;color:#fff;font-weight:900;font-size:20px">✕</button></div>
+    </div>
+
+    <!-- यही सिर्फ download बटन रहेगा (user ने कहा बाकी हटाओ) -->
+    <a id="sdownload" class="sheet-download" href="#" download>Download</a>
+
+    <div class="public-reviews">
+      <strong>Public Reviews</strong>
+      <div style="margin-top:8px;color:#ffd86b">★★★★☆ — "Acha app, fast payout"</div>
+      <div style="margin-top:6px;color:#ffd86b">★★★☆☆ — "Bonus thoda kam hai"</div>
+    </div>
+  </div>
+
+  <!-- fixed age notice -->
+  <div id="ageNotice" class="age-fixed" role="dialog" aria-label="age notice">
+    <div style="flex:1">⚠️ यह साइट 18+ रियल-मनी गेमिंग कंटेंट दिखाती है। <small style="display:block;margin-top:4px">जारी रखने के लिए 18+ होना आवश्यक है।</small></div>
+    <button id="dismissAge">OK</button>
+  </div>
+
+  <script>
+    // --- UI hooks ---
+    const openBtns = document.querySelectorAll('.open-sheet');
+    const sheet = document.getElementById('sheet');
+    const backdrop = document.getElementById('backdrop');
+    const sname = document.getElementById('sname');
+    const sbonus = document.getElementById('sbonus');
+    const simg = document.getElementById('simg');
+    const sdownload = document.getElementById('sdownload');
+    const sclose = document.getElementById('sclose');
+    const dismissAge = document.getElementById('dismissAge');
+
+    // open sheet from card
+    openBtns.forEach(btn=>{
+      btn.addEventListener('click', (e)=>{
+        e.preventDefault();
+        const card = e.currentTarget.closest('article.app-card');
+        if(!card) return;
+        const link = card.dataset.link;
+        const img = card.dataset.img;
+        const name = card.dataset.name || 'App';
+        const bonus = card.dataset.bonus || '';
+
+        sname.textContent = name;
+        sbonus.textContent = 'Signup Bonus: ' + bonus;
+        simg.src = img || '';
+        sdownload.href = link || '#';
+        sdownload.setAttribute('data-link', link || '#');
+
+        backdrop.style.display = 'block';
+        backdrop.setAttribute('aria-hidden','false');
+        sheet.classList.add('open');
+        sheet.setAttribute('aria-hidden','false');
+      });
+    });
+
+    // close sheet
+    function closeSheet(){
+      sheet.classList.remove('open');
+      sheet.setAttribute('aria-hidden','true');
+      setTimeout(()=>{ backdrop.style.display = 'none'; backdrop.setAttribute('aria-hidden','true'); }, 360);
+    }
+    sclose.addEventListener('click', closeSheet);
+    backdrop.addEventListener('click', closeSheet);
+
+    // dismiss age
+    dismissAge.addEventListener('click', ()=> document.getElementById('ageNotice').style.display='none');
+
+    // ========== DOWNLOAD logic ==========
+    // हम पहले fetch करके blob download का प्रयास करेंगे — पेज में ही रखा जाएगा।
+    sdownload.addEventListener('click', async function(e){
+      e.preventDefault();
+      const link = this.getAttribute('data-link') || this.href;
+      if(!link || link === '#'){ alert('Download link missing'); return; }
+
+      try {
+        // कोशिश: fetch (CORS required)
+        const res = await fetch(link, { mode: 'cors' });
+        if(!res.ok) throw new Error('Network response not OK: ' + res.status);
+        const blob = await res.blob();
+        // filename guess (URL based)
+        let filename = (link.split('/').pop().split('?')[0]) || 'app.apk';
+        // trigger in-page download
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        URL.revokeObjectURL(url);
+
+        // success: close sheet and scroll to next
+        setTimeout(()=>{ closeSheet(); autoAdvance(); }, 300);
+        return;
+      } catch(err){
+        // fetch failed -> likely CORS or server block
+        console.warn('In-page fetch failed:', err);
+        // पूछो user से: नया टैब खोलें या रोकें
+        const openTab = confirm('Automatic in-page डाउनलोड सर्वर द्वारा रोका गया (CORS)। क्या आप नया टैब खोलकर डाउनलोड करना चाहेंगे? (हाँ = नया टैब खुलेगा)');
+        if(openTab){
+          window.open(link, '_blank', 'noopener,noreferrer');
+          setTimeout(()=>{ closeSheet(); autoAdvance(); }, 400);
+        } else {
+          // user denied; keep sheet open for retry
+        }
+      }
+    });
+
+    // auto-advance to next app visually
+    function autoAdvance(){
+      const name = sname.textContent.trim();
+      const cards = Array.from(document.querySelectorAll('article.app-card'));
+      const idx = cards.findIndex(c => (c.dataset.name||'').trim() === name);
+      if(idx >= 0){
+        const next = cards[(idx+1) % cards.length];
+        if(next){
+          next.scrollIntoView({behavior:'smooth', block:'center'});
+          next.style.transition = 'transform .3s';
+          next.style.transform = 'scale(1.02)';
+          setTimeout(()=> next.style.transform = '', 700);
+        }
+      }
+    }
+
+    // small safety: prevent back button from taking user out while sheet open
+    window.addEventListener('popstate', (e)=>{
+      if(sheet.classList.contains('open')){
+        // if sheet open, close it instead of letting history/back navigate away
+        closeSheet();
+        history.pushState(null, null, location.href);
+      }
+    });
+    // push initial state so back button first closes sheet (if open) rather than leave site
+    history.pushState(null, null, location.href);
+
+  </script>
 </body>
 </html>
