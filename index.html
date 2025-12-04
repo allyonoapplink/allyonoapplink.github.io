@@ -1,56 +1,8 @@
-/* ===== OLD PROFILE MOMENT / ANIMATION ===== */
-
-/* Header float animation */
-header > div {
-  animation: headerFloat 4s ease-in-out infinite;
-}
-
-@keyframes headerFloat {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-4px); }
-  100% { transform: translateY(0px); }
-}
-
-/* Rocket shine animation */
-header .rocket-icon, 
-header div[style*="background:linear-gradient(180deg"] {
-  position: relative;
-  overflow: hidden;
-}
-
-header div[style*="background:linear-gradient(180deg"]::after {
-  content: "";
-  position: absolute;
-  top: 0; left: -120%;
-  width: 200%; height: 100%;
-  background: linear-gradient(120deg, rgba(255,255,255,0.4), rgba(255,255,255,0));
-  animation: rocketShine 2.8s linear infinite;
-}
-
-@keyframes rocketShine {
-  0% { transform: translateX(-120%); }
-  50% { transform: translateX(120%); }
-  100% { transform: translateX(120%); }
-}
-
-/* Button hover pulse */
-.topbar a,
-.topbar button {
-  transition: transform .25s ease, box-shadow .25s ease;
-}
-
-.topbar a:hover,
-.topbar button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0,255,255,0.25);
-}
-
-<!-- ===== OLD PROFILE HEADER (paste & replace existing header) ===== -->
+<!-- ===== SIMPLE OLD PROFILE HEADER (NO ANIMATION) ===== -->
 <header style="max-width:980px;margin:0 auto 18px;padding:10px 6px;">
   <div style="display:flex;align-items:center;justify-content:space-between;background:#0f2138;padding:10px;border-radius:10px;">
     <!-- left: logo + site name -->
     <div style="display:flex;align-items:center;gap:10px;">
-      <!-- rocket icon: change src if you have your image -->
       <div style="width:44px;height:44px;border-radius:10px;background:linear-gradient(180deg,#ffd24a,#c99711);display:flex;align-items:center;justify-content:center;font-weight:900;color:#041013;">
         🚀
       </div>
@@ -77,13 +29,12 @@ header div[style*="background:linear-gradient(180deg"]::after {
   </div>
 </header>
 
-<!-- small JS to toggle panels (paste near end of body or in your main script) -->
+<!-- Panels will be created by JS below (keeps header code clean) -->
 <script>
   (function(){
     var robotBtn = document.getElementById('robotBtnHeader');
     var menuBtn = document.getElementById('menuBtnHeader');
 
-    // create panels if not exist (keeps original profile untouched visually)
     function createPanel(id, rightPx){
       var panel = document.getElementById(id);
       if(panel) return panel;
@@ -97,15 +48,21 @@ header div[style*="background:linear-gradient(180deg"]::after {
       panel.style.borderRadius = '8px';
       panel.style.display = 'none';
       panel.style.zIndex = 9999;
+      panel.style.boxShadow = '0 10px 30px rgba(0,0,0,0.4)';
       document.body.appendChild(panel);
       return panel;
     }
 
     var robotPanel = createPanel('robotPanelHeader','120px');
-    robotPanel.innerHTML = '<a href=\"#apps\" style=\"display:block;color:#e6f7f7;padding:8px 10px;text-decoration:none;border-radius:6px;\">All Games (Open)</a><a href=\"/robots.txt\" target=\"_blank\" style=\"display:block;color:#e6f7f7;padding:8px 10px;text-decoration:none;border-radius:6px;\">robots.txt</a>';
+    robotPanel.innerHTML = ''
+      + '<a href="#apps" style="display:block;color:#e6f7f7;padding:8px 10px;text-decoration:none;border-radius:6px;">All Games (Open)</a>'
+      + '<a href="/robots.txt" target="_blank" style="display:block;color:#e6f7f7;padding:8px 10px;text-decoration:none;border-radius:6px;">robots.txt</a>';
 
     var menuPanel = createPanel('menuPanelHeader','12px');
-    menuPanel.innerHTML = '<a href=\"#about\" style=\"display:block;color:#e6f7f7;padding:8px 10px;text-decoration:none;border-radius:6px;\">About</a><a href=\"#contact\" style=\"display:block;color:#e6f7f7;padding:8px 10px;text-decoration:none;border-radius:6px;\">Contact</a><a href=\"#disclaimer\" style=\"display:block;color:#e6f7f7;padding:8px 10px;text-decoration:none;border-radius:6px;\">Disclaimer</a>';
+    menuPanel.innerHTML = ''
+      + '<a href="#about" style="display:block;color:#e6f7f7;padding:8px 10px;text-decoration:none;border-radius:6px;">About</a>'
+      + '<a href="#contact" style="display:block;color:#e6f7f7;padding:8px 10px;text-decoration:none;border-radius:6px;">Contact</a>'
+      + '<a href="#disclaimer" style="display:block;color:#e6f7f7;padding:8px 10px;text-decoration:none;border-radius:6px;">Disclaimer</a>';
 
     robotBtn && robotBtn.addEventListener('click', function(e){
       e.stopPropagation();
@@ -123,4 +80,3 @@ header div[style*="background:linear-gradient(180deg"]::after {
     });
   })();
 </script>
-
